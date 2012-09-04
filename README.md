@@ -8,11 +8,11 @@ Como Se Candidatar - Front End
 
 1. Acesse uma de nossas páginas de local, ex: http://www.apontador.com.br/local/sp/sao_paulo/bares_e_casas_noturnas/Y2RX4EP2/bar_do_juarez_.html
 
-2. Pense sobre o que você gosta e o que não gosta na página (Pode ser visual, estrutura de código ou ambos)
+2. Pense sobre o que você gosta e o que não gosta na página
 
-3. Melhore esta página da forma que você quiser
+3. Faça um fork neste projeto e adicione as melhorias que você quiser (pode ser visual, estrutura de código ou ambos)
 
-4. Crie um pull request com suas alterações e um texto defendendo-as em comparação com a página atual (A sua argumentação é importante).
+4. Mande um pull request com suas alterações e um texto defendendo-as em comparação com a página atual (a sua argumentação é importante).
 
 
 ####Regras
