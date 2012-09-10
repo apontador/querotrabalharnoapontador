@@ -14,14 +14,13 @@ Como Se Candidatar - Front End
 
 4. Mande um pull request com suas alterações e um texto defendendo-as em comparação com a página atual (a sua argumentação é importante).
 
-
-####Regras
+###Regras
 
 * Você pode alterar a página o quanto quiser -- Pode fazer do zero se desejar
 
 * Você pode incluir arquivos no projeto no formato que achar melhor para vender sua ideia (PSD, PDF, HTML, HTML + JavaScript, Pequeno projeto no seu framework preferido, etc). Nos impressione, seu empenho será levado em conta :)
 
-####Apreciamos
+###Apreciamos
 
 * O uso de dados reais obtidos através da [nossa API](http://api.apontador.com.br/pt/)
 
@@ -35,6 +34,38 @@ Como Se Candidatar - Front End
     * PHP
     * Ruby
     * Python
+
+FAQ
+---
+
+###Não quero fazer um fork público do projeto, posso enviar minha contribuição de outra forma?
+
+**R**: Claro, além do seu trabalho, nós queremos ver como você se organiza com o controle de versão. Sendo assim, você tem algumas alternativas:
+
+1. Nos envie o *bare file* do git por e-mail. Depois de ter feito seus commits, você pode gerar este arquivo executando no terminal:
+
+    ```bash
+    git clone --bare /caminho/para/seu/repositorio/querotrabalharnoapontador
+    ```
+
+    Isto gerará uma pasta chamada **querotrabalharnoapontador.git**. Você deve compactá-la, anexar em um e-mail e enviá-la para nós.
+
+3. Nos envie por e-mail um patch com seus commits, ex:
+
+    ```bash
+    git format-patch --binary --stdout -10 > feature.patch
+    ```
+
+    No caso acima, *10* é a quantidade de commits que serão integrados no patch. Este comando criará um arquivo chamado feature.patch que deverá ser anexado ao e-mail.
+
+2. Crie um repositório privado no github ou outro serviço. Quando você terminar, nos envie um e-mail. Nós vamos lhe informar que usuário você pode adicionar entre os colaboradores do seu projeto.
+
+    **Dica**: O BitBucket tem repositórios git privados gratuitos.
+
+Contato
+-------
+
+Mande um e-mail para: leonardo.andreucci@apontador.com.
 
 Outras Vagas
 ------------
