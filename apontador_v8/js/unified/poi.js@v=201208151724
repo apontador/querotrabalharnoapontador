@@ -1,0 +1,809 @@
+(function (b) {
+    b.fn.dataset = function (d) {
+        if (this.length === 0) {
+            return null
+        }
+        if (this.length == 1) {
+            if (this[0].dataset !== undefined) {
+                return this[0].dataset[d]
+            }
+            return this.attr("data-" + d)
+        }
+        var a = {};
+        this.each(function (c, f) {
+            a[b(f).attr("id")] = b(f).dataset(d)
+        });
+        return a
+    }
+})(jQuery);
+(function (b) {
+    b.writePhoneNumber = function (k, l) {
+        function i(c) {
+            c.tip = b(c.tip);
+            c.phone_list = b(c.phone_list);
+            c.phone1 = b(c.phone1);
+            c.phone2 = b(c.phone2)
+        }
+        function n(d) {
+            var f = d.split(/\s?\/\s?/),
+                c = null,
+                e = 0;
+            for (; e < f.length; e++) {
+                c = b.trim(f[e]).split(/\s/, 2);
+                if (c.length === 2) {
+                    f[e] = '<span class="areacode">' + c[0] + '</span> <span class="number">' + c[1] + "</span>"
+                }
+            }
+            return {
+                phone_list: f.join(" / "),
+                phone1: f[0],
+                phone2: f[1]
+            }
+        }
+        function m(c, d) {
+            if (c) {
+                c.html(d)
+            }
+        }
+        function a(c) {
+            m(l.phone_list, c.phone_list);
+            m(l.phone1, c.phone1);
+            m(l.phone2, c.phone2)
+        }
+        function j() {
+            var c = null;
+            i(l);
+            c = n(k);
+            a(c);
+            if (l.tip) {
+                l.tip.slideDown()
+            }
+        }
+        j()
+    }
+}(jQuery));
+(function (d, c) {
+    c.likeReview = function () {
+        var a = d(this);
+        a.html("Aguarde...");
+        d.post("/local/review/like/" + a.dataset("lbsid") + "/" + a.dataset("review_id"), d.proxy(c.handlePost, this), "json")
+    };
+    c.handlePost = function (a) {
+        var b = d(this);
+        if (a.success === true) {
+            if (!a.hasOwnProperty("numLikes")) {
+                a.numLikes = parseInt(b.dataset("num_likes"), 10) + 1
+            }
+            b.html('Obrigado pelo elogio! <span title="Obrigado pelo elogio!">(' + a.numLikes + ")</span>").addClass("sprite_ico_up_ajudou_successo").removeClass("sprite_ico_up_ajudou")
+        } else {
+            b.likeReviewButton()
+        }
+    };
+    d.fn.likeReviewButton = function () {
+        this.each(function (k, i) {
+            var a = d(i),
+                l = a.dataset("review_id"),
+                j = a.dataset("lbsid");
+            if (l.length && j.length) {
+                var b = a.dataset("num_likes") || 0;
+                a.addClass("sprite_icones sprite_ico_up_ajudou").removeClass("sprite_ico_up_ajudou_successo").html("Essa avaliação me ajudou <span>(" + b + ")</span>");
+                a.click(function (e) {
+                    e.preventDefault();
+                    d(this).unbind("click");
+                    d.proxy(c.likeReview, this)()
+                })
+            }
+        });
+        return this
+    }
+})(jQuery, (typeof context === "undefined") ? {} : context);
+(function (b) {
+    b.fn.counter = function (a) {
+        b(this).keyup(function (e) {
+            var f = b(this);
+            b(a).each(function (d, h) {
+                var c = f.val();
+                c = b.trim(c);
+                b(h).html(c.length)
+            })
+        });
+        return this
+    }
+})(jQuery);
+(function (b) {
+    b.fn.sync = function () {
+        var a = b(this);
+        a.blur(function (d) {
+            a.val(b(this).val())
+        });
+        return this
+    }
+})(jQuery);
+(function (b) {
+    b.fn.zuppaBooking = function (e) {
+        var a = this;
+
+        function f(c) {
+            a.html('<iframe src="http://widgets.zuppa.com.br/afiliado/apontadornovo/restaurante/' + c + '"style="width: 200px; height: 250px; border: 0; overflow: hidden;" frameborder="0"></iframe>')
+        }
+        f(e);
+        return this
+    };
+    b.fn.zuppaButton = function () {
+        this.attr("href", this.dataset("place_url") + "?highlight=booking_zuppa").addClass("f11").addClass("left").addClass("bt_gradiente_vermelho").addClass("mr10").html("reserve sua mesa grátis");
+        return this
+    }
+}(jQuery));
+eval(function (e, a, c, l, j, k) {
+    j = function (b) {
+        return (b < a ? "" : j(parseInt(b / a))) + ((b = b % a) > 35 ? String.fromCharCode(b + 29) : b.toString(36))
+    };
+    if (!"".replace(/^/, String)) {
+        while (c--) {
+            k[j(c)] = l[c] || j(c)
+        }
+        l = [function (b) {
+            return k[b]
+        }];
+        j = function () {
+            return "\\w+"
+        };
+        c = 1
+    }
+    while (c--) {
+        if (l[c]) {
+            e = e.replace(new RegExp("\\b" + j(c) + "\\b", "g"), l[c])
+        }
+    }
+    return e
+}(";5(29.1j)(7($){5($.1L.1J)1I{1t.1H(\"1K\",J,H)}1M(e){};$.n.3=7(i){5(4.Q==0)k 4;5(A I[0]=='1h'){5(4.Q>1){8 j=I;k 4.W(7(){$.n.3.y($(4),j)})};$.n.3[I[0]].y(4,$.1T(I).1U(1)||[]);k 4};8 i=$.12({},$.n.3.1s,i||{});$.n.3.K++;4.2a('.9-3-1f').o('9-3-1f').W(7(){8 a,l=$(4);8 b=(4.23||'21-3').1v(/\\[|\\]/g,'Z').1v(/^\\Z+|\\Z+$/g,'');8 c=$(4.1X||1t.1W);8 d=c.6('3');5(!d||d.18!=$.n.3.K)d={z:0,18:$.n.3.K};8 e=d[b];5(e)a=e.6('3');5(e&&a)a.z++;x{a=$.12({},i||{},($.1b?l.1b():($.1S?l.6():s))||{},{z:0,F:[],v:[]});a.w=d.z++;e=$('<1R V=\"9-3-1Q\"/>');l.1P(e);e.o('3-15-T-17');5(l.S('R'))a.m=H;e.1c(a.E=$('<P V=\"3-E\"><a 14=\"'+a.E+'\">'+a.1d+'</a></P>').1g(7(){$(4).3('O');$(4).o('9-3-N')}).1i(7(){$(4).3('u');$(4).G('9-3-N')}).1l(7(){$(4).3('r')}).6('3',a))};8 f=$('<P V=\"9-3 q-'+a.w+'\"><a 14=\"'+(4.14||4.1p)+'\">'+4.1p+'</a></P>');e.1c(f);5(4.11)f.S('11',4.11);5(4.1r)f.o(4.1r);5(a.1F)a.t=2;5(A a.t=='1u'&&a.t>0){8 g=($.n.10?f.10():0)||a.1w;8 h=(a.z%a.t),Y=1y.1z(g/a.t);f.10(Y).1A('a').1B({'1C-1D':'-'+(h*Y)+'1E'})};5(a.m)f.o('9-3-1o');x f.o('9-3-1G').1g(7(){$(4).3('1n');$(4).3('D')}).1i(7(){$(4).3('u');$(4).3('C')}).1l(7(){$(4).3('r')});5(4.L)a.p=f;l.1q();l.1N(7(){$(4).3('r')});f.6('3.l',l.6('3.9',f));a.F[a.F.Q]=f[0];a.v[a.v.Q]=l[0];a.q=d[b]=e;a.1O=c;l.6('3',a);e.6('3',a);f.6('3',a);c.6('3',d)});$('.3-15-T-17').3('u').G('3-15-T-17');k 4};$.12($.n.3,{K:0,D:7(){8 a=4.6('3');5(!a)k 4;5(!a.D)k 4;8 b=$(4).6('3.l')||$(4.U=='13'?4:s);5(a.D)a.D.y(b[0],[b.M(),$('a',b.6('3.9'))[0]])},C:7(){8 a=4.6('3');5(!a)k 4;5(!a.C)k 4;8 b=$(4).6('3.l')||$(4.U=='13'?4:s);5(a.C)a.C.y(b[0],[b.M(),$('a',b.6('3.9'))[0]])},1n:7(){8 a=4.6('3');5(!a)k 4;5(a.m)k;4.3('O');4.1a().19().X('.q-'+a.w).o('9-3-N')},O:7(){8 a=4.6('3');5(!a)k 4;5(a.m)k;a.q.1V().X('.q-'+a.w).G('9-3-1k').G('9-3-N')},u:7(){8 a=4.6('3');5(!a)k 4;4.3('O');5(a.p){a.p.6('3.l').S('L','L');a.p.1a().19().X('.q-'+a.w).o('9-3-1k')}x $(a.v).1m('L');a.E[a.m||a.1Y?'1q':'1Z']();4.20()[a.m?'o':'G']('9-3-1o')},r:7(a,b){8 c=4.6('3');5(!c)k 4;5(c.m)k;c.p=s;5(A a!='B'){5(A a=='1u')k $(c.F[a]).3('r',B,b);5(A a=='1h')$.W(c.F,7(){5($(4).6('3.l').M()==a)$(4).3('r',B,b)})}x c.p=4[0].U=='13'?4.6('3.9'):(4.22('.q-'+c.w)?4:s);4.6('3',c);4.3('u');8 d=$(c.p?c.p.6('3.l'):s);5((b||b==B)&&c.1e)c.1e.y(d[0],[d.M(),$('a',c.p)[0]])},m:7(a,b){8 c=4.6('3');5(!c)k 4;c.m=a||a==B?H:J;5(b)$(c.v).S(\"R\",\"R\");x $(c.v).1m(\"R\");4.6('3',c);4.3('u')},1x:7(){4.3('m',H,H)},24:7(){4.3('m',J,J)}});$.n.3.1s={E:'25 26',1d:'',t:0,1w:16};$(7(){$('l[27=28].9').3()})})(1j);", 62, 135, "|||rating|this|if|data|function|var|star|||||||||||return|input|readOnly|fn|addClass|current|rater|select|null|split|draw|inputs|serial|else|apply|count|typeof|undefined|blur|focus|cancel|stars|removeClass|true|arguments|false|calls|checked|val|hover|drain|div|length|disabled|attr|be|tagName|class|each|filter|spw|_|width|id|extend|INPUT|title|to||drawn|call|andSelf|prevAll|metadata|append|cancelValue|callback|applied|mouseover|string|mouseout|jQuery|on|click|removeAttr|fill|readonly|value|hide|className|options|document|number|replace|starWidth|disable|Math|floor|find|css|margin|left|px|half|live|execCommand|try|msie|BackgroundImageCache|browser|catch|change|context|before|control|span|meta|makeArray|slice|children|body|form|required|show|siblings|unnamed|is|name|enable|Cancel|Rating|type|radio|window|not".split("|"), 0, {}));
+var hasPhoto = null;
+var poiName = null;
+var poiAdress = null;
+var poiState = null;
+var urlImage = null;
+var poiId = null;
+var poiUrl = null;
+var scrollToReviewBox = function () {
+    jq.scrollTo("#avaliacao", 1000)
+};
+var scrollToLastReview = function () {
+    jq.scrollTo("div.bloco_comentario", 1000, {
+        queue: false
+    })
+};
+var scrollToRecommend = function () {
+    jq.scrollTo(".poi_open", 1000, {
+        queue: false
+    })
+};
+var scrollToAbas = function () {
+    jq.scrollTo("#abas_poi", 1000, {
+        queue: false
+    })
+};
+var updateReviewButton = function () {
+    jq("#submitReviewSpan").html('<button id="submitReviewButton" form="form_resenha" type="submit" class="sprite_corners sprite_button right">Enviar minha avaliação</button>');
+    jq("#submitMiniReviewSpan").html('<button id="submitMiniReviewSpan" form="form_mini_resenha" type="submit" class="sprite_corners sprite_button right w150">Enviar minha avaliação</button>')
+};
+jq(".silverbutton>button").button();
+var validateComment = function (g) {
+    var f = false;
+    if (jq("#" + g + " .stars:checked").length !== 1) {
+        jq(".erroResenha_nota").show();
+        f = true
+    } else {
+        jq(".erroResenha_nota").hide()
+    }
+    var d = jq.trim(jq("#" + g + ' textarea[name="comment"]').val());
+    if (d.length < 20) {
+        jq(".erroResenha_comment_min").show();
+        f = true
+    } else {
+        jq(".erroResenha_comment_min").hide()
+    }
+    if (d.length > 4000) {
+        jq(".erroResenha_comment_max").show();
+        f = true
+    } else {
+        jq(".erroResenha_comment_max").hide()
+    }
+    if (f) {
+        if (g === "form_mini_resenha") {
+            jq("#erroMiniResenha").html(jq("#erroResenha").html());
+            jq("#erroMiniResenha").slideDown()
+        } else {
+            jq("#erroResenha").slideDown()
+        }
+        return false
+    } else {
+        jq("#submit_resenha").attr("disabled", true);
+        jq("#erroResenha, #erroMiniResenha").hide();
+        return true
+    }
+};
+jq(document).ready(function () {
+    jq(".box_abas").hide();
+    jq(".submenu-poi li a").click(function (a) {
+        jq(this).parent().parent().find(".selected").removeClass("selected");
+        jq(this).parent().addClass("selected");
+        var b = jq(this).attr("id");
+        jq(".box_abas").hide();
+        jq("#" + b + "_content").show();
+        a.preventDefault()
+    });
+    jq(".scrollable_mini img, .veja_mais_mini, .link_envie").click(function (a) {
+        a.preventDefault();
+        scrollToAbas();
+        jq("#tab_fotos a").click()
+    });
+    var z = jq(".full_description p").html() || "";
+    var A = "",
+        y = false;
+    var w = z;
+    if (z.length > 400) {
+        w = jq.limit_text(z, 400, " ...");
+        A = '&nbsp;<a href="#" title="Mais">Mais <small>▼</small></a>'
+    }
+    jq(".full_description p").html(w);
+    jq(".full_description").append(A);
+    jq(".full_description a").click(function (a) {
+        a.preventDefault();
+        if (y) {
+            jq(".full_description a").html("Mais <small>▼</small>");
+            jq(".full_description p").html(w);
+            y = false
+        } else {
+            jq(".full_description a").html("Menos <small>▲</small>");
+            jq(".full_description p").html(z);
+            y = true
+        }
+    });
+    jq("a.abuseReview").click(function () {
+        var b = this;
+        var a = jq("#poiId").val();
+        var c = jq(b).attr("rel");
+        jq(b).html("Aguarde...").unbind("click").addClass("quiet");
+        jq.post("/local/review/abuse/" + a + "/" + c, "", function (d) {
+            jq(b).html("Enviado para análise!")
+        }, "json");
+        return false
+    });
+    jq(".likeReview").likeReviewButton();
+    hasPhoto = jq("#hasPhotoInput").val();
+    poiName = jq("#poiNameInput").val();
+    poiAdress = jq("#poiAdressInput").val();
+    poiState = jq("#poiStateInput").val();
+    urlImage = jq("#urlImageInput").val();
+    poiId = jq("#poiId").val();
+    poiUrl = jq("#poiUrlInput").val();
+    jq("a[href='#form_resenha']").click(function (a) {
+        jq("#tab_avaliacao a").click();
+        scrollToReviewBox();
+        a.preventDefault()
+    });
+    jq("a[href='#ver_fotos']").click(function (a) {
+        jq("#tab_fotos a").click();
+        scrollToAbas();
+        a.preventDefault()
+    });
+    jq("a[href='#recomendar']").click(function (a) {
+        scrollToRecommend();
+        a.preventDefault()
+    });
+    jq("a[href='#ver_comentario']").click(function (a) {
+        scrollToLastReview();
+        a.preventDefault()
+    });
+    jq("#userCommentPhoto").setProfilePhoto(pageObj.user.logged);
+    if (pageObj.user.email !== "") {
+        jq("#sendmail_from").val(pageObj.user.email)
+    }
+    jq("#email_form").bind("submit", function (a) {
+        a.preventDefault();
+        if (jq("#sendmail_from").val().length === 0) {
+            jq("#errorTalkToUs").html("Antes de enviar, preencha seu email.").slideDown();
+            jq("#sendmail_from").focus()
+        } else {
+            if (0 === jq("#sendmail_text").val().length) {
+                jq("#errorTalkToUs").html("Antes de enviar, digite sua mensagem.").slideDown();
+                jq("#sendmail_text").focus()
+            } else {
+                jq("#email_submit").attr("disabled", true);
+                jq("#errorTalkToUs").hide();
+                jq.post(jq("#email_form").attr("action"), {
+                    from: jq("#sendmail_from").val(),
+                    text: jq("#sendmail_text").val(),
+                    lbsid: jq("#poiId").val()
+                }, function (b) {
+                    if (b.status === true) {
+                        jq("#sendmail_text").val("");
+                        jq.scrollTo(".logo", 500, {
+                            queue: false
+                        });
+                        jq("div.success").slideDown("slow");
+                        jq("#email_submit").attr("disabled", false)
+                    } else {
+                        if (b.error) {
+                            jq("#errorTalkToUs").html(b.error).slideDown()
+                        } else {
+                            jq("#errorTalkToUs").html("Erro ao enviar a mensagem, tente novamente!").slideDown()
+                        }
+                        jq("#email_submit").attr("disabled", false)
+                    }
+                })
+            }
+        }
+    });
+    jq(".showPhone a").click(function (a) {
+        a.preventDefault();
+        jq.writePhoneNumber(jq("#contactId").val(), {
+            tip: ".phone_tip",
+            phone_list: ".phone_list",
+            phone1: ".phone1",
+            phone2: ".phone2"
+        });
+        jq(".showPhone").hide();
+        jq(".phoneNumber").fadeIn("fast")
+    });
+    jq(".share_list a#doShare").button({
+        icons: {
+            primary: "ui-icon-friendshare"
+        }
+    });
+    jq(".mail_share").button({
+        icons: {
+            primary: "ui-icon-mail-closed"
+        }
+    });
+    jq(".facebook_share span").button({
+        icons: {
+            primary: "ui-icon-facebook"
+        }
+    });
+    jq(".orkut_share span").button({
+        icons: {
+            primary: "ui-icon-orkut"
+        }
+    });
+    jq(".twitter_share span").button({
+        icons: {
+            primary: "ui-icon-twitter"
+        }
+    });
+    var s = jq("#poiOwnerId").val();
+    if (pageObj.user.logged) {
+        jq("#reportPOI").attr("href", "/local/report/" + jq("#poiId").val());
+        jq("#reportPOI").click(function () {
+            pageTracker._trackPageview("/contabilizacao/poi/" + jq("#poiId").val() + "/" + jq("#poiNameInput").val().replace("'", "") + "/denuncia.html");
+            location.href = "/local/report/" + jq("#poiId").val()
+        });
+        if (s === "") {
+            jq("#editPoiInfo").attr("href", "/local/edit/" + jq("#poiId").val() + ".html")
+        }
+    } else {
+        jq("#editPoiInfo").attr("href", "/accounts/login.html");
+        jq("#editPoiInfo").click(function (a) {
+            a.preventDefault();
+            var b = APT_SERVER + "/local/edit/" + jq("#poiId").val() + ".html";
+            jq.cookie(COOKIE_PREFIX + "redir", b);
+            setTimeout('document.location = "' + b + '"', 500)
+        })
+    }
+    jq("#doPrint").click(function (a) {
+        a.preventDefault();
+        pageTracker._trackPageview("/contabilizacao/poi/" + jq("#poiId").val() + "/" + jq("#poiNameInput").val() + "/imprimir.html");
+        window.open(jq(this).attr("href"), "doPrint", "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=800,height=600");
+        return false
+    });
+    if (hasPhoto === 0) {
+        jq("#img_vazia").click(function () {
+            jq(".box_add").toggle()
+        })
+    }
+    if (pageObj.user.logged) {
+        jq.getFollowing(jq.getUserIdList(), "onPOI")
+    }
+    jq("input.stars").rating({
+        focus: function (a, c) {
+            var b = jq(".hover-star");
+            b[0].data = b[0].data || b.html();
+            b.html(c.title || "value: " + a)
+        },
+        blur: function () {
+            var a = jq(".hover-star");
+            jq(".hover-star").html(a[0].data || "")
+        }
+    });
+    jq("#form_resenha, #form_mini_resenha").submit(function (a) {
+        if (!validateComment(jq(this).attr("id"))) {
+            a.preventDefault()
+        } else {
+            jq(this).append('<input type="hidden" name="share_providers" value="' + jq("#share_providers").val() + '" />')
+        }
+    });
+    jq(".review_text").sync().counter(".counter");
+    updateReviewButton(jq("#isPremium").val());
+    jq("#submit_resenha, #submitReview").click(function (a) {
+        pageTracker._trackPageview("/contabilizacao/poi/" + jq("#poiId").val() + "/" + jq("#poiNameInput") + "/salvar_resenha.html")
+    });
+    jq(".box_add form").submit(function () {
+        jq(".box_add input:submit").attr("disabled", "disabled")
+    });
+    jq(".box_add input:file").change(function () {
+        jq(".box_add input:submit").attr("disabled", false)
+    });
+    jq(".cancelar").click(function (a) {
+        jq("span.sprite_maquina_foto").show();
+        jq(".btn_add").show();
+        jq(".box_add").hide();
+        jq(".box_add input:submit").attr("disabled", false);
+        a.preventDefault()
+    });
+    jq(".scrollable_mini").scrollable({
+        circular: true,
+        mousewheel: true
+    }).autoscroll({
+        autoplay: false
+    }).navigator().autoscroll({
+        interval: 5000
+    });
+    var u = jq(".scrollable .items img").clone();
+    var x = jq(".scrollable .items span");
+    u = jq.array_chunk(u, 11);
+    var v = "";
+    jq.each(u, function (b, a) {
+        v += "<div>";
+        jq.each(a, function (g, f) {
+            var c = jq(f).attr("title");
+            var d = jq(f).attr("src");
+            v += "<img title='" + c + "' alt='" + c + "' src='" + d + "' >";
+            v += "<span class='hide'>" + x.eq(g).html() + "</span>"
+        });
+        v += "</div>"
+    });
+    jq(".scrollable .items").html(v);
+    jq(".scrollable").scrollable();
+    if (jq(".items img").length <= 11) {
+        jq(".prev,.next").hide()
+    }
+    jq(".items img").click(function (a) {
+        a.preventDefault();
+        var b = jq(this);
+        if (jq(this).hasClass("active")) {
+            return
+        }
+        jq(".items img").removeClass("active");
+        jq(this).addClass("active");
+        jq("#image_wrap img").fadeTo("fast", "0.1", function () {
+            var c = b.attr("src").replace(/_s\./, "_l.");
+            obPreLoadImage = new Image();
+            obPreLoadImage.onload = function () {
+                jq("#image_wrap img").attr("src", c);
+                jq("#image_wrap img").attr("alt", b.attr("alt"));
+                jq("#image_wrap img").attr("title", b.attr("title"));
+                jq("#image_wrap img").fadeTo("fast", "1.0")
+            };
+            obPreLoadImage.src = c;
+            jq(".photo_legend").fadeOut("fast", function () {
+                jq(this).html(b.next("span").html()).fadeIn()
+            })
+        })
+    });
+    jq("#tab_fotos").click(function () {
+        jq("#galeria_poi .items img").first().click()
+    });
+    if (pageObj.user.logged) {
+        jq(".btn_add").click(function (a) {
+            jq(this).parent().find("span.sprite_maquina_foto").hide();
+            jq(this).hide();
+            jq(".box_add").show();
+            return false
+        })
+    }
+    var r = jq("#selo_confianca_apontador");
+    r.mousemove(function (a) {
+        jq(this).find(".tooltip_selo").css({
+            top: a.clientY - 80,
+            left: a.clientX - 200
+        }).stop(true, true).show()
+    });
+    r.mouseleave(function () {
+        jq(this).find(".tooltip_selo").hide()
+    });
+    var C = jq(".tooltip_checkin");
+    C.mousemove(function (a) {
+        jq(this).parent().find(".tooltip_selo").css({
+            top: a.clientY - 80,
+            left: a.clientX - 200
+        }).stop(true, true).show()
+    });
+    C.mouseleave(function () {
+        jq(this).parent().find(".tooltip_selo").hide()
+    });
+    if (jq("#isPremium").length === 1) {
+        jq("#tab_descricao_local a").click()
+    } else {
+        jq("#tab_avaliacao a").click()
+    }
+    var t = jq(document).getUrlParam("comment");
+    if (t !== null) {
+        jq("#tab_avaliacao a").click();
+        if (t === "fail") {
+            scrollToReviewBox()
+        }
+    }
+    if (jq(document).getUrlParam("photoUploadSuccess") !== null) {
+        jq("#tab_fotos a").click();
+        scrollToAbas()
+    }
+    if (jq(document).getUrlParam("photoAba") !== null) {
+        jq("#tab_fotos a").click();
+        scrollToAbas()
+    }
+    jq(".enlarge").click(function (b) {
+        var a = jq(".mapa_pequeno");
+        var c = jq(".mapa_grande");
+        var d = c.height();
+        if (!jq(".mapa_grande iframe").attr("src")) {
+            jq(".mapa_grande iframe").attr("src", MAPLINK_URL + "widget/route_widget1?w=960&h=360&lat=" + jq("#poi_coordinate_y").val() + "&lng=" + jq("#poi_coordinate_x").val() + "&zcontrol=big&mcontrol=yes&dn=" + encodeURIComponent(jq("#poiNameInput").val()))
+        }
+        c.slideDown();
+        jq(".mapa_pequeno img, .mapa_pequeno .footer_veja").hide();
+        a.css({
+            position: "absolute",
+            left: a.offset().left,
+            top: a.offset().top
+        }).animate({
+            left: c.position().left,
+            top: c.position().top,
+            width: c.width(),
+            height: d
+        }, function () {
+            c.removeClass("transparent");
+            a.fadeOut()
+        })
+    });
+    jq(".mapa_grande .reduce").click(function (a) {
+        jq(".mapa_grande").slideUp("slow", function () {
+            jq(this).addClass("transparent")
+        });
+        jq(".mapa_pequeno").removeAttr("style").hide().slideDown();
+        jq(".mapa_pequeno img, .mapa_pequeno .footer_veja").show()
+    });
+    var B = false;
+    var p = (jq(".parceiro_inline").length === 0) ? true : false;
+    if (jq("#isMother").val() === 1) {
+        jq.post("/local/getPoiContentPartners.html", {
+            lbs_id: jq("#poiId").val()
+        }, function (b) {
+            if (b.length > 0) {
+                if (p === true) {
+                    jq("div.conteudo_abas_poi:first").addClass("aba_des_parceiro");
+                    jq(".parceiros").fadeIn("slow");
+                    if (b.length > 8) {
+                        jq(".anterior, .mais").removeClass("hide");
+                        B = true
+                    }
+                }
+            }
+            jq(b).each(function (f, d) {
+                link = '<a href="/local/redirect?partner=' + d.NOME + "&url=" + encodeURIComponent(d.URL) + '" title="' + d.NOME + '">';
+                link += '<img src="' + d.FOTO + '" alt="' + d.NOME + '" />';
+                link += "</a>";
+                jq("div.parceiros .logos .items").append(link)
+            });
+            var a = jq(".scrollable_icons .items a").clone();
+            a = jq.array_chunk(a, 8);
+            var c = "";
+            jq.each(a, function (f, d) {
+                c += "<div>";
+                jq(d).each(function (g, h) {
+                    c += '<a href="' + jq(h).attr("href") + '" title="' + jq(h).attr("title") + '" target="_blank" onclick="pageTracker._trackPageview(\'/contabilizacao/poi/' + jq(h).attr("title") + "/Mais_informacoes.html');\">" + jq(h).html() + "</a>"
+                });
+                c += "</div>"
+            });
+            jq(".scrollable_icons .items").html(c);
+            jq("img").error(function () {
+                jq(this).attr("src", "/apontador_v8/images/v10/icone_parceiro_quebrado.png")
+            });
+            if (B && p === true) {
+                jq(".scrollable_icons").scrollable({
+                    circular: true,
+                    next: ".mais",
+                    prev: ".anterior"
+                })
+            }
+        })
+    } else {
+        jq("div.conteudo_abas_poi").removeClass("aba_des_parceiro")
+    }
+    if (jq(document).getUrlParam("utm_source") === "email") {
+        var q = jq('<img src="/apontador_v8/images/v10/seta-avaliacao.png" width="340" />');
+        jq("body").append(q);
+        jq("#foco_avaliacao").highlight({
+            messageElement: q,
+            pixelMargin: -15
+        })
+    }
+    jq(".lista_facilidades_poi .tips").click(function (b) {
+        b.preventDefault();
+        if (!jq(this).hasClass("off")) {
+            return
+        }
+        jq(".parceiro_facilidade_poi").hide();
+        var a = jq(this).attr("rel");
+        jq("#" + a).fadeIn("fast");
+        jq(".lista_facilidades_poi .tips").addClass("off");
+        jq(this).removeClass("off")
+    })
+});
+bv_image_topo_small = "/apontador_v8/images/v10/barra_apt_small.png";
+window.onload = function () {
+    jq("#apontaofertas").html('<iframe src="http://widget.apontaofertas.com.br/widget/' + jq("#cityInputNormalized").val() + "?ap_categoryid=" + jq("#categoryId").val() + '&ncoupons=3" scrolling="no" allowtransparency="true" width="100%" height="100%" marginheight="0" marginwidth="0" frameborder="0"></iframe>');
+    var b = pageObj.user.id || "";
+    __alog.poi.start(jq("#poiId").val(), b);
+    if (jq.browser.msie && jq.browser.version === "6.0") {
+        e("/apontador_v8/js/ie6/")
+    }
+};
+recommendSuccess = function (o, m) {
+    try {
+        jq("#rec_message").show()
+    } catch (n) {}
+    var p = 0;
+    jq("#thumbsTotal_" + m).val((parseInt(jq("#thumbsTotal_" + m).val(), 10) + 1));
+    var e = parseInt(jq("#thumbsUp_" + m).val(), 10);
+    var k = parseInt(jq("#thumbsTotal_" + m).val(), 10);
+    if (o === "yes") {
+        p = Math.round(((e + 1) / (k)) * 100);
+        jq("#thumbsUp_" + m).val((parseInt(jq("#thumbsUp_" + m).val(), 10) + 1));
+        jq("button.sprite_bt_rec_up").html('<span class="sprite_icones sprite_ico_rec_up">&nbsp;</span> <span class="left pt2">Obrigado!</span>')
+    } else {
+        p = Math.round(((e) / (k)) * 100)
+    }
+    var l = (k === 1) ? " voto" : " votos";
+    jq(".percent_votos").fadeOut().html(p + "%").fadeIn();
+    recomendationWord = (jq("#thumbsUp_" + m).val() === 1) ? "recomendação" : "recomendações";
+    jq("li.rec_total").fadeOut().html('<span class="sprite_icones sprite_recomendacao">&nbsp;</span> <strong>' + jq("#thumbsUp_" + m).val() + "</strong> " + recomendationWord).fadeIn();
+    jq("div.cont_votos p").fadeOut().html(l).fadeIn();
+    var j = k.toString().split("");
+    jq("div.qt_votos span").fadeOut("fast", function () {
+        jq("div.qt_votos span").remove();
+        var a = 0;
+        for (a = 0; a < j.length; a++) {
+            jq("div.qt_votos").append("<span>" + j[a] + "</span>")
+        }
+        jq("div.qt_votos span").last().addClass("last");
+        jq("div.qt_votos span").fadeIn()
+    })
+};
+disableRecBtn = function (b) {
+    jq(".sprite_bt_rec_up").unbind("click").css("cursor", "default");
+    jq(".sprite_bt_rec_down").unbind("click").css("cursor", "default")
+};
+jq(document).ready(function () {
+    jq(".sprite_bt_rec_up").click(function () {
+        var d = this;
+        var c = jq(d).attr("id").replace("rec_up_", "");
+        disableRecBtn(c);
+        jq.post("/local/recommend/yes/" + c, "", function (a) {
+            if (a.message === "ok") {
+                recommendSuccess("yes", c);
+                jq(d).addClass("thumbsUpSelected").addClass("voted")
+            }
+        }, "json")
+    });
+    jq(".sprite_bt_rec_down").click(function (f) {
+        var e = this;
+        var d = jq(e).attr("id").replace("rec_down_", "");
+        disableRecBtn(d);
+        jq.post("/local/recommend/no/" + d, "", function (b, a, c) {
+            if (b.message === "ok") {
+                recommendSuccess("no", d);
+                jq(e).addClass("thumbsDownSelected").addClass("voted")
+            }
+        }, "json")
+    })
+});
+CrossLoader = {
+    status_msg: "",
+    call: function (f, e) {
+        this.status_msg = e;
+        var d = document.createElement("script");
+        d.src = "http://www.aponta.me/add?wt=xss&url=" + f;
+        jq("body").append(d)
+    },
+    callback: function (c) {
+        var d = this.status_msg.replace("%shorturl%", c.shortURL);
+        window.location.href = "http://twitter.com/home?status=" + d
+    }
+};
+var apontame = Class.create({
+    initialize: function (h, l, g, i, j, k) {
+        this.name = h;
+        this.adress = l;
+        this.state = g;
+        this.urlImage = i;
+        this.shortUrl = false;
+        this.url = k;
+        this.id = j;
+        this.registerListeners()
+    },
+    registerListeners: function () {},
+    openShareBox: function (b) {
+        jq(".share_box").slideToggle();
+        if (!this.shortUrl) {
+            this.generateApontame(this)
+        }
+        $("poiShortUrl").setValue(this.shortUrl)
+    },
+    setApontameUrl: function (b) {
+        this.shortUrl = b
+    },
+    generateApontame: function (b) {
+        Ajax.Request("/local/apontame.html", {
+            parameters: {
+                url: b.url
+            },
+            asynchronous: false,
+            onComplete: function (d) {
+                var a = d.responseJSON;
+                b.shortUrl = a.url
+            },
+            onFailure: function () {}
+        })
+    },
+    setMessage: function (b) {
+        b.message = "Eu recomendo " + b.name + " em " + b.state + ". E você? " + b.shortUrl + " no @apontador #apontame"
+    },
+    setData: function (b) {
+        if (!b.shortUrl) {
+            b.generateApontame(b)
+        }
+        if (!b.message) {
+            b.setMessage(b)
+        }
+    },
+    apontameTwitter: function (b) {
+        this.setData(this);
+        window.open("http://twitter.com/home?status=" + encodeURIComponent(this.message));
+        pageTracker._trackPageview("/contabilizacao/poi/botao_twitter/" + this.id + "/" + this.name);
+        Event.stop(b);
+        return false
+    }
+});
+var shortUrl = new apontame(poiName, poiAdress, poiState, urlImage, poiId, poiUrl);
+var shorted = false;
+jq(document).ready(function () {
+    jq("#doShare, #closeShare").click(function (c) {
+        jq(".share_box").slideToggle();
+        jq.scrollTo("h1", 1000);
+        if (!shorted) {
+            shorted = true;
+            var d = jq("#poiUrlInput").val();
+            jq("#poiShortUrl").val(d);
+            jq("#shortening").fadeIn();
+            jq.ajax({
+                type: "POST",
+                url: "/local/apontame.html",
+                data: {
+                    url: poiUrl
+                },
+                dataType: "json",
+                success: function (b) {
+                    if (b.url !== null) {
+                        jq("#poiShortUrl").val(b.url);
+                        shortUrl.setApontameUrl(b.url);
+                        var a = b.url + ".qrcode";
+                        jq("#shortening").fadeOut("fast", function () {
+                            jq("#qrcode").attr("src", a).fadeIn()
+                        })
+                    }
+                }
+            })
+        }
+        c.preventDefault();
+        return false
+    })
+});

@@ -1,0 +1,43 @@
+#header_full .busca form .bt_buscar {margin: 21px 10px 0 10px;}
+div.bt_buscar button {
+  height: 35px;
+  padding: 0 10px;
+  width: 135px;
+  line-height: 12px;
+  text-indent: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #005b80;
+  color: #fff;
+  border: none;
+  text-align: center;
+  box-shadow: 0px 1px 0px #fff;
+  background: #009fda; /* Old browsers */
+	background: -moz-linear-gradient(top,  #009fda 0%, #008fc5 1%, #0097d0 2%, #009ed9 3%, #006890 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009fda), color-stop(1%,#008fc5), color-stop(2%,#0097d0), color-stop(3%,#009ed9), color-stop(100%,#006890)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #009fda 0%,#008fc5 1%,#0097d0 2%,#009ed9 3%,#006890 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #009fda 0%,#008fc5 1%,#0097d0 2%,#009ed9 3%,#006890 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #009fda 0%,#008fc5 1%,#0097d0 2%,#009ed9 3%,#006890 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #009fda 0%,#008fc5 1%,#0097d0 2%,#009ed9 3%,#006890 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009fda', endColorstr='#006890',GradientType=0 ); /* IE6-9 */
+}
+div.bt_buscar button:hover {
+  background: #009fda; /* Old browsers */
+	background: -moz-linear-gradient(top,  #009fda 0%, #0092d6 1%, #009beb 2%, #00a2f7 3%, #006890 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009fda), color-stop(1%,#0092d6), color-stop(2%,#009beb), color-stop(3%,#00a2f7), color-stop(100%,#006890)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #009fda 0%,#0092d6 1%,#009beb 2%,#00a2f7 3%,#006890 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #009fda 0%,#0092d6 1%,#009beb 2%,#00a2f7 3%,#006890 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #009fda 0%,#0092d6 1%,#009beb 2%,#00a2f7 3%,#006890 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #009fda 0%,#0092d6 1%,#009beb 2%,#00a2f7 3%,#006890 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009fda', endColorstr='#006890',GradientType=0 ); /* IE6-9 */
+}
+
+#header_full .busca .separador_top {
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #fff;
+  height: 36px;
+  display: block;
+  float: left;
+  width: 0;
+  margin: 21px 0 0 10px;
+}
