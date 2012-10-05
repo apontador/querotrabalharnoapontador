@@ -35,6 +35,8 @@ Como Se Candidatar - Front End
     * Ruby
     * Python
 
+* Nos impressionar não é, necessáriamente, trabalhoso. Escolha algo que você acha que está errado (quanto mais errado você achar que está, melhor. Isto te ajudará a defender a sua ideia) e faça da melhor forma que puder, de forma que você tenha orgulho! Pense que este pode ser o código com que você trabalhará nos próximos anos da sua vida. O tamanho da alteração não é o mais importante, mas sim o quão bem executado e manutenível.
+
 FAQ
 ---
 
@@ -50,7 +52,7 @@ FAQ
 
     Isto gerará uma pasta chamada **querotrabalharnoapontador.git**. Você deve compactá-la, anexar em um e-mail e enviá-la para nós.
 
-3. Nos envie por e-mail um patch com seus commits, ex:
+2. Nos envie por e-mail um patch com seus commits, ex:
 
     ```bash
     git format-patch --binary --stdout -10 > feature.patch
@@ -58,7 +60,7 @@ FAQ
 
     No caso acima, *10* é a quantidade de commits que serão integrados no patch. Este comando criará um arquivo chamado feature.patch que deverá ser anexado ao e-mail.
 
-2. Crie um repositório privado no github ou outro serviço. Quando você terminar, nos envie um e-mail. Nós vamos lhe informar que usuário você pode adicionar entre os colaboradores do seu projeto.
+3. Crie um repositório privado no github ou outro serviço. Quando você terminar, nos envie um e-mail. Nós vamos lhe informar que usuário você pode adicionar entre os colaboradores do seu projeto.
 
     **Dica**: O BitBucket tem repositórios git privados gratuitos.
 
