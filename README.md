@@ -64,7 +64,7 @@ FAQ
 
     **Dica**: O BitBucket tem repositórios git privados gratuitos.
 
-###O que vocês querem é que eu trabalhe em cima da página de vocês? Só posso fazer alguns blocos de codigos modificando o que achar melhor?
+###O que vocês querem é que eu trabalhe em cima da página de vocês? Só posso fazer alguns blocos de código?
 
 **R**: O objetivo de mostrar ao candidato a página do apontador é fazer ele partir de um objetivo definido (ele pode ver que elementos/funcionalidades nós já temos para melhorar e propor novos).
 
