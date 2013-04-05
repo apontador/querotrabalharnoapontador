@@ -6,7 +6,7 @@ Quer trabalhar com pessoas que têm paixão pelo que fazem e ajudar a construir 
 Como Se Candidatar - Front End
 ------------------------------
 
-1. Acesse uma de nossas páginas de local, ex: http://www.apontador.com.br/local/sp/sao_paulo/bares_e_casas_noturnas/Y2RX4EP2/bar_do_juarez_.html
+1. Acesse a home page do Apontador: http://www.apontador.com.br/
 
 2. Pense sobre o que você gosta e o que não gosta na página
 
@@ -35,7 +35,7 @@ Como Se Candidatar - Front End
     * Ruby
     * Python
 
-* Nos impressionar não é, necessáriamente, trabalhoso. Escolha algo que você acha que está errado (quanto mais errado você achar que está, melhor. Isto te ajudará a defender a sua ideia) e faça da melhor forma que puder, de forma que você tenha orgulho! Pense que este pode ser o código com que você trabalhará nos próximos anos da sua vida. O tamanho da alteração não é o mais importante, mas sim o quão bem executado e manutenível.
+* Nos impressionar não é, necessariamente, trabalhoso. Escolha algo que você acha que está errado (quanto mais errado você achar que está, melhor. Isto te ajudará a defender a sua ideia) e faça da melhor forma que puder, de forma que você tenha orgulho! Pense que este pode ser o código com que você trabalhará nos próximos anos da sua vida. O tamanho da alteração não é o mais importante, mas sim o quão bem executado e manutenível.
 
 FAQ
 ---
