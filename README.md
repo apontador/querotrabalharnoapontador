@@ -6,80 +6,38 @@ Quer trabalhar com pessoas que têm paixão pelo que fazem e ajudar a construir 
 Como Se Candidatar - Front End
 ------------------------------
 
-1. Acesse a home page do Apontador: http://www.apontador.com.br/
+1. Acesse a página de locais do Apontador:
+ http://www.apontador.com.br/local/sp/sao_paulo/parques/B37822W2/parque_do_ibirapuera.html
 
 2. Pense sobre o que você gosta e o que não gosta na página
 
-3. Faça um fork neste projeto e adicione as melhorias que você quiser (pode ser visual, estrutura de código ou ambos)
+3. Faça um fork neste projeto e adicione as melhorias que você quiser (pode ser visual, estrutura de código ou ambos). Não é necessario colocar banners, nem replicar todas as funcionalidades. Mas pense em como você tornaria essa página melhor!
 
-4. Mande um pull request com suas alterações e um texto defendendo-as em comparação com a página atual (a sua argumentação é importante).
+4. Mande um pull request com suas alterações
 
 ###Regras
 
 * Você pode alterar a página o quanto quiser -- Pode fazer do zero se desejar
 
-* Você pode incluir arquivos no projeto no formato que achar melhor para vender sua ideia (PSD, PDF, HTML, HTML + JavaScript, Pequeno projeto no seu framework preferido, etc). Nos impressione, seu empenho será levado em conta :)
+* Você pode utilizar as tecnologias que achar melhor (React.js, Angular.js, Ember.js, Webpack, Babel e etc)
 
 ###Apreciamos
 
-* O uso de dados reais obtidos através da [nossa API](http://api.apontador.com.br/pt/)
+* O uso de dados reais obtidos através da [nossa API](https://api.apontador.com.br/v2/docs/)
 
-* O uso de tecnologias que usamos aqui, ou poderíamos nos beneficiar, como:
+* Organização do código (HTML, CSS e Javascript)
 
-    * JavaScript
-    * HTML5
-    * CSS3
-    * Less
-    * Sass
-    * PHP
-    * Ruby
-    * Python
+* Testes unitários
+
+* Utilização de alguma metodologia CSS (OOCSS, SMACSS, BEM, DRY CSS)
 
 * Nos impressionar não é, necessariamente, trabalhoso. Escolha algo que você acha que está errado (quanto mais errado você achar que está, melhor. Isto te ajudará a defender a sua ideia) e faça da melhor forma que puder, de forma que você tenha orgulho! Pense que este pode ser o código com que você trabalhará nos próximos anos da sua vida. O tamanho da alteração não é o mais importante, mas sim o quão bem executado e manutenível.
 
-FAQ
----
-
-###Não quero fazer um fork público do projeto, posso enviar minha contribuição de outra forma?
-
-**R**: Claro, além do seu trabalho, nós queremos ver como você se organiza com o controle de versão. Sendo assim, você tem algumas alternativas:
-
-1. Nos envie o *bare file* do git por e-mail. Depois de ter feito seus commits, você pode gerar este arquivo executando no terminal:
-
-    ```bash
-    git clone --bare /caminho/para/seu/repositorio/querotrabalharnoapontador
-    ```
-
-    Isto gerará uma pasta chamada **querotrabalharnoapontador.git**. Você deve compactá-la, anexar em um e-mail e enviá-la para nós.
-
-2. Nos envie por e-mail um patch com seus commits, ex:
-
-    ```bash
-    git format-patch --binary --stdout -10 > feature.patch
-    ```
-
-    No caso acima, *10* é a quantidade de commits que serão integrados no patch. Este comando criará um arquivo chamado feature.patch que deverá ser anexado ao e-mail.
-
-3. Crie um repositório privado no github ou outro serviço. Quando você terminar, nos envie um e-mail. Nós vamos lhe informar que usuário você pode adicionar entre os colaboradores do seu projeto.
-
-    **Dica**: O BitBucket tem repositórios git privados gratuitos.
-
-###O que vocês querem é que eu trabalhe em cima da página de vocês? Só posso fazer alguns blocos de código?
-
-**R**: O objetivo de mostrar ao candidato a página do apontador é fazer ele partir de um objetivo definido (ele pode ver que elementos/funcionalidades nós já temos para melhorar e propor novos).
-
-Você pode escrever todo o HTML, CSS, JavaScript e até algum back-end usando a nossa API se você quiser -- Quanto mais código seu você nos mostrar, mais atributos poderemos avaliar para te chamar. Apenas lembre-se de que [nos impressionar não é, necessáriamente, trabalhoso](#apreciamos). :)
 
 Contato
 -------
 
-Mande um e-mail para: leonardo@apontador.com
-
-Outras Vagas
-------------
-
-Veja em: http://ondetrabalhar.com/apontador
-
+Mande um e-mail para: tulio.rodrigues@apontador.com
 
 Sobre a Empresa
 ---------------
