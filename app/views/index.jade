@@ -2,7 +2,8 @@ extends layout
 
 block content
   - var enderecoFormatado = `${place.address.street}, ${place.address.number}, ${place.address.complement}, ${place.address.district}\n ${place.address.city} - ${place.address.state}, CEP: ${place.address.zipcode}`;
-    if photo
+    // Carrossel com fotos do lugar
+    if photos
       .row
         .col-md-12
           #theCarousel.carousel.slide.multi-item-carousel
@@ -19,42 +20,22 @@ block content
               i.glyphicon.glyphicon-chevron-left
             a.right.carousel-control(href='#theCarousel', data-slide='next')
               i.glyphicon.glyphicon-chevron-right
-        script.
-          $('.multi-item-carousel').carousel({
-            interval: false
-          });
-          
-          $('.multi-item-carousel .carousel-item').each(function(){
-            var next = $(this).next();
-            if (!next.length) {
-              next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-            
-            if (next.next().length>0) {
-              next.next().children(':first-child').clone().appendTo($(this));
-            } else {
-            	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-            }
-          });
-          
-          
           
     .row(style="margin-top:40px")
       .container  
         .col-md-8
-          //Dados
+          //Breadcrumb
           .thumbnail
             | Apontador > #{place.categories[0].name} > #{place.categories[0].subcategory.name}
           
           h2.place-name #{place.name}
-          
+          //Avaliação
           .rating
             each index in Array(parseInt(place.statistics.rating))
               i.fa.fa-star
             each index in Array(parseInt(5 - place.statistics.rating))
               i.fa.fa-star-o
-
+          //Links
           ul.links-details.clearfix
             li.link-detail 
               i.fa.fa-star
@@ -63,7 +44,7 @@ block content
               i.fa.fa-share
               | &nbsp; Compartilhar
               
-              
+          //Dados do lugar    
           .box-white    
             h4.display-5 Endereço
             p.card-text(style="padding-left:40px")
@@ -79,14 +60,13 @@ block content
                   li(style="list-style:none")
                     i.fa.fa-phone 
                     | &nbsp; #{phone}
-                      
+          //Tags            
           if place.tags
             ul.place-tags.clearfix
               each tag in place.tags
                 li.place-tag #{tag.value}
           
-          //Avaliações
-          
+          //Lista de Avaliações
           div(style="border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding:20px 0")
             h1.nice
               fa.fa.fa-star
@@ -112,7 +92,6 @@ block content
                 
         
         .col-md-4
-        
           // Mapa
           .card
             .card-header
@@ -123,7 +102,7 @@ block content
             .card-block
               iframe(width="100%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=#{enderecoFormatado}&key=AIzaSyDHYsZARIIjGtIZMVtClCgMxVFC0qPhabQ" allowfullscreen)
           
-          // Dados adicionais
+          // Galeria de Fotos
           if photo
             .card
               .card-header 
@@ -136,7 +115,7 @@ block content
                   each photo in photos
                     div.galery-photo
                       img(src="#{photo.small}")
-            
+          // Onde estacionar?  
           div.clearfix  
             .card
               .card-header
