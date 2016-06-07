@@ -1,6 +1,8 @@
 var path = require('path');
 var friendlyFormatter = require('eslint-friendly-formatter');
 var autoprefixer = require('autoprefixer');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -28,5 +30,20 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx', '.json']
     },
-    plugins: require('./plugins')
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            React: 'react',
+            Reflux: 'reflux'
+        }),
+        new webpack.NoErrorsPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'Apontador',
+            template: './src/index.html',
+            scriptFilename: 'app.js'
+        })
+    ]
 };

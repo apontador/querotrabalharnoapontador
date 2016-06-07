@@ -1,5 +1,7 @@
 var path = require('path');
 var autoprefixer = require('autoprefixer');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -10,7 +12,7 @@ module.exports = {
     ],
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'app.min.js'
+        filename: 'app.js'
     },
     module: {
         loaders: require('./loaders')
@@ -21,5 +23,20 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx', '.json']
     },
-    plugins: require('./plugins')
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            React: 'react',
+            Reflux: 'reflux'
+        }),
+        new webpack.NoErrorsPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'Apontador',
+            template: './src/index.html',
+            scriptFilename: 'app.min.js'
+        })
+    ]
 };
