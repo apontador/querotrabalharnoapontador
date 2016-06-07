@@ -79,7 +79,7 @@
     "node": ">=5.6.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./bin/www",
     "build": "./node_modules/.bin/webpack",
     "dist": "./node_modules/.bin/webpack -p --config webpack.production.config.js",
     "lint": "./node_modules/.bin/eslint src/"
