@@ -5,13 +5,11 @@ var bodyParser = require('body-parser');
 var compression = require('compression');
 var morgan = require('morgan');
 var helmet = require('helmet');
-
-var isDevelopment = (process.env.NODE_ENV !== 'production');
-var staticPath = path.join(__dirname, !isDevelopment ? 'dist' : 'src');
+var config = require('./config');
+var staticPath = path.join(__dirname, !config.isDevelopment ? 'dist' : 'src');
 var app = express();
-var PORT = process.env.PORT || 8081;
 
-if(isDevelopment){
+if (config.isDevelopment) {
     require('./dev')(app);
 }
 
@@ -29,8 +27,8 @@ app.get('/', function (req, res) {
     });
 });
 
-app.listen(PORT, function () {
-    console.log('Express server listening on port ' + PORT);
+app.listen(config.port, function () {
+    console.log('Express server listening on port ' + config.port);
 });
 
 module.exports = app;
