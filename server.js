@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 
 app.use(session({ resave: false, saveUninitialized: false, secret: 'keyboardCat' }));
 
-app.use(express.static(path.join(__dirname, staticPath)));
+app.use(express.static(path.join(staticPath)));
 
 app.get('/', function (req, res) {
     res.sendFile('/index.html', {
