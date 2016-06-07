@@ -28,10 +28,16 @@ app.use(session({ resave: false, saveUninitialized: false, secret: 'keyboardCat'
 
 app.use(express.static(path.join(staticPath)));
 
-app.get('/', function (req, res) {
+app.get('*', function (req, res) {
     res.sendFile('/index.html', {
         root: staticPath
     });
+});
+
+app.use(function (req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 module.exports = app;
