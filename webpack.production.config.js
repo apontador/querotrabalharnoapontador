@@ -12,7 +12,7 @@ module.exports = {
     ],
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'app.js'
+        filename: 'app.min.js'
     },
     module: {
         loaders: require('./loaders')
