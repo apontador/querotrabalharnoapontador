@@ -15,7 +15,7 @@ module.exports = {
         filename: 'app.min.js'
     },
     module: {
-        loaders: require('./loaders')
+        loaders: require('./webpack.loaders')
     },
     postcss: function () {
         return [autoprefixer({ browsers: ['last 3 versions'] })];
