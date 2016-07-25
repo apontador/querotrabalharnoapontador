@@ -1,0 +1,117 @@
+/*
++----------------------------------------------------------------+
+:: GENERAL
++----------------------------------------------------------------+
+*/
+
+body{
+	font-family: $font-default;
+	padding-top: 70px;
+}
+
+button{
+	cursor: pointer;
+}
+
+h1{
+	font-size: 30px;
+	font-weight: 700;
+}
+
+h2{
+	font-size: 16px;
+}
+
+h3{
+	font-size: 20px;
+	font-weight: 700;
+}
+
+b, strong{
+	font-weight: 700;
+}
+
+a{
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+p{
+	color: #535353;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.background-orange{
+	background: $orange;
+}
+
+.image-sprite{
+	display: inline-block;
+}
+
+.fixed{
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+.list-inline{
+	li{
+		float: left;
+		margin-right: 5px;
+	}
+}
+
+.title{
+	float: left;
+	color: #333;
+	margin: 10px 0;
+	width: 100%;
+}
+
+.link-blue{
+	color: $blue;
+	text-decoration: none;
+}
+
+.link-gray{
+	color: #969696;
+}
+
+.link-dark-gray{
+	color: $gray;
+}
+
+.link-orange-light{
+	color: $orange-light;
+}
+
+.link-orange{
+	color: $orange;
+}
+
+
+.button-second{
+	border: 1px solid #ded8cd;
+	@include border-radius(3px);
+	padding: 2px 6px;
+	color: $gray;
+	&:hover{
+		background: #efece8;
+		text-decoration: none;
+	}
+}
+
+.image-border{
+	border: 1px solid #e3e3e3;
+	padding: 3px;
+}

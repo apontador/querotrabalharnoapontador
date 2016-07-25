@@ -1,0 +1,77 @@
+/*
++----------------------------------------------------------------+
+:: SIDEBAR
++----------------------------------------------------------------+
+*/
+
+.sidebar{
+	width: 300px;
+	float: right;
+}
+
+.similar-places{
+	width: 300px;
+	//height: 61px;
+	float: left;
+	margin: 10px 0 0 0;
+	//border: 1px solid #000;
+	//background: #000;
+
+	li{
+		margin-bottom: 10px;
+		//background: #fef4b9;
+		padding: 5px;
+		float: left;
+	}
+}
+
+.similar-place-first{
+	background: #fef4b9;
+}
+
+.similar-places-infos{
+	float: right;
+	width: 210px;
+	height: 50px;
+	font-size: 12px;
+	margin-left: 5px;
+
+	span{
+		float: left;
+		width: 100%;
+		margin: 5px 0 0 0;
+		color: #979797;
+	}
+}
+
+.similar-places-number-aval{
+	font-size: 10px;
+}
+
+.similar-places-category{
+	font-size: 11px;
+}
+
+.similar-places-title{
+	float: left;
+}
+
+.bottom-similar-box{
+	float: left;
+	width: 100%;
+	font-size: 11px;
+	text-align: center;
+}
+
+.border-bottom-similar{
+	width: 110px;
+	height: 1px;
+	border-bottom: 1px dotted #ccc;
+	float: left;
+	margin: 4px 0 0 0;
+}
+
+.link-bottom-similar{
+	float: left;
+	margin: 0 10px;
+}

@@ -20,7 +20,7 @@ gulp.task('htmlmin', function() {
 // Scripts
 gulp.task('scripts', function(){
 	return gulp
-	.src('src/js/*.js')
+	.src('src/js/**/*.js')
 	.pipe(uglify())
 	.pipe(concat('scripts.min.js'))
 	.pipe(gulp.dest(directory + '/js'));
@@ -57,7 +57,7 @@ gulp.task('sprite', function() {
 
 // Browser Sync
 gulp.task('browser-sync', function() {
-	browserSync.init(["index.html", "build/css/style.min.css", "build/js/scripts.min.js"], {
+	browserSync.init(["build/index.html", "build/css/style.min.css", "build/js/scripts.min.js"], {
 		server: {
 			baseDir: "./"
 		}
@@ -66,9 +66,9 @@ gulp.task('browser-sync', function() {
 
 // Watch 
 gulp.task('watch', function(){
-	gulp.watch('src/js/*.js', ['scripts']);
-	gulp.watch('src/sass/*.scss', ['sass']);
-	gulp.watch('src/*.html', ['htmlmin']);
+	gulp.watch('src/js/**/*.js', ['scripts']);
+	gulp.watch('src/sass/**/*.scss', ['sass']);
+	gulp.watch('src/**/*.html', ['htmlmin']);
 });
 
 gulp.task('default', ['scripts', 'sass', 'images', 'browser-sync', 'sprite', 'htmlmin', 'watch']);
