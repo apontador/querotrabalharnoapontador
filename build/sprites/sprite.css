@@ -11,61 +11,67 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 .icon-arrow {
   background-image: url(sprite.png);
-  background-position: -25px -141px;
+  background-position: -91px -98px;
   width: 10px;
   height: 12px;
 }
 .icon-clock {
   background-image: url(sprite.png);
-  background-position: -116px -118px;
+  background-position: -91px -82px;
   width: 11px;
   height: 11px;
 }
 .icon-facebook {
   background-image: url(sprite.png);
-  background-position: -72px -82px;
+  background-position: -118px -52px;
   width: 36px;
   height: 36px;
 }
 .icon-flag-br {
   background-image: url(sprite.png);
-  background-position: -98px -118px;
+  background-position: -91px -50px;
   width: 18px;
   height: 12px;
 }
 .icon-flag-es {
   background-image: url(sprite.png);
-  background-position: -80px -118px;
+  background-position: -185px -100px;
   width: 18px;
   height: 12px;
 }
 .icon-flag-us {
   background-image: url(sprite.png);
-  background-position: -62px -118px;
+  background-position: -185px -88px;
   width: 18px;
   height: 12px;
 }
 .icon-google {
   background-image: url(sprite.png);
-  background-position: -108px -82px;
+  background-position: -154px -52px;
   width: 36px;
   height: 36px;
 }
+.icon-like {
+  background-image: url(sprite.png);
+  background-position: -190px -33px;
+  width: 15px;
+  height: 15px;
+}
 .icon-linkedin {
   background-image: url(sprite.png);
-  background-position: 0px -82px;
+  background-position: -154px -16px;
   width: 36px;
   height: 36px;
 }
 .icon-logo-outbrain1 {
   background-image: url(sprite.png);
-  background-position: -91px -66px;
+  background-position: -118px -100px;
   width: 67px;
   height: 12px;
 }
 .icon-logo-outbrain2 {
   background-image: url(sprite.png);
-  background-position: -91px -50px;
+  background-position: -118px -88px;
   width: 67px;
   height: 12px;
 }
@@ -77,19 +83,25 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .icon-phone {
   background-image: url(sprite.png);
-  background-position: -14px -141px;
+  background-position: -105px -66px;
   width: 11px;
   height: 14px;
 }
+.icon-photo {
+  background-image: url(sprite.png);
+  background-position: -70px 0px;
+  width: 48px;
+  height: 48px;
+}
 .icon-pin {
   background-image: url(sprite.png);
-  background-position: -161px 0px;
+  background-position: -46px -114px;
   width: 9px;
   height: 13px;
 }
 .icon-rating1 {
   background-image: url(sprite.png);
-  background-position: -70px 0px;
+  background-position: -118px 0px;
   width: 91px;
   height: 16px;
 }
@@ -101,73 +113,73 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .icon-rating3 {
   background-image: url(sprite.png);
-  background-position: 0px -50px;
+  background-position: 0px -98px;
   width: 91px;
   height: 16px;
 }
 .icon-rating4 {
   background-image: url(sprite.png);
-  background-position: -70px -32px;
+  background-position: 0px -82px;
   width: 91px;
   height: 16px;
 }
 .icon-rating5 {
   background-image: url(sprite.png);
-  background-position: -70px -16px;
+  background-position: 0px -50px;
   width: 91px;
   height: 16px;
 }
 .icon-recommend-gray {
   background-image: url(sprite.png);
-  background-position: -144px -99px;
+  background-position: -190px -52px;
   width: 16px;
   height: 14px;
 }
 .icon-recommend {
   background-image: url(sprite.png);
-  background-position: -46px -118px;
+  background-position: -190px -66px;
   width: 16px;
   height: 14px;
 }
 .icon-search {
   background-image: url(sprite.png);
-  background-position: -144px -82px;
+  background-position: -190px -16px;
   width: 17px;
   height: 17px;
 }
 .icon-star-off-g {
   background-image: url(sprite.png);
-  background-position: -23px -118px;
+  background-position: 0px -114px;
   width: 23px;
   height: 23px;
 }
 .icon-star-off-p {
   background-image: url(sprite.png);
-  background-position: -161px -13px;
+  background-position: -102px -82px;
   width: 9px;
   height: 9px;
 }
 .icon-star-on-g {
   background-image: url(sprite.png);
-  background-position: 0px -118px;
+  background-position: -23px -114px;
   width: 23px;
   height: 23px;
 }
 .icon-star-on-p {
   background-image: url(sprite.png);
-  background-position: -161px -22px;
+  background-position: -109px -50px;
   width: 9px;
   height: 9px;
 }
 .icon-twitter {
   background-image: url(sprite.png);
-  background-position: -36px -82px;
+  background-position: -118px -16px;
   width: 36px;
   height: 36px;
 }
 .icon-user {
   background-image: url(sprite.png);
-  background-position: 0px -141px;
+  background-position: -91px -66px;
   width: 14px;
   height: 15px;
 }

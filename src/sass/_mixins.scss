@@ -12,3 +12,10 @@
       -ms-box-sizing: $box-sizing;
           box-sizing: $box-sizing;
 }
+
+@mixin opacity($opacity){
+	-webkit-opacity: $opacity;
+     -moz-opacity: $opacity;
+      -ms-opacity: $opacity;
+          opacity: $opacity;
+}

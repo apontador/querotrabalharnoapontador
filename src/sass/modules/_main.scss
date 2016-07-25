@@ -50,6 +50,13 @@
 	color: #545454;
 }
 
+
+/*
++----------------------------------------------------------------+
+:: GALLERY
++----------------------------------------------------------------+
+*/
+
 .gallery{
 	width: 230px;
 	height: 180px;
@@ -61,7 +68,22 @@
 		//border: 1px solid #000;
 		width: 230px;
 		height: 153px;
-		background: #000;
+		//background: #000;
+		img{
+			width: 230px;
+			height: 153px;
+		}
+
+		span{
+			font-size: 10px;
+			color: #fff;
+			padding: 3px;
+			background: #000;
+			@include opacity(0.8);
+			@include border-radius(3px);
+			position: absolute;
+			margin: -25px 0 0 5px;
+		}
 	}
 
 	ul{
@@ -70,7 +92,12 @@
 			//border: 1px solid #333;
 			width: 42px;
 			height: 27px;
-			background: #000;
+			//background: #000;
+
+			img{
+				width: 42px;
+				height: 27px;
+			}
 		}
 
 		.last{
@@ -78,6 +105,13 @@
 		}
 	}
 }
+
+
+/*
++----------------------------------------------------------------+
+:: INFOS PLACES
++----------------------------------------------------------------+
+*/
 
 .place-info{
 	margin: 10px 0 0 0;
@@ -89,7 +123,7 @@
 	li{
 		margin-bottom: 18px;
 	}
-}
+
 
 .icon-phone, .icon-pin, .icon-clock, .icon-arrow, .icon-recommend-gray{
 	float: left;
@@ -131,12 +165,24 @@
 	margin: 2px 0 0 0;
 }
 
+}
+
+
+/*
++----------------------------------------------------------------+
+:: TABS
++----------------------------------------------------------------+
+*/
+
 .tabs{
 	float: left;
 	margin: 85px 0 40px 0;
 	width: 100%;
 	border-top: 1px dotted #ccc;
+	border-bottom: 1px dotted #ccc;
 	padding: 20px 0;
+
+	
 }
 
 .tabs-nav{
@@ -153,6 +199,7 @@
 			text-transform: uppercase;
 			padding-bottom: 8px;
 			font-weight: bold;
+			cursor: pointer;
 			&:hover{
 				text-decoration: none;
 			}
@@ -170,7 +217,63 @@
 		font-size: 16px;
 		font-weight: normal;
 	}
+
+	p{
+		font-size: 12px;
+	}
+
+	.icon-pin{
+		margin: 2px 8px 0 0;
+		float: left;
+	}
 }
+
+.img-gallery-tabs{
+	float: left;
+	width: 200px;
+	height: 150px;
+	margin-right: 12px;
+	background-color: #eee;
+
+	img{
+		width: 200px;
+		height: 150px;
+	}
+
+	a{
+		//display: block;
+		
+	}
+}
+
+.gallery-more{
+	//display: inline-block;
+	width: 200px;
+	height: 150px;
+	background: #000;
+	z-index: 9;
+	position: absolute;
+	@include opacity(0.5);
+	color: #fff;
+	text-align: center;
+	font-size: 13px;
+	//line-height: 20px;
+
+	i{
+		position: relative;
+		margin: 35px auto 5px auto;
+		display: block;
+	}
+
+}
+
+
+
+/*
++----------------------------------------------------------------+
+:: NEWS
++----------------------------------------------------------------+
+*/
 
 
 .news-outbrain{
@@ -185,6 +288,7 @@
 	//height: 200px;
 	margin: 0 10px 10px 0;
 	float: left;
+	padding-bottom: 20px;
 }
 
 .news-image{
@@ -201,8 +305,10 @@
 }
 
 .news-txt-title{
-	font-size: 14px;
-	color: 000;
+	a{
+		font-size: 14px;
+		color: #000;
+	}
 }
 
 .news-txt-font{
@@ -215,15 +321,28 @@
 .recommend-outbrain{
 	color: #999;
 	font-size: 11px;
-	margin: 20px 15px -10px 0;
+	margin: -15px 15px -10px 0;
 	float: right;
 	&:hover{
 		text-decoration: none;
 		i{
-			 background-position: -91px -50px;
+			 background-position: -118px -88px;
 		}
 	}
 }
+
+.button-container{
+	float: left;
+	width: 100%;
+	margin: 10px 0 20px 0;
+}
+
+
+/*
++----------------------------------------------------------------+
+:: RATING
++----------------------------------------------------------------+
+*/
 
 .title-rate{
 	font-size: 30px;
@@ -264,4 +383,9 @@
 		color: #525252;
 		font-size: 14px;
 	}
+}
+
+.footer-rate-text{
+	float: left;
+	margin: 20px 0;
 }
