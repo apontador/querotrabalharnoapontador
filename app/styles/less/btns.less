@@ -1,0 +1,85 @@
+.btn {
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0 none;
+  box-shadow: none;
+  border-radius: 3px;
+  padding-top: 7px;
+  outline: none;
+  display: block;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    outline: none !important;
+  }
+
+  &.color-black {color: @colorBlack;}
+  
+  &.inverter {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      text-decoration: underline;
+    }
+  }
+
+
+  &.sm{font-size: 12px;}
+
+  &.btn-link {
+    background: transparent;
+    padding: 0;    
+  }
+
+  &.btn-primary { 
+    font-size: 14px;
+    text-decoration: none;
+    color: #d03a00;   
+    background: transparent;
+    padding: 0;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      color: @colorBlack;         
+    }
+  }
+
+  &.btn-secundary { 
+    font-size: 12px;
+    text-decoration: none;
+    color: #d03a00;   
+    background: transparent;
+    padding: 0;
+    border: 1px solid #CCC;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      color: @colorBlack;         
+    }
+  }
+
+  &.btn-tertiary { 
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFF;
+    background: #f9d036;
+    padding: 0;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      background: #f9d036+20;
+    }
+  }
+}

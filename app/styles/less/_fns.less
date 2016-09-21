@@ -1,0 +1,36 @@
+
+.degrade(@direction: left, @color0: @b2wBlack, @color1: @b2wBlack, @color2: transparent){
+  background: @color1; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(@direction, @color0, @color1, @color2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(@direction, @color0, @color1, @color2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(@direction, @color0, @color1, @color2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(@direction, @color0, @color1, @color2); /* Standard syntax (must be last) */
+}
+
+.degradeRadial(@color0: @b2wBlack, @color1: @b2wBlack, @color2: transparent){
+  background: @color1; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(@color0, @color1, @color2); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(@color0, @color1, @color2); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(@color0, @color1, @color2); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(@color0, @color1, @color2); /* Standard syntax (must be last) */
+}
+
+.beforeAndAfter(@width: 0, @height: 0, @top:0, @left:0, @right:auto, @bottom: auto){
+  display: block;
+  content: '';
+  position: absolute;
+  top: @top;
+  bottom: @bottom;
+  left: @left;
+  right: @right;
+  height: @height;
+  width: @width;
+}
+
+.transition(@time: 1s, @style: all, @type: ease-out){
+  -webkit-transition: @style @type @time;
+  -moz-transition: @style @type @time;
+  -ms-transition: @style @type @time;
+  -o-transition: @style @type @time;
+  transition: @style @type @time;
+}

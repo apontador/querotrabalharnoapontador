@@ -1,0 +1,38 @@
+
+.font-h1        {font-size: @fontH1 !important;}
+.font-h2        {font-size: @fontH2 !important;}
+.font-h3        {font-size: @fontH3 !important;}
+.font-h4        {font-size: @fontH4 !important;}
+.font-p         {font-size: @fontP !important;}
+.font-psmall    {font-size: @fontPsmall !important;}
+.font-bold      {font-weight: bold !important;}
+
+.font-weight    {font-weight: bold !important;}
+.font-noweight  {font-weight: normal !important;}
+.font-uppercase {text-transform: uppercase !important;}
+
+.text-center    {text-align: center !important;}
+.text-left      {text-align: left !important;}
+.text-right     {text-align: right !important;}
+
+.color-link 	{
+				color: #428bca;
+				&:hover {color: #2a6496; text-decoration: underline;}
+}
+
+body {
+  font-family: 'Verdana';
+  color: @colorBlack;
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {line-height: normal; margin: 0; padding: 0;}
+
+@media (max-width: 768px){
+	.font-h1        {font-size: @MfontH1 !important;}
+	.font-h2        {font-size: @MfontH2 !important;}
+	.font-h3        {font-size: @MfontH3 !important;}
+	.font-h4        {font-size: @MfontH4 !important;}
+	.font-p         {font-size: @MfontP !important;}
+	.font-psmall    {font-size: @MfontPsmall !important;}
+}

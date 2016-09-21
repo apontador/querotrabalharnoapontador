@@ -1,0 +1,112 @@
+// Base
+@import '_vars.less';
+@import '_fns.less';
+@import 'fonts.less';
+@import 'btns.less';
+@import 'icons.less';
+
+// Structure
+@import 'structure/header.less';
+
+//Widgets
+@import 'widget/abas.less';
+@import 'widget/menus.less';
+@import 'widget/image-featured.less';
+@import 'widget/carousel.less';
+@import 'widget/list.less';
+@import 'widget/reviews-stars.less';
+
+//Widgets
+@import 'pages/detalhe.less';
+
+
+html, body {
+  height: 100%;
+
+  .viewApp  {
+    //min-height: 100%; 
+    position: relative;
+    padding-bottom: 40px;
+    min-height: 99.8%;
+    > div > .container{
+      position: relative;
+      padding-top: @HeaderPagH+10px;
+      padding-bottom: 30px;
+      z-index: 5;
+    }
+
+    // Footer
+    #footerPag {
+      position: absolute; left: 0; top: 100%; width: 100%; margin-top: -40px;
+      display: block;
+      z-index: 9;
+
+      .content-footer {overflow: hidden; padding: 0;}
+
+        .copyright {
+          background-color: @HeaderBG + 20;
+          border-top: 1px solid @HeaderBG - 10;
+          height: 40px; line-height: 40px;
+          text-align: center; color:  @HeaderBG - 80; font-size: 14px;
+          margin: 0; padding: 0;
+        }
+    }
+  }
+}
+
+
+.content-floatRight { 
+  > * {float: right;}
+}
+
+.nopadding {padding: 0 !important;}
+.nopadding-left {padding-left: 0 !important;}
+.nopadding-right {padding-right: 0 !important;}
+.pull-right {float: right;}
+.row {padding: 0; margin: 0;}
+
+#breadcrumb {border-bottom: 1px solid #CCC; margin-bottom: 20px;}
+
+//ALERT {INICIO}
+.alert-section {list-style: none;}
+.alert{
+  position: relative;
+  text-align: left;
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 0;
+  border: 0 none;
+  padding: 20px 20px 20px 10px;
+
+
+  li {
+    display: table;
+    width: 100%;
+    
+    .close {position: absolute; top: 10px; right: 15px;}
+    .alert-content {display: table-cell; vertical-align: middle;}    
+
+    .alert-content {
+      width: 99%;
+      p, h4 {margin: 0;}
+      h4 {font-size: 16px;}
+    }
+  }
+
+
+  &.alert-danger  {background-color: @colorError;}
+  &.alert-warning {background-color: @colorWarn;}
+  &.alert-success {background-color: @colorSucess;}
+}
+//ALERT {FIM}
+
+
+@media (max-width: 768px){
+  html, body {
+    .viewApp  {
+      > div > .container{
+        padding-top: 10px;        
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+
+@colorCarousel: @HeaderBG - 20;
+
+.widget-carousel {
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  position: relative;
+
+  .carousel-inner-preview {
+    position: relative;
+    display: block;
+    border: 2px solid @colorCarousel;
+    box-shadow: 0 0 55px 10px #000;
+
+    .item {
+      opacity: 0;
+      display: block;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #FFF;
+      overflow: hidden;
+
+
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -ms-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+      .content-image{
+        display: table; vertical-align: middle;
+        height: 100%; width: 100%;
+
+        img{width: 100%;}
+
+        &.imgAdapte{
+          img{height: 100%; width: auto;}
+        }
+      }
+
+      &.active{opacity: 1; z-index: 10;}
+
+      &.errorExternal {
+        border: 1px solid red;
+
+        .contentError {top: auto; bottom: 5px; right: 15px;}
+      }
+    }
+
+    .interaction{
+      width: 100%;
+
+      text-align: center;
+      img{margin-top: 30%;}
+    }
+  }
+
+  .carousel-indicators-preview{
+    margin-bottom: 0;
+    z-index: 12;
+
+    ol{padding: 0; margin: 0;}
+
+    li{
+      text-indent: 0;        
+      background-color: #FFF;        
+      color: @colorCarousel;
+      overflow: hidden;
+      position: relative;
+
+      &.active{
+        background-color: @colorCarousel;
+        border-color: @colorCarousel;
+        color: #FFF;
+      }
+    }
+  }
+
+  .carousel-indicators-preview {
+    margin: 40px 0;
+    overflow: hidden;
+    
+    li{
+      border: 1px solid #FFF;
+      margin: 10px 0;
+      
+      &:first-child{margin-top: 0;}
+      &:last-child{margin-bottom: 0;}
+      &.active{border: 2px solid @colorCarousel;}
+    }   
+
+    .thumbs{
+      margin: auto;
+      float: none;        
+      background-color: #FFF;
+      cursor: pointer;
+      overflow: hidden;
+      img{width: 100%; height: 100%;}      
+    }
+  }
+
+  .carousel-control {
+    background: transparent;
+    color: #DDD;
+    z-index: 11;
+    top: 35px;
+    text-align: center;
+
+    .glyphicon {
+      width: 30px;
+      height: 30px;
+      margin: auto;
+      font-size: 30px; 
+    
+      &.glyphicon-chevron-left {margin-top: -15px;}      
+    }
+
+
+    &:hover{color: @colorCarousel;}
+    &:before{
+      .beforeAndAfter(100%, 100%, 0, 0);
+    }
+
+    &.left {
+      &:before{
+        .degrade(left, #EEE, #EEE 70%);
+      }
+    }
+
+    &.right {
+      &:before{
+        .degrade(right, #EEE, #EEE 70%);
+      }
+    }
+
+    &.top{top: 0; height: 30px;}
+    &.bottom{top: auto; bottom: 0; height: 30px;}
+    
+  }
+}
