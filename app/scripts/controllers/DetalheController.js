@@ -77,7 +77,7 @@
 					site: 'http://www.parquedoibirapuera.com'
 				},
 				map: {
-					title: 'Mapa',
+					title: 'Mapa",
 					description: place.address.description,
 					src: mapAPIServices.map(place, 700, 300)
 				},
@@ -128,7 +128,7 @@
 			$scope.callPlace($scope.idPlace, function(place){
 				place.address.description =  place.address.street+', '+place.address.number+', '+place.address.complement+', '+
 					place.address.district+', '+place.address.city+', '+place.address.state+', CEP: '+ $filter('viewMaks')(place.address.zipcode, '99999-999');
-				console.log(place.address.state, place.address.street);
+
 				$scope.callAddresses(place.address.state, place.address.street);
 				$scope.callPhotos($scope.idPlace, function(photos, amount){
 					$scope.callInfoAdditionals(place, photos, amount);
