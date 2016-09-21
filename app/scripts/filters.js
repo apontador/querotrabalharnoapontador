@@ -8,12 +8,12 @@
 
       if(val){      
         val = val.replace(/[\-._:/]/g,'');
-        var newValue = "";
+        var newValue = '';
         var maskValue = 0;
         var error = false;
         
         for(var mId = 0, vId = 0; mId<mask.length;mId++){
-          if(mask[mId].match(/[DYM9\*]/) == null){
+          if(mask[mId].match(/[DYM9\*]/) === null){
             maskValue++;
             newValue += mask[mId];
           }else{
@@ -29,7 +29,7 @@
       }else{
         return val;
       }
-    }
+    };
   });
 })();
 

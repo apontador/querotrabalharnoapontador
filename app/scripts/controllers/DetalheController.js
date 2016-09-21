@@ -2,7 +2,7 @@
 (function(){ 
  	'use strict';
 
-	angular.module('catalogoApp').controller('DetalheController', ['$scope', '$location', '$filter', 'apontadorAPIServices', 'Alert', function ($scope, $location, $filter, apontadorAPIServices, Alert) {
+	angular.module('catalogoApp').controller('DetalheController', ['$scope', '$location', '$filter', 'Alert', 'addressesAPIServices', 'mapAPIServices', 'photosAPIServices', 'placeAPIServices', 'reviewsAPIServices', function ($scope, $location, $filter, Alert, addressesAPIServices, mapAPIServices, photosAPIServices, placeAPIServices, reviewsAPIServices) {
 
 		$scope.breadcrumbs = [
 			{title: 'Apontador', link:''},
@@ -14,7 +14,7 @@
 		
 		//CHAMADA DE ENDERECOS RELACIONADOS
 		$scope.callAddresses = function(state, termo) {
-			apontadorAPIServices.addresses(state, termo)
+			addressesAPIServices.address(state, termo)
 		    	.success(function (data) {
 		    		if(data.addressResults){	    			
 			    		$scope.locations = data.addressResults.addresses;
@@ -27,14 +27,14 @@
 		    			Alert.addMessageError('', 'Locais parecidos não encontrado.');	
 		    		}
 		    	})
-		      	.error(function (err){
+		      	.error(function (){
 		      		Alert.addMessageError('', 'Locais parecidos não encontrado.');
 		      	});	
 		};
 	 
 		//CHAMADA PARA CARREGAR AS FOTOS DO LOCAL
 		$scope.callPhotos = function(place, callback) {
-			apontadorAPIServices.placePhotos(place)
+			photosAPIServices.place(place)
 				.success(function (data) {
 					if(data.photoResults){	
 						$scope.carousel  = {
@@ -56,7 +56,7 @@
 						Alert.addMessageError('', 'Fotos do local não encontradas.');
 					}
 		      	})
-		      	.error(function (err){
+		      	.error(function (){
 		      		Alert.addMessageError('', 'Fotos do local não encontradas.');
 		      	});
 		};	
@@ -79,7 +79,7 @@
 				map: {
 					title: "Mapa",
 					description: place.address.description,
-					src: apontadorAPIServices.placeMap(place, 700, 300)
+					src: mapAPIServices.map(place, 700, 300)
 				},
 				photos: {
 					title: 'Fotos',
@@ -92,7 +92,7 @@
 
 		//CHAMADA DAS AVALIACOES DO PARQUE
 		$scope.callReviews = function(place) {
-			apontadorAPIServices.placeReviews(place)
+			reviewsAPIServices.place(place)
 				.success(function (data) {
 					if(data.reviewResults){
 						$scope.reviews = data.reviewResults.reviews;
@@ -100,14 +100,14 @@
 						Alert.addMessageError('', 'Avaliações do local não encontradas.');
 					}				
 		      	})
-		      	.error(function (err){
+		      	.error(function (){
 		      		Alert.addMessageError('', 'Avaliações do local não encontradas.');
 		      	});
 		};
 
 		//CHAMADA DO LOCAL
 		$scope.callPlace = function(place, callback) {
-			apontadorAPIServices.places(place)
+			placeAPIServices.place(place)
 				.success(function (data) {
 					$scope.place = data.place;
 					$scope.showPlace = true;
@@ -116,7 +116,7 @@
 						callback($scope.place);
 					}				
 		      	})
-		      	.error(function (err){
+		      	.error(function (){
 		      		Alert.addMessageError('', 'Local não encontrado.');
 		      	});	
 		};

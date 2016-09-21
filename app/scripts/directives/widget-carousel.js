@@ -3,14 +3,14 @@ DIRETIVA PARA CRIAR O TEMPLATE DE CAROUSEL
 */
 (function(){   
   'use strict';
-  angular.module('catalogoApp').directive('widgetCarousel', ['$rootScope', '$filter', '$interval', '$timeout', '$http', '$compile', function ($rootScope, $filter, $interval, $timeout, $http, $compile) {
+  angular.module('catalogoApp').directive('widgetCarousel', ['$rootScope', '$filter', '$interval', '$timeout', function ($rootScope, $filter, $interval, $timeout) {
     return {
       restrict: 'AE',
       replace: true,
       scope: {
         content: '='      
       },
-      link: function (scope, elm, attrs) {
+      link: function (scope) {
 
         scope.content.visibled = (scope.content.visibled ? scope.content.visibled : true);
         scope.content.interval = (scope.content.slides.length > 1 && !scope.content.interval ? false : (scope.content.interval ? scope.content.interval : false));
