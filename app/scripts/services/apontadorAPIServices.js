@@ -4,12 +4,13 @@
 
 services.factory('apontadorAPIServices', [ '$http', function ($http) {
   delete $http.defaults.headers.common['X-Requested-With'];
+  var token = 'a4103524-0ea2-46ec-80ff-94864d7a28a6';
   return{
     places: function(place){
       return $http({
         method: 'GET',
         params: {
-          access_token: '2624b3aa-84f5-4f78-b1fb-7f013017af73',
+          access_token: token,
           wt:'json',
           fl:'*,openingHours'
         },
@@ -21,7 +22,7 @@ services.factory('apontadorAPIServices', [ '$http', function ($http) {
       return $http({
         method: 'GET',
         params: {
-          access_token: '2624b3aa-84f5-4f78-b1fb-7f013017af73',
+          access_token: token,
           q: termo,
           fl:'description',
           fq: 'state:'+state
@@ -34,7 +35,7 @@ services.factory('apontadorAPIServices', [ '$http', function ($http) {
       return $http({
         method: 'GET',
         params: {
-          access_token: '2624b3aa-84f5-4f78-b1fb-7f013017af73'          
+          access_token: token
         },
         url: 'https://api.apontador.com.br/v2/places/'+place+'/photos',
         withCredentials: true
@@ -44,7 +45,7 @@ services.factory('apontadorAPIServices', [ '$http', function ($http) {
       return $http({
         method: 'GET',
         params: {
-          access_token: '2624b3aa-84f5-4f78-b1fb-7f013017af73'
+          access_token: token
         },
         url: 'https://api.apontador.com.br/v2/places/'+place+'/reviews',
         withCredentials: true
