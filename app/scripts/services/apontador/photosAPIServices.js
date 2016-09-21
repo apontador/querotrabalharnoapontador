@@ -8,7 +8,7 @@
         return $http({
           method: 'GET',
           params: {
-            'access_token': 'a4103524-0ea2-46ec-80ff-94864d7a28a6'
+            'access_token': '25c9d5ff-6ce0-40b4-ba0f-3dc6f8fc9cd4'
           },
           url: 'https://api.apontador.com.br/v2/places/'+place+'/photos',
           withCredentials: true
