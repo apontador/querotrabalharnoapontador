@@ -77,7 +77,7 @@
 					site: 'http://www.parquedoibirapuera.com'
 				},
 				map: {
-					title: "Mapa",
+					title: 'Mapa',
 					description: place.address.description,
 					src: mapAPIServices.map(place, 700, 300)
 				},

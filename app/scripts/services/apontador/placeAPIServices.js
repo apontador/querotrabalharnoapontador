@@ -16,6 +16,6 @@
           withCredentials: true
         });
       }
-    }    
+    };   
   }]);
 })();

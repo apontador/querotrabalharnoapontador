@@ -14,6 +14,6 @@
           withCredentials: true
         });      
       }    
-    }
+    };
   }]);
 })();

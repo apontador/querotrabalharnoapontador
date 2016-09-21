@@ -1,7 +1,7 @@
 (function(){   
   'use strict';
 
-  angular.module('catalogoApp').factory('mapAPIServices', [ '$http', function ($http) {
+  angular.module('catalogoApp').factory('mapAPIServices', [function () {
     return{
       map: function(place, width, heigth) {
         return 'http://widget.maplink.com.br:80/WidGetGenerator/PoiWidgets?placeid='+place.id +
