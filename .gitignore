@@ -3,6 +3,6 @@ node_modules
 bower_components
 dist
 .tmp
-portalparceiro.tgz
+apontador.tgz
 war/
 .sass-cache
