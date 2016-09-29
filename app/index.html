@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" ng-controller="MainController" ng-app="catalogoApp" ng-init> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" ng-app="app" ng-init> <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <title>Catalogo</title>
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <!-- endbuild -->    
   </head>
-  <body>
+  <body ng-controller="MainController">
     <!--[if lt IE 7]>
       <p class="browsehappy">Você está usando um navegador <strong>antigo</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> para melhorar sua experiência no portal.</p>
     <![endif]-->
@@ -52,6 +52,8 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/moment-range/lib/moment-range.js"></script>
     <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script> <!--MOCKS-->
     <!-- endbower -->
     
     <!-- endbuild -->
@@ -77,6 +79,14 @@
     <script src="scripts/controllers/MainController.js"></script>
     <script src="scripts/controllers/DetalheController.js"></script>
     <!-- endbuild -->
+
+    <!-- MOCKS -->
+    <script src="scripts/services/mocks/app.js"></script> 
+    <script src="scripts/services/mocks/addressesAPIServices.js"></script>
+    <script src="scripts/services/mocks/photosAPIServices.js"></script>
+    <script src="scripts/services/mocks/placeAPIServices.js"></script>
+    <script src="scripts/services/mocks/reviewsAPIServices.js"></script>
+    <!-- MOCKS -->
 
   </body>
 </html>

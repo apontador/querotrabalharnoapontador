@@ -2,13 +2,15 @@
 (function(){   
   'use strict';
 
+  angular.module('app', ['catalogoApp']);
+
   angular.module('catalogoApp', [
-      'ngResource',
+    'ngResource',
       'ngSanitize',
       'ngRoute',
       'ngAnimate',
       'ui.bootstrap',
-      'ngCookies'
+      'ngCookies',
   ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -23,5 +25,5 @@
         label: '404'
       });    
   }]);
-
+  
 })();
