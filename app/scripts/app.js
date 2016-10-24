@@ -17,7 +17,7 @@
         templateUrl: './views/detalhe.html',
         controller: 'DetalheController',
         requiresAuth: false,
-        label: 'Redirect'
+        label: 'Detalhe do produto'
       })
       .otherwise({
         templateUrl:'/404.html',

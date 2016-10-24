@@ -1,7 +1,7 @@
 <nav id="breadcrumb" class="menu">
 	<ul class="container nopadding">
   		<li class="left" ng-class="{ active: $last }" ng-repeat="item in breadcrumbs">
-      		<span ng-if="item.title">{{item.title}}</span>		      
+      		<span class="title" ng-if="item.title">{{item.title}}</span>		      
     		<span class="breadcrum-separator" ng-hide="$last"> > </span>
   		</li>
   	</ul>

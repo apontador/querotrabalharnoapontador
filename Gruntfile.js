@@ -411,7 +411,8 @@ module.exports = function (grunt) {
       'autoprefixer',
       'connect:livereload',
       'less',
-      'watch'
+      'watch',
+      'test'
     ]);
   });
 
@@ -439,11 +440,13 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin',
+    'test',
     'clean:server'
   ]);
   grunt.registerTask('production',[
     'build',
     'compress',
+    'test',
     'clean:server'
   ]);
 

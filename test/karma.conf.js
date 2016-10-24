@@ -11,7 +11,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'https://www.google.com/jsapi',
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/angular/angular.js',
         'bower_components/angular-mocks/angular-mocks.js',
@@ -22,13 +21,38 @@ module.exports = function(config) {
         'bower_components/angular-sanitize/angular-sanitize.js',
         'bower_components/angular-bootstrap/ui-bootstrap.js',
         'app/scripts/app.js',
-        'app/scripts/**/*.js',
+        'app/scripts/controllers/*.js',
+        'app/scripts/services/*.js',
+        'app/scripts/services/apontador/*.js',
+        'app/scripts/filters/*.js',
+        'app/scripts/directives/*.js',
+        'app/partials/*.html',
+        'app/widgets/*.html',
+        'test/spec/mocks/mocks.js',
         'test/spec/**/*.js'
     ],
+
+    preprocessors: {
+      'app/partials/*.html': ['ng-html2js'],
+      'app/widgets/*.html': ['ng-html2js'],
+      'app/**/*.js': ['coverage']
+    },
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'app/',
+      moduleName: 'templates'
+    },
+
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
 
     // list of files / patterns to exclude
     exclude: [],
 
+    reporters: ['progress', 'coverage'],
+    
     // web server port
     port: 9876,
 
@@ -56,7 +80,7 @@ module.exports = function(config) {
     ],
 
     // Which plugins to enable
-    plugins: ['karma-*'],
+    plugins: ['karma-*', 'jasmine'],
 
 
     // Continuous Integration mode

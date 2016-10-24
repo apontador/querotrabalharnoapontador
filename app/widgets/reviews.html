@@ -8,9 +8,9 @@
 
         <div class="description">
             <h6 class="font-h4 font-weight">
-                <a href="{{review.urlperfil}}" title="{{review.nome}}">{{review.name}}</a>
+                <a href="{{review.creation.author.link.uri}}" title="{{review.creation.author.name}}">{{review.creation.author.name}}</a>
             </h6>            
-            <widget-reviews-stars content="review.statistics.rating" data="review.creation.created"></widget-reviews-stars> 
+            <widget-stars content="review.statistics.rating" data="review.creation.created"></widget-stars> 
             <p class="font-h4">{{review.text}}</p>
         </div>
      </li>

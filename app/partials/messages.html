@@ -1,7 +1,9 @@
-<div class="alert-section col-sm-12" ng-if="allInfos().messages.length > 0">	
+<div class="alert-section col-sm-12" ng-if="allInfos().messages.length">
+	{{allInfos().messages.length}}
+	{{allInfos().messages}}	
 	<ul class="alert alert-{{allInfos().classe}} alert-dismissable">
 		<li ng-repeat="alert in allInfos().messages">
-			<button type="button" class="close" data-dismiss="alert" aria-hidden="true" close='remove(alert)'>
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true" ng-click='remove(alert)'>
 				&times;
 			</button>
 

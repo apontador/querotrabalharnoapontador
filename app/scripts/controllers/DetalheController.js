@@ -2,7 +2,7 @@
 (function(){ 
  	'use strict';
 
-	angular.module('catalogoApp').controller('DetalheController', ['$scope', '$location', '$filter', 'Alert', 'addressesAPIServices', 'mapAPIServices', 'photosAPIServices', 'placeAPIServices', 'reviewsAPIServices', function ($scope, $location, $filter, Alert, addressesAPIServices, mapAPIServices, photosAPIServices, placeAPIServices, reviewsAPIServices) {
+	angular.module('catalogoApp').controller('DetalheController', ['$scope', '$filter', 'Alert', 'addressesAPIServices', 'mapAPIServices', 'photosAPIServices', 'placeAPIServices', 'reviewsAPIServices', function ($scope, $filter, Alert, addressesAPIServices, mapAPIServices, photosAPIServices, placeAPIServices, reviewsAPIServices) {
 
 		$scope.breadcrumbs = [
 			{title: 'Apontador', link:''},
@@ -16,16 +16,14 @@
 		$scope.callAddresses = function(state, termo) {
 			addressesAPIServices.address(state, termo)
 		    	.success(function (data) {
-		    		if(data.addressResults){	    			
-			    		$scope.locations = data.addressResults.addresses;
-			    		$scope.locations.map(function(local) {
-			    			local.image = 'https://d31a08puryq8et.cloudfront.net/apps/sponsoredplacepromoted/files/placeholder.png';
-			    			local.statistics = $scope.place.statistics; //objeto fake para ver o layout correto
-			    			local.categories = $scope.place.categories; //objeto fake para ver o layout correto
-			    		});
-		    		}else{
-		    			Alert.addMessageError('', 'Locais parecidos não encontrado.');	
-		    		}
+					$scope.locations = data.addressResults.addresses;
+
+					$scope.locations.map(function(local) {
+						local.image = 'https://d31a08puryq8et.cloudfront.net/apps/sponsoredplacepromoted/files/placeholder.png';
+						local.statistics = $scope.place.statistics; //objeto fake para ver o layout correto
+						local.categories = $scope.place.categories; //objeto fake para ver o layout correto
+					});
+		    		
 		    	})
 		      	.error(function (){
 		      		Alert.addMessageError('', 'Locais parecidos não encontrado.');
@@ -36,24 +34,19 @@
 		$scope.callPhotos = function(place, callback) {
 			photosAPIServices.place(place)
 				.success(function (data) {
-					if(data.photoResults){	
-						$scope.carousel  = {
-					        id: 'image', name: 'images', size: 10, height: 290,
-					        classField: 'fieldCarousel', 
-					        preview: {
-					         size: 2,
-					         thumbs: {height: 40}
-					        },
-					        slides: data.photoResults.photos
-						};
-						$scope.imagefull = data.photoResults.photos[0].large;
-						
-						if(callback){
-							callback(data.photoResults.photos, data.photoResults.header.found);
-						}
-						
-					}else{
-						Alert.addMessageError('', 'Fotos do local não encontradas.');
+					$scope.carousel  = {
+						id: 'image', name: 'images', size: 10, height: 290,
+						classField: 'fieldCarousel', 
+						preview: {
+							size: 2,
+							thumbs: {height: 40}
+						},
+						slides: data.photoResults.photos
+					};
+					$scope.imagefull = data.photoResults.photos[0].large;
+					
+					if(callback){
+						callback(data.photoResults.photos, data.photoResults.header.found);
 					}
 		      	})
 		      	.error(function (){
@@ -94,11 +87,7 @@
 		$scope.callReviews = function(place) {
 			reviewsAPIServices.place(place)
 				.success(function (data) {
-					if(data.reviewResults){
-						$scope.reviews = data.reviewResults.reviews;
-					}else{
-						Alert.addMessageError('', 'Avaliações do local não encontradas.');
-					}				
+					$scope.reviews = data.reviewResults.reviews;									
 		      	})
 		      	.error(function (){
 		      		Alert.addMessageError('', 'Avaliações do local não encontradas.');

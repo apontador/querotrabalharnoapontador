@@ -3,7 +3,7 @@ DIRETIVA PARA CRIAR O TEMPLATE DE SUGESTAO DE OUTRAS LOCALIDADES
 */
 (function(){   
   'use strict';
-  angular.module('catalogoApp').directive('widgetReviewsStars', [function () {
+  angular.module('catalogoApp').directive('widgetStars', [function () {
     return {
       restrict: 'AE',
       replace: true,
@@ -12,7 +12,7 @@ DIRETIVA PARA CRIAR O TEMPLATE DE SUGESTAO DE OUTRAS LOCALIDADES
         total: '=',
         data: '='   
       },
-      templateUrl: 'widgets/reviews-stars.html'
+      templateUrl: 'widgets/stars.html'
     };
   }]);
 })();

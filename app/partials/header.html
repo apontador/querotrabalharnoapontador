@@ -22,12 +22,12 @@
 		<menu id="header-info" class="menu content-floatRight col-sm-4">
 
 			<li class="col-sm-2">
-				<div id="languages" class="dropdown">
-					<button id="dropMenuHeader" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<div id="languages" class="dropdown" ng-class="{'open': openDropMenu}">
+					<button id="dropMenuHeader" class="btn btn-link dropdown-toggle" ng-click="clickOpenDropMenu()">
 						<img ng-src="{{selectedLanguage.image}}" alt="{{selectedLanguage.title}}"/>
 						<i class="caret"></i>
 					</button>
-					<div class="dropdown-menu" aria-labelledby="dropMenuHeader">
+					<div class="dropdown-menu">
 						<ul>
 							<li ng-repeat="language in languages" ng-if="language != selectedLanguage">
 								<a href ng-click="setLanguage(language)" class="btn btn-link sm">

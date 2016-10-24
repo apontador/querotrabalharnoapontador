@@ -8,6 +8,10 @@
       templateUrl: 'partials/header.html',
       link: function(scope){
 
+        scope.clickOpenDropMenu = function(){
+          scope.openDropMenu = (scope.openDropMenu ? false : true);
+        };
+
         //LINGUAGEM {INCIO}
         scope.languages = [
           {title: 'Português',  image: 'https://aplocalapp.apontador-assets.com/apps/localizationmenu2/files/br.png'},
@@ -23,39 +27,4 @@
       }
     };
   }]);
-})();
-
-
-(function(){   
-  'use strict';
-  angular.module('catalogoApp').directive('appFooter', function() {
-    return {
-      restrict: 'E',
-      replace: true,
-      templateUrl: 'partials/footer.html'
-    };
-  });
-})();
-
-(function(){   
-  'use strict';
-  angular.module('catalogoApp').directive('messages', function() {
-    return {
-      controller: '',
-      restrict: 'EA', // E = Element, A = Attribute, C = Class, M = Comment
-      templateUrl: 'partials/messages.html'
-    };
-  });
-})();
-
-(function(){   
-  'use strict';
-  angular.module('catalogoApp').directive('breadcrumb', function() {
-    return {
-      controller: '',
-      restrict: 'EA', // E = Element, A = Attribute, C = Class, M = Comment
-      replace: true,
-      templateUrl: 'partials/breadcrumb.html'
-    };
-  });
 })();

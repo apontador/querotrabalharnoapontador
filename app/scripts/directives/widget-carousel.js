@@ -3,7 +3,7 @@ DIRETIVA PARA CRIAR O TEMPLATE DE CAROUSEL
 */
 (function(){   
   'use strict';
-  angular.module('catalogoApp').directive('widgetCarousel', ['$rootScope', '$filter', '$interval', '$timeout', function ($rootScope, $filter, $interval, $timeout) {
+  angular.module('catalogoApp').directive('widgetCarousel', ['$rootScope', '$filter', '$interval', function ($rootScope, $filter, $interval) {
     return {
       restrict: 'AE',
       replace: true,
@@ -12,7 +12,6 @@ DIRETIVA PARA CRIAR O TEMPLATE DE CAROUSEL
       },
       link: function (scope) {
 
-        scope.content.visibled = (scope.content.visibled ? scope.content.visibled : true);
         scope.content.interval = (scope.content.slides.length > 1 && !scope.content.interval ? false : (scope.content.interval ? scope.content.interval : false));
         var filterActive = $filter('filter')(scope.content.slides, {active: true})[0];
 
@@ -27,23 +26,7 @@ DIRETIVA PARA CRIAR O TEMPLATE DE CAROUSEL
           });
         };
 
-        //ESCONDER OU MOSTRAR CAROUSEL
-        scope.content.showHide = function(){
-          scope.content.visibled = (scope.content.visibled ? false : true);
-          scope.content.heightAll = (scope.content.visibled ? scope.content.height : 0);
-          if(scope.content.visibled){
-            scope.content.visibled = true;
-            scope.content.heightAll = scope.content.height + 30;
-            scope.content.resetInterval(); //INICIAR A INTERCAO CASO ESTEJA ABERTO
-          }else{
-            scope.content.visibled = false;
-            scope.content.heightAll = 0;
-            scope.content.stopInterval(); //PARAR A INTERCACAO CASO ESTEJA FECHADO
-          }
-        };
-        
         scope.$watch('carousel', function(){
-          scope.content.visibled = true;
           scope.content.heightAll = scope.content.height + 30;                
         });
         
@@ -66,26 +49,25 @@ DIRETIVA PARA CRIAR O TEMPLATE DE CAROUSEL
 
         //INTERACAO DE INVERVALO DA TROCA DO SLIDE
         scope.content.resetInterval = function(){
-          if(scope.content.interval && scope.content.visibled){
+          //console.log('entrou reset');
+          if(scope.content.interval){
             scope.content.stopInterval();
 
-            $timeout(function(){
-              scope.content.fnInterval = $interval(function(){
+            scope.content.fnInterval = $interval(function(){
 
-                if(scope.content.startInvetval){          
-                  var setNextSlide;
-                  scope.content.loopSlides(function(slide){
-                    if(slide === scope.content.currentSlide){
-                      setNextSlide = (slide.id === scope.content.slides.length-1 ? scope.content.slides[0] : scope.content.slides[slide.id + 1]);            
-                    }
-                  });
-                  scope.content.currentSlide = setNextSlide;
-                }else{
-                  scope.content.startInvetval = true;
-                }
+              if(scope.content.startInvetval){          
+                var setNextSlide;
+                scope.content.loopSlides(function(slide){
+                  if(slide === scope.content.currentSlide){
+                    setNextSlide = (slide.id === scope.content.slides.length-1 ? scope.content.slides[0] : scope.content.slides[slide.id + 1]);            
+                  }
+                });
+                scope.content.currentSlide = setNextSlide;
+              }else{
+                scope.content.startInvetval = true;
+              }
 
-              }, scope.content.interval);    
-            }, 100);
+            }, scope.content.interval);
           }
         };      
 
@@ -122,7 +104,7 @@ DIRETIVA PARA CRIAR O TEMPLATE DE CAROUSEL
             var setActiveSlide = 0;
             scope.content.slides.map(function(slide){
               if(slide.active){
-                setActiveSlide = slide.active;
+                setActiveSlide = slide;
               }
             });
 
