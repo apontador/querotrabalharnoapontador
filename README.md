@@ -37,7 +37,7 @@ Como Se Candidatar - Front End
 Contato
 -------
 
-Mande um e-mail para: tulio.rodrigues@apontador.com
+Mande um e-mail para: bruno.muller@apontador.com
 
 Sobre a Empresa
 ---------------
