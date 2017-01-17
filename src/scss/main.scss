@@ -1,0 +1,78 @@
+/*
+Project:    Apontador
+Author:     Maurício Nunes
+====================================== */
+
+@import 'loading'; 
+
+$apontadorBg: #F17B03;
+$white: #fff;
+
+#app-content{
+    main.container{
+        min-height: 500px;
+    }
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img{
+        max-height: 500px;
+    }
+    .reviews-section{
+        p.review-content{
+            max-width: 90%;
+        }
+    }
+    margin-top: 55px;
+    .breadcrumb{
+        padding-bottom: 0px;
+        margin-bottom: 10px
+    }
+    .apontador-footer{
+        padding-top: 5px;
+    }
+    .apontador-header, .apontador-footer{
+        .divider{
+            background-color: $white!important;
+        }
+        background-color:$apontadorBg;
+        
+        *, *:hover, *:active, *:focus {
+            color:$white!important;
+            background-color:$apontadorBg!important;
+        }
+        .navbar-form{
+            border-color: transparent!important;
+            input{
+                background-color: $white!important;
+                border-color: $white;
+                color: #000!important;
+            }
+        }
+        button{
+            border-color:$white;
+            span, span:hover, span:focus{
+                background: $white!important;
+            }   
+        }
+        a.navbar-brand{
+            padding: 4px 15px!important;
+        }   
+    }
+
+    .infos-section{
+        .ratings-data{
+            .ratings-value{
+                margin-right: 15px;
+            }
+        }
+        li[role="presentation"].active a {
+            background-color: #fff!important;
+            color: #F17B03 !important;
+            outline: none;
+        } 
+        .nav-pills{
+            a{
+                background-color: $apontadorBg!important;
+                color: $white!important;
+            }
+        }
+    }
+}
