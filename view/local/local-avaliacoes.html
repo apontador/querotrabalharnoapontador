@@ -1,0 +1,24 @@
+<div id="avaliacoes">
+    <div class="row">
+        <h2>Avaliações sobre <span class="bold"> {{place.name}}</span></h2> 
+    </div>
+
+    <div class="row top-20">
+        <div class="col-md-8 col-md-push-2 col-lg-8 col-lg-push-2" ng-repeat="review in reviews">
+            <div class="media">
+                    <div class="media-left top-middle">
+                        <a href="">
+                            <img class="media-object img-review" src="{{review.creation.author.photo}}">                        
+                             <p>{{review.creation.author.name}}</p>
+                        </a>
+                        <img class="media-object" src="https://clientmanager.apontador-assets.com/prod/base/images/5-on.png"> 
+                    </div>
+                    <div class="media-body text-left">
+                        <p class="media-heading">{{review.text}}</p>
+                        
+                    </div>
+                    <hr/>
+            </div>
+    </div></div>
+   
+</div>
