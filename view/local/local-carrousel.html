@@ -1,0 +1,65 @@
+<div id="carrousel-info" class="row top-10">
+	<div id="place-fotos" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+		<div class="" uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+			<div uib-slide ng-repeat="slide in img track by slide.id" index="slide.id">
+				<img ng-src="{{slide.image}}" style="width: 400px; height: 300px;">
+				<div class="carousel-caption">
+					
+				</div>
+			</div>
+		</div>			
+	</div>
+
+	<div id="place-informacoes" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		<div id="phones" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 info">
+			<div class=" col-md-1 col-lg-1">
+				<img class="info-icon-default" src="assets/img/phone.svg">
+			</div>
+			<div class=" col-md-11 col-lg-11">
+				<label class="info-text">{{phonesFormatado}}</label>
+			</div>
+		</div>
+
+		<div id="address" class="col-xs-12 col-sm-12 col-md-12 col-lg-12  info">
+			<div class=" col-md-1 col-lg-1">
+				<img class="info-icon-default" src="assets/img/local.svg">
+			</div>
+
+			<div class=" col-md-11 col-lg-11">
+				<p class="info-text">{{place.address.street}}, {{place.address.number}}, {{place.address.complement}}, {{place.address.district}} {{place.address.city}} - {{place.address.state}}, CEP: {{place.address.zipcode}} <span> - <a href=""> Como Chegar</a></span></p>
+			</div>
+		</div>
+
+		<div id="time" class="col-xs-12 col-sm-12 col-md-12 col-lg-12  info">
+			<div class=" col-md-1 col-lg-1">
+				<img class="info-icon-default" src="assets/img/time.svg">
+			</div>
+
+			<div class=" col-md-11 col-lg-11">
+				<p class="info-text">Hoje: {{horarioA}} às {{horarioB}}</p>
+			</div>
+		</div>
+
+		<div id="site" class="col-xs-12 col-sm-12 col-md-12 col-lg-12  info">
+			<div class=" col-md-1 col-lg-1">
+				<img class="info-icon-default" src="assets/img/site.svg">
+			</div>
+
+			<div class=" col-md-11 col-lg-11">
+				<p class="info-text"><a href="">www.parquedoibirapuera.com</a></p>
+			</div>
+		</div>
+		<div id="like" class="col-xs-12 col-sm-12 col-md-12 col-lg-12  info">
+			<div class=" col-md-1 col-lg-1">
+				<img class="info-icon-default" src="assets/img/like.svg">
+			</div>
+
+			<div class=" col-md-11 col-lg-11">
+				<p class="info-text"><span class="color-apontador">{{place.statistics.thumbsUp}} Pessoas</span> recomendaram</p>
+			</div>
+		</div>
+		<div id="btn-recomendar" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 info ">
+			<input type="button" value="Recomendar" class="btn btn-apontador color-apontador" ng-click="recomendar()"/>
+		</div>
+	</div>		
+</div>

@@ -1,0 +1,38 @@
+/*reset*/
+*{margin:0;padding:0;font-size:100%;font-style:normal; text-outline: 0; font-family: 'Roboto Regular', 'Arial', 'sans-serif';font-size: 1em;}
+/*configuraçoes de font*/
+@font-face {font-family: Roboto Regular; src: url(/assets/fonts/Roboto-Regular.ttf);}
+@font-face {font-family: Roboto Bold; src: url(/assets/fonts/Roboto-Bold.ttf);}
+@font-face {font-family: Roboto Light; src: url(/assets/fonts/Roboto-Light.ttf);}
+/*fim configuraçoes de font*/
+hr{margin-top: 1.25em;}
+h1{font-family: 'Roboto Bold', 'Arial', 'sans-serif'; font-size:4em; text-align: center;}
+h2{text-align: center; font-family: 'Roboto Regular', 'Arial', 'sans-serif'}
+header,footer{background-color: #FF8207 ;height: 4.5em;}
+.top-5{margin-top:5px;}
+.top-10{margin-top:0.625em;}
+.top-20{margin-top: 1.25em;}
+.left-10{margin-left: 0.625em;}
+.bold{font-weight: bold;}
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.caminho{margin-left: 1.25em; font-family: 'Roboto Light', 'Arial', 'sans-serif'; font-size:1em;}
+.info{margin-top: 0.3125em; margin-bottom: 0.3125em;}
+.info-text{margin-top: 0.3125em; font-family: 'Roboto Bold', 'Arial', 'sans-serif' ; font-size:1em;}
+.info-icon-default{width: 1.875em; height: auto;}
+.titulo{margin-top: 1.875em;}
+.conteudo{min-height: 600px; border: 0px solid #000000;}
+.logo{margin-top: 0.625em; margin-left: 1.875em;}
+.border{border: 1px solid #000000;}
+.color-apontador{color: #FF8207; font-weight: bold;}
+.btn-apontador{height: 3.125em; width: 9.375em; border-radius: 0.125em; border: 0.0625em solid #FF8207; background-color: #ffffff; font-family: 'Roboto Bold', 'Arial', 'sans-serif' ; font-size:1.125em;}
+.btn-apontador:hover{background-color: #FF8207; color: #ffffff;}
+.estrelas{text-align: right;}
+.avalicoes{text-align: left;}
+.md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon{color:#000000; font-weight: bold;}
+.md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {color: #FF8207;background: #FF8207;}
+.carousel-control.right {right: 0;left: auto;background-image: -webkit-linear-gradient(left,#FFFFFF,#FFFFFF 100%);background-image: -o-linear-gradient(left,#FFFFFF 0,#FFFFFF 100%);background-image: -webkit-gradient(linear,left top,right top,from(#FFFFFF),to(#FFFFFF));background-image: linear-gradient(to right,#FFFFFF ,#FFFFFF 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);background-repeat: repeat-x;}
+.carousel-control {position: absolute;top: 0;bottom: 0;left: 0;width: 15%;font-size: 20px;color: #FF8207;text-align: center;text-shadow: 0 1px 2px rgba(0,0,0,.6);background-color: rgba(0,0,0,0);filter: alpha(opacity=50);opacity: .5;}
+.carousel-control.left {background-image: -webkit-linear-gradient(left,#FFFFFF 0,#FFFFFF 100%);background-image: -o-linear-gradient(left,#FFFFFF 0,#FFFFFF 100%);background-image: -webkit-gradient(linear,left top,right top,from(#FFFFFF),to(#FFFFFF));background-image: linear-gradient(to right,#FFFFFF 0,#FFFFFF 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);background-repeat: repeat-x;}
+.img-review{width: 150px; height: 150px;}
+@media only screen and (max-device-width: 61.9375em) {h1{text-align: center; margin: 0;}.btn-recomendo{float: none; margin-left: auto; margin-right: auto;}.caminho{text-align: center; font-size:1.125em;}.info{margin-left: auto; margin-right: auto; text-align: center;}.estrelas,.avalicoes{text-align: center;}}
