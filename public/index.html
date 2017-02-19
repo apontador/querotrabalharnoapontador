@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="/css/ext/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,800">
+    <link rel="stylesheet" href="/css/carrousel.css">
+    <link rel="stylesheet" href="/css/producao.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <title>Apontador</title>
+  </head>
+  <body>
+    <header>
+      <div class="linha linha-v">
+        <div class="centralizado a100pc">
+          <div class="vertical">
+              <h1 class="logo">APONTADOR API</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="photos"></div>
+
+    <section class="info-api">
+      <div class="linha">
+        <div id="local"></div>
+        <div id="recomendados"></div>
+      </div>
+    </section>
+
+    <section class="info-reviews mt-info">
+      <div class="linha bg-branco">
+      <div id="reviews"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        $('.jcarousel').jcarouselAutoscroll({
+          target: '+=1',
+          interval: 3000,
+          autostart: true
+        });
+        setTimeout(function(){
+            $('.jcarousel-control-next').trigger("click");
+            $('.jcarousel-control-next').trigger("click");
+        }, 2000);
+    });
+
+    </script>
+  </body>
+</html>
