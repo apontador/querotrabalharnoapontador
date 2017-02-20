@@ -23,7 +23,7 @@ class PlacesListLocal extends Component{
       statisticsReviews: [],
       statisticsCurtida: [],
       statisticsTags: [],
-      location: [],
+      gmapsUrl: [],
       phone1: [],
       phone2: [],
       address: []
@@ -53,7 +53,7 @@ class PlacesListLocal extends Component{
         statisticsReviews:data.place.statistics.reviews,
         statisticsCurtida:data.place.statistics.thumbsUp,
         statisticsTags:data.place.tags,
-        location:data.place.location,
+        gmapsUrl: 'http:\/\/maps.google.com/maps?q='+data.place.location.lat+','+data.place.location.lng+'&hl=es;z=14&amp&output=embed',
         phone1: data.place.phones[0],
         phone2: data.place.phones[1],
         address: data.place.address,
@@ -88,7 +88,7 @@ class PlacesListLocal extends Component{
             </p>
           </div>
           <div>
-          <iframe className="maps" src="https://maps.google.com/maps?q=-23.588295029163444,-46.65945053100586&hl=es;z=14&amp;output=embed"/>
+          <iframe className="maps" src={this.state.gmapsUrl}/>
           </div>
           <div className="linha linha-6 mt20 bg-branco">
             {this.state.statisticsTags.map(item => (
