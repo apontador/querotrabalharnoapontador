@@ -1,5 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react';
+import config from './config';
+
 var rows;
 
 class PlaceTags extends Component{
@@ -34,10 +36,7 @@ class PlacesListLocal extends Component{
     var url = 'https://api.apontador.com.br/v2/places/B37822W2'
     var options = {
       method: 'GET',
-      headers: {
-      'Accept': 'application/json',
-      'Authorization': 'Bearer 97b684b0-39ce-46e9-ab27-51ba2ba53209'
-      }
+      headers: config.apontadorHeaders
     }
 
     fetch(url, options)
