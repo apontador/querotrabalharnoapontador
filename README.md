@@ -31,6 +31,8 @@ Como Se Candidatar - Front End
 
 * Utilização de alguma metodologia CSS (OOCSS, SMACSS, BEM, DRY CSS)
 
+* Faça seu próprio CSS sem usar Bootstrap
+
 * Nos impressionar não é, necessariamente, trabalhoso. Escolha algo que você acha que está errado (quanto mais errado você achar que está, melhor. Isto te ajudará a defender a sua ideia) e faça da melhor forma que puder, de forma que você tenha orgulho! Pense que este pode ser o código com que você trabalhará nos próximos anos da sua vida. O tamanho da alteração não é o mais importante, mas sim o quão bem executado e manutenível.
 
 
