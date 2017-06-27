@@ -1,0 +1,36 @@
+
+.menu, .list {
+  list-style: none; 
+  margin: 0;
+  padding: 0; 
+
+  li {
+    list-style: none;
+    &.left{float: left; margin-right: 5px;}
+  }
+
+  .dropdown {
+    
+    .dropdown-toggle {
+      &:hover, 
+      &:active, 
+      &:focus,
+      &:active:focus {text-decoration: none;}
+    }    
+
+    .dropdown-menu {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li{
+          line-height: 26px; height: 26px; 
+          padding-left: 10px;
+          a {text-align: left; line-height: inherit;}
+          img {display: inline-block; margin-right: 5px;}
+        }
+      }
+    }
+  }
+}

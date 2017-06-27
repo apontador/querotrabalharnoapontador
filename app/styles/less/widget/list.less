@@ -1,0 +1,28 @@
+
+.widget-list {
+  padding: 0;
+
+  .content-list {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid @colorBlack + 200;
+
+    > * {display: table-cell; vertical-align: top;}
+    &:last-child {margin-bottom: 0;}
+
+    figure {
+      width: 25%; min-width: 70px;
+
+      img{width: 100%;}
+    }
+
+    .description {
+      padding-left: 3%;
+
+      p{color: @colorBlackNegative;}
+    }
+  }
+
+}

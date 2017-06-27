@@ -1,0 +1,51 @@
+
+
+<header id="headerPag">
+	<div class="container">
+		<a href="http://www.apontador.com.br" class="logo col-sm-2" title="Apontador">
+			<img ng-src="https://clientmanager.apontador-assets.com/prod/base/images/newheader/logo.png?v=140" alt="Apontador"/>
+		</a>	
+
+		<form id="header-search" name="formSearch" class="col-sm-6">
+			<span class="col-sm-5">
+				<input type="text" name="oque" class="form-control" placeholder="O que está procurando?"/>
+			</span>
+			<span class="col-sm-5">
+				<input type="text" name="localidade" class="form-control" placeholder="São Paulo, SP" value="São Paulo, SP"/>
+			</span>
+
+			<button class="btn btn-tertiary col-sm-2" type="submit" title="Buscar">
+				<i class="glyphicon glyphicon-search"></i>
+			</button>
+		</form>
+
+		<menu id="header-info" class="menu content-floatRight col-sm-4">
+
+			<li class="col-sm-2">
+				<div id="languages" class="dropdown" ng-class="{'open': openDropMenu}">
+					<button id="dropMenuHeader" class="btn btn-link dropdown-toggle" ng-click="clickOpenDropMenu()">
+						<img ng-src="{{selectedLanguage.image}}" alt="{{selectedLanguage.title}}"/>
+						<i class="caret"></i>
+					</button>
+					<div class="dropdown-menu">
+						<ul>
+							<li ng-repeat="language in languages" ng-if="language != selectedLanguage">
+								<a href ng-click="setLanguage(language)" class="btn btn-link sm">
+									<img ng-src="{{language.image}}"/>{{language.title}}
+								</a>
+							</li>						
+						</ul>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-sm-3">
+				<a href="http://www.apontador.com.br/login" class="btn sm btn-link"><i class="icon icon-user"></i>Entrar</a>
+			</li>
+
+			<li class="col-sm-5">
+				<a href="http://www.apontador.com.br/mais/planos" class="btn sm btn-link">Anuncie seu negócio!</a>
+			</li>
+		</menu>
+	</div>
+</header>

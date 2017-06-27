@@ -1,0 +1,17 @@
+
+<ul class="widget-list">
+
+     <li ng-repeat="review in content" class="content-list">
+        <figure>
+            <img ng-src="{{review.creation.author.photo}}" alt="{{review.name}}"/>
+        </figure>
+
+        <div class="description">
+            <h6 class="font-h4 font-weight">
+                <a href="{{review.creation.author.link.uri}}" title="{{review.creation.author.name}}">{{review.creation.author.name}}</a>
+            </h6>            
+            <widget-stars content="review.statistics.rating" data="review.creation.created"></widget-stars> 
+            <p class="font-h4">{{review.text}}</p>
+        </div>
+     </li>
+</ul>

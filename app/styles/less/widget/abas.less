@@ -1,0 +1,31 @@
+
+.widget-abas {
+  .nav-tabs {
+  	border-bottom: 1px solid @HeaderBG;
+
+  	> li {
+  		margin-bottom: 0;
+  		> a {
+  			color: @HeaderBG;
+  			&:hover{
+  				border-color: @HeaderBG; 
+  				color: @HeaderBG;
+  			}
+  		}
+
+  		&.active {
+	  		> a,
+	  		> a:hover, 
+	  		> a:focus {
+	  			background-color: @HeaderBG;
+	  			color: @colorWhite; 	
+	  			border-color: @HeaderBG;  			
+	  		}
+	  	}
+  	}
+  }
+
+  .tab-content {  	
+	  .tab-pane {padding: 15px 0;}
+  }
+}

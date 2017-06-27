@@ -1,0 +1,60 @@
+<div class="widget-carousel">
+    
+    <!--IMAGEM PREVIEW -->
+    <div class="carousel-indicators-preview nopadding-left" ng-if="content.slides.length > 0" style="{{content.insertStyle()}}" 
+        ng-class="{'col-sm-{{content.preview.size}} col-xs-{{content.preview.size}}': content.preview.size}">
+
+        <ol ng-style="{marginTop: content.navigate}">
+            <li ng-repeat="slide in content.slides track by $index" 
+                ng-click="content.selectSlide(slide)"
+                ng-class="{'active': content.classActive(slide)}">
+
+                <div ng-if="content.preview" class="thumbs"
+                ng-style="{height: content.preview.thumbs.height}">
+                    <img ng-src="{{slide.small}}"/>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <!-- IMAGEM GRANDE -->
+    <div class="carousel-inner-preview pull-right" ng-style="{height: content.height}" 
+        ng-mouseover="content.stopInterval()" ng-mouseleave="content.resetInterval()" 
+        ng-class="{'col-sm-{{content.size}} col-xs-{{content.size}}': content.size}">
+
+        <div ng-if="content.slides.length > 0" ng-repeat="slide in content.slides" class="item text-center" 
+            ng-class="{'active': content.classActive(slide)}">
+                <div class="content-image" ng-class="{'imgAdapte': content.preview}">
+                    <img ng-if="slide.large" src="{{slide.large}}" style="margin:auto;">
+                </div>
+                <div class="carousel-caption" ng-if="slide.text">
+                  <p>{{slide.text}}</p>
+                </div>        
+        </div>
+    </div>
+
+
+    <!--SETAS -->
+    <a role="button" href="" class="carousel-control top nopadding-left" 
+        ng-click="content.setPrevNext(true, content.preview)"
+        ng-class="{'col-sm-{{content.preview.size}}': content.preview.size}"
+        ng-if="
+            content.slides.length > 1 && !content.noControl ||
+            content.slides.length > 1 && content.preview
+        ">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        <span class="sr-only">Voltar</span>
+    </a>
+
+    <a role="button" href="" class="carousel-control bottom nopadding-left" 
+        ng-click="content.setPrevNext(false, content.preview)"
+        ng-class="{'col-sm-{{content.preview.size}}': content.preview.size}"
+        ng-if="
+            content.slides.length > 1 && !content.noControl ||
+            content.slides.length > 1 && content.preview
+        ">
+        <span class="glyphicon glyphicon-chevron-down"></span>
+        
+        <span class="sr-only">Avançar</span>
+    </a>
+</div>

@@ -1,0 +1,12 @@
+
+<div class="stars">
+
+    <i class="glyphicon" ng-class="{'glyphicon-star': content > 0, 'glyphicon-star-empty': content == 0}"></i>
+    <i class="glyphicon" ng-class="{'glyphicon-star': content > 1, 'glyphicon-star-empty': content < 2}"></i>
+    <i class="glyphicon" ng-class="{'glyphicon-star': content > 2, 'glyphicon-star-empty': content < 3}"></i>
+    <i class="glyphicon" ng-class="{'glyphicon-star': content > 3, 'glyphicon-star-empty': content < 4}"></i>
+    <i class="glyphicon" ng-class="{'glyphicon-star': content > 4, 'glyphicon-star-empty': content < 5}"></i>
+    
+    <span ng-show="data" class="font-psmall"> - {{data | date: "dd/MM/yyyy"}}</span>
+    <span ng-show="total">({{total}} avaliações)</span>
+</div>

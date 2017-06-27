@@ -1,0 +1,673 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'karma-jasmine',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.0
+4 verbose install initial load of C:\Projetos\querotrabalharnoapontador\package.json
+5 warn package.json template@0.0.1 No repository field.
+6 warn package.json template@0.0.1 No license field.
+7 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\ansi-styles\package.json
+8 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\chalk\package.json
+9 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\compress\package.json
+10 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\connect\package.json
+11 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\connect-modrewrite\package.json
+12 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\db\package.json
+13 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\di\package.json
+14 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\es5-ext\package.json
+15 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\estraverse\package.json
+16 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt\package.json
+17 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-autoprefixer\package.json
+18 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-bower-install\package.json
+19 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-checkrepo\package.json
+20 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-concurrent\package.json
+21 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-clean\package.json
+22 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-compress\package.json
+23 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-concat\package.json
+24 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-connect\package.json
+25 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-copy\package.json
+26 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-cssmin\package.json
+27 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-htmlmin\package.json
+28 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-imagemin\package.json
+29 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-jasmine\package.json
+30 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-jshint\package.json
+31 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-less\package.json
+32 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-uglify\package.json
+33 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-watch\package.json
+34 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-filerev\package.json
+35 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-githash\package.json
+36 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-google-cdn\package.json
+37 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-karma\package.json
+38 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-newer\package.json
+39 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-ngmin\package.json
+40 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-rev\package.json
+41 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-svgmin\package.json
+42 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-template-jasmine-istanbul\package.json
+43 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-usemin\package.json
+44 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-wiredep\package.json
+45 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-zip\package.json
+46 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\gulp\package.json
+47 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\gzip-size\package.json
+48 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\has-color\package.json
+49 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\iconv-lite\package.json
+50 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\imagemin\package.json
+51 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\jasmine\package.json
+52 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\jshint\package.json
+53 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\jshint-stylish\package.json
+54 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma\package.json
+55 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-chrome-launcher\package.json
+56 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-coverage\package.json
+57 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-firefox-launcher\package.json
+58 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine-runner-reporter\package.json
+59 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-ng-html2js-preprocessor\package.json
+60 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-ng-scenario\package.json
+61 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\less\package.json
+62 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\load-grunt-tasks\package.json
+63 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\ngmin\package.json
+64 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\pretty-bytes\package.json
+65 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\shortid\package.json
+66 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\socket.io\package.json
+67 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\strip-ansi\package.json
+68 verbose installManyTop reading scoped package data from C:\Projetos\querotrabalharnoapontador\node_modules\time-grunt\package.json
+69 info package.json db@1.0.6 license should be a valid SPDX license expression
+70 info package.json grunt-checkrepo@0.1.0 No license field.
+71 info package.json grunt-rev@0.1.0 No license field.
+72 info package.json compress@0.99.0 No repository field.
+73 info package.json connect-modrewrite@0.5.11 No license field.
+74 info package.json estraverse@4.1.0 No license field.
+75 info package.json grunt@0.4.5 No license field.
+76 info package.json grunt-bower-install@1.0.2 No license field.
+77 info package.json grunt-contrib-clean@0.5.0 No license field.
+78 info package.json grunt-contrib-compress@0.10.0 No license field.
+79 info package.json grunt-contrib-connect@0.7.1 No license field.
+80 info package.json grunt-concurrent@0.5.0 No license field.
+81 info package.json grunt-contrib-copy@0.5.0 No license field.
+82 info package.json grunt-contrib-concat@0.4.0 No license field.
+83 info package.json grunt-contrib-cssmin@0.9.0 No license field.
+84 info package.json grunt-contrib-htmlmin@0.3.0 No license field.
+85 info package.json grunt-contrib-jshint@0.10.0 No license field.
+86 info package.json grunt-contrib-less@0.11.4 No license field.
+87 info package.json grunt-filerev@0.2.1 No license field.
+88 info package.json grunt-contrib-uglify@0.4.1 No license field.
+89 info package.json grunt-google-cdn@0.4.3 license should be a valid SPDX license expression
+90 info package.json grunt-contrib-watch@0.6.1 No license field.
+91 info package.json grunt-newer@0.7.0 No license field.
+92 info package.json grunt-ngmin@0.0.3 license should be a valid SPDX license expression
+93 info package.json grunt-svgmin@0.2.1 No license field.
+94 info package.json grunt-template-jasmine-istanbul@0.5.0 No license field.
+95 info package.json grunt-usemin@2.1.1 license should be a valid SPDX license expression
+96 info package.json grunt-wiredep@1.9.0 No license field.
+97 info package.json grunt-zip@0.10.2 No license field.
+98 info package.json gulp@3.8.11 No license field.
+99 info package.json jshint@2.7.0 No license field.
+100 info package.json socket.io@1.3.5 No license field.
+101 info package.json shortid@2.0.1 No license field.
+102 verbose readDependencies loading dependencies from C:\Projetos\querotrabalharnoapontador\package.json
+103 silly cache add args [ 'karma-jasmine', null ]
+104 verbose cache add spec karma-jasmine
+105 silly cache add parsed spec Result {
+105 silly cache add   raw: 'karma-jasmine',
+105 silly cache add   scope: null,
+105 silly cache add   name: 'karma-jasmine',
+105 silly cache add   rawSpec: '',
+105 silly cache add   spec: 'latest',
+105 silly cache add   type: 'tag' }
+106 silly addNamed karma-jasmine@latest
+107 verbose addNamed "latest" is being treated as a dist-tag for karma-jasmine
+108 info addNameTag [ 'karma-jasmine', 'latest' ]
+109 silly mapToRegistry name karma-jasmine
+110 silly mapToRegistry using default registry
+111 silly mapToRegistry registry https://registry.npmjs.org/
+112 silly mapToRegistry data Result {
+112 silly mapToRegistry   raw: 'karma-jasmine',
+112 silly mapToRegistry   scope: null,
+112 silly mapToRegistry   name: 'karma-jasmine',
+112 silly mapToRegistry   rawSpec: '',
+112 silly mapToRegistry   spec: 'latest',
+112 silly mapToRegistry   type: 'tag' }
+113 silly mapToRegistry uri https://registry.npmjs.org/karma-jasmine
+114 verbose addNameTag registry:https://registry.npmjs.org/karma-jasmine not in flight; fetching
+115 verbose request uri https://registry.npmjs.org/karma-jasmine
+116 verbose request no auth needed
+117 info attempt registry request try #1 at 16:57:16
+118 verbose request id 7de0ed301f563510
+119 verbose etag "36V4PLV1VKGDW8C5GXL8K8BVH"
+120 http request GET https://registry.npmjs.org/karma-jasmine
+121 http 304 https://registry.npmjs.org/karma-jasmine
+122 verbose headers { date: 'Thu, 20 Oct 2016 18:57:16 GMT',
+122 verbose headers   via: '1.1 varnish',
+122 verbose headers   'cache-control': 'max-age=300',
+122 verbose headers   etag: '"36V4PLV1VKGDW8C5GXL8K8BVH"',
+122 verbose headers   age: '296',
+122 verbose headers   connection: 'keep-alive',
+122 verbose headers   'x-served-by': 'cache-gru7122-GRU',
+122 verbose headers   'x-cache': 'HIT',
+122 verbose headers   'x-cache-hits': '1',
+122 verbose headers   'x-timer': 'S1476989836.550699,VS0,VE0',
+122 verbose headers   vary: 'Accept-Encoding' }
+123 silly get cb [ 304,
+123 silly get   { date: 'Thu, 20 Oct 2016 18:57:16 GMT',
+123 silly get     via: '1.1 varnish',
+123 silly get     'cache-control': 'max-age=300',
+123 silly get     etag: '"36V4PLV1VKGDW8C5GXL8K8BVH"',
+123 silly get     age: '296',
+123 silly get     connection: 'keep-alive',
+123 silly get     'x-served-by': 'cache-gru7122-GRU',
+123 silly get     'x-cache': 'HIT',
+123 silly get     'x-cache-hits': '1',
+123 silly get     'x-timer': 'S1476989836.550699,VS0,VE0',
+123 silly get     vary: 'Accept-Encoding' } ]
+124 verbose etag https://registry.npmjs.org/karma-jasmine from cache
+125 verbose get saving karma-jasmine to C:\Users\Marcio Santos\AppData\Roaming\npm-cache\registry.npmjs.org\karma-jasmine\.cache.json
+126 verbose correctMkdir C:\Users\Marcio Santos\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+127 silly addNameTag next cb for karma-jasmine with tag latest
+128 silly addNamed karma-jasmine@1.0.2
+129 verbose addNamed "1.0.2" is a plain semver version for karma-jasmine
+130 silly mapToRegistry name karma-jasmine
+131 silly mapToRegistry using default registry
+132 silly mapToRegistry registry https://registry.npmjs.org/
+133 silly mapToRegistry data Result {
+133 silly mapToRegistry   raw: 'karma-jasmine',
+133 silly mapToRegistry   scope: null,
+133 silly mapToRegistry   name: 'karma-jasmine',
+133 silly mapToRegistry   rawSpec: '',
+133 silly mapToRegistry   spec: 'latest',
+133 silly mapToRegistry   type: 'tag' }
+134 silly mapToRegistry uri https://registry.npmjs.org/karma-jasmine
+135 verbose addRemoteTarball https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-1.0.2.tgz not in flight; adding
+136 verbose addRemoteTarball [ 'https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-1.0.2.tgz',
+136 verbose addRemoteTarball   'c0b3ab327bf207db60e17fa27db37cfdef5d8e6c' ]
+137 info retry fetch attempt 1 at 16:57:16
+138 info attempt registry request try #1 at 16:57:16
+139 http fetch GET https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-1.0.2.tgz
+140 http fetch 200 https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-1.0.2.tgz
+141 silly fetchAndShaCheck shasum c0b3ab327bf207db60e17fa27db37cfdef5d8e6c
+142 verbose addTmpTarball C:\Users\MARCIO~1\AppData\Local\Temp\npm-6740-634d4079\registry.npmjs.org\karma-jasmine\-\karma-jasmine-1.0.2.tgz not in flight; adding
+143 verbose addTmpTarball already have metadata; skipping unpack for karma-jasmine@1.0.2
+144 verbose correctMkdir C:\Users\Marcio Santos\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+145 silly cache afterAdd karma-jasmine@1.0.2
+146 verbose afterAdd C:\Users\Marcio Santos\AppData\Roaming\npm-cache\karma-jasmine\1.0.2\package\package.json not in flight; writing
+147 verbose correctMkdir C:\Users\Marcio Santos\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+148 verbose afterAdd C:\Users\Marcio Santos\AppData\Roaming\npm-cache\karma-jasmine\1.0.2\package\package.json written
+149 silly install resolved [ { name: 'karma-jasmine',
+149 silly install resolved     version: '1.0.2',
+149 silly install resolved     description: 'A Karma plugin - adapter for Jasmine testing framework.',
+149 silly install resolved     main: 'lib/index.js',
+149 silly install resolved     scripts: { test: 'grunt test' },
+149 silly install resolved     repository:
+149 silly install resolved      { type: 'git',
+149 silly install resolved        url: 'git://github.com/karma-runner/karma-jasmine.git' },
+149 silly install resolved     keywords: [ 'karma-plugin', 'karma-adapter', 'jasmine' ],
+149 silly install resolved     author: { name: 'Vojta Jina', email: 'vojta.jina@gmail.com' },
+149 silly install resolved     dependencies: {},
+149 silly install resolved     devDependencies:
+149 silly install resolved      { 'eslint-config-standard': '^5.1.0',
+149 silly install resolved        'eslint-plugin-promise': '^1.1.0',
+149 silly install resolved        'eslint-plugin-standard': '^1.3.2',
+149 silly install resolved        grunt: '~0.4.5',
+149 silly install resolved        'grunt-bump': '^0.7.0',
+149 silly install resolved        'grunt-conventional-changelog': '^6.1.0',
+149 silly install resolved        'grunt-conventional-github-releaser': '^1.0.0',
+149 silly install resolved        'grunt-eslint': '^18.0.0',
+149 silly install resolved        'grunt-karma': '1.x || ~0.12.1',
+149 silly install resolved        'grunt-npm': '0.0.2',
+149 silly install resolved        'jasmine-core': '~2.4.1',
+149 silly install resolved        karma: '1.x || ',
+149 silly install resolved        'karma-chrome-launcher': '1.x || ~0.2.2',
+149 silly install resolved        'karma-firefox-launcher': '1.x || ~0.1.7',
+149 silly install resolved        'karma-jasmine': '1.x || ~0.3.7',
+149 silly install resolved        'load-grunt-tasks': '^3.4.1' },
+149 silly install resolved     peerDependencies: { 'jasmine-core': '*', karma: '*' },
+149 silly install resolved     license: 'MIT',
+149 silly install resolved     contributors:
+149 silly install resolved      [ [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object],
+149 silly install resolved        [Object] ],
+149 silly install resolved     gitHead: 'aaee433141f76ad6cf13495f4f19e9eeb2e49d06',
+149 silly install resolved     bugs: { url: 'https://github.com/karma-runner/karma-jasmine/issues' },
+149 silly install resolved     homepage: 'https://github.com/karma-runner/karma-jasmine#readme',
+149 silly install resolved     _id: 'karma-jasmine@1.0.2',
+149 silly install resolved     _shasum: 'c0b3ab327bf207db60e17fa27db37cfdef5d8e6c',
+149 silly install resolved     _from: 'karma-jasmine@latest',
+149 silly install resolved     _npmVersion: '2.14.12',
+149 silly install resolved     _nodeVersion: '4.3.0',
+149 silly install resolved     _npmUser: { name: 'zzo', email: 'mark@zzo.com' },
+149 silly install resolved     dist:
+149 silly install resolved      { shasum: 'c0b3ab327bf207db60e17fa27db37cfdef5d8e6c',
+149 silly install resolved        tarball: 'https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-1.0.2.tgz' },
+149 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+149 silly install resolved     _npmOperationalInternal:
+149 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+149 silly install resolved        tmp: 'tmp/karma-jasmine-1.0.2.tgz_1462326469449_0.28350111772306263' },
+149 silly install resolved     directories: {},
+149 silly install resolved     _resolved: 'https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-1.0.2.tgz' } ]
+150 info install karma-jasmine@1.0.2 into C:\Projetos\querotrabalharnoapontador
+151 info installOne karma-jasmine@1.0.2
+152 verbose installOne of karma-jasmine to C:\Projetos\querotrabalharnoapontador not in flight; installing
+153 verbose correctMkdir C:\Users\Marcio Santos\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+154 verbose lock using C:\Users\Marcio Santos\AppData\Roaming\npm-cache\_locks\karma-jasmine-9ddd524fc650e8d0.lock for C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine
+155 silly install write writing karma-jasmine 1.0.2 to C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine
+156 verbose unbuild node_modules\karma-jasmine
+157 silly gentlyRm C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine is being purged from base C:\Projetos\querotrabalharnoapontador
+158 verbose gentlyRm don't care about contents; nuking C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine
+159 verbose tar unpack C:\Users\Marcio Santos\AppData\Roaming\npm-cache\karma-jasmine\1.0.2\package.tgz
+160 verbose tar unpacking to C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine
+161 silly gentlyRm C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine is being purged
+162 verbose gentlyRm don't care about contents; nuking C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine
+163 silly gunzTarPerm modes [ '777', '666' ]
+164 silly gunzTarPerm extractEntry package.json
+165 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+166 silly gunzTarPerm extractEntry LICENSE
+167 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+168 silly gunzTarPerm extractEntry wallaby.js
+169 silly gunzTarPerm modified mode [ 'wallaby.js', 420, 438 ]
+170 silly gunzTarPerm extractEntry gruntfile.js
+171 silly gunzTarPerm modified mode [ 'gruntfile.js', 420, 438 ]
+172 silly gunzTarPerm extractEntry lib/adapter.js
+173 silly gunzTarPerm modified mode [ 'lib/adapter.js', 420, 438 ]
+174 silly gunzTarPerm extractEntry lib/boot.js
+175 silly gunzTarPerm modified mode [ 'lib/boot.js', 420, 438 ]
+176 silly gunzTarPerm extractEntry lib/index.js
+177 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 438 ]
+178 silly gunzTarPerm extractEntry integration-tests.sh
+179 silly gunzTarPerm modified mode [ 'integration-tests.sh', 493, 511 ]
+180 silly gunzTarPerm extractEntry CHANGELOG.md
+181 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
+182 verbose write writing to C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine\package.json
+183 info preinstall karma-jasmine@1.0.2
+184 verbose readDependencies loading dependencies from C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine\package.json
+185 silly prepareForInstallMany adding jasmine-core@* from karma-jasmine peerDependencies
+186 warn peerDependencies The peer dependency jasmine-core@* included from karma-jasmine will no
+187 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+188 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+189 verbose readDependencies loading dependencies from C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine\package.json
+190 silly install resolved []
+191 verbose about to build C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine
+192 info build C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine
+193 info linkStuff karma-jasmine@1.0.2
+194 silly linkStuff karma-jasmine@1.0.2 has C:\Projetos\querotrabalharnoapontador\node_modules as its parent node_modules
+195 verbose linkBins karma-jasmine@1.0.2
+196 verbose linkMans karma-jasmine@1.0.2
+197 verbose rebuildBundles karma-jasmine@1.0.2
+198 info install karma-jasmine@1.0.2
+199 info postinstall karma-jasmine@1.0.2
+200 verbose readDependencies loading dependencies from C:\Projetos\querotrabalharnoapontador\package.json
+201 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\ansi-styles\package.json
+202 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\chalk\package.json
+203 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\compress\package.json
+204 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\connect\package.json
+205 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\connect-modrewrite\package.json
+206 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\db\package.json
+207 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\di\package.json
+208 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\es5-ext\package.json
+209 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\estraverse\package.json
+210 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt\package.json
+211 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-autoprefixer\package.json
+212 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-bower-install\package.json
+213 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-checkrepo\package.json
+214 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-concurrent\package.json
+215 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-clean\package.json
+216 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-compress\package.json
+217 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-concat\package.json
+218 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-connect\package.json
+219 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-copy\package.json
+220 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-cssmin\package.json
+221 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-htmlmin\package.json
+222 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-imagemin\package.json
+223 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-jasmine\package.json
+224 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-jshint\package.json
+225 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-less\package.json
+226 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-uglify\package.json
+227 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-contrib-watch\package.json
+228 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-filerev\package.json
+229 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-githash\package.json
+230 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-google-cdn\package.json
+231 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-karma\package.json
+232 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-newer\package.json
+233 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-ngmin\package.json
+234 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-rev\package.json
+235 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-svgmin\package.json
+236 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-template-jasmine-istanbul\package.json
+237 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-usemin\package.json
+238 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-wiredep\package.json
+239 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\grunt-zip\package.json
+240 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\gulp\package.json
+241 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\gzip-size\package.json
+242 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\has-color\package.json
+243 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\iconv-lite\package.json
+244 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\imagemin\package.json
+245 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\jasmine\package.json
+246 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\jshint\package.json
+247 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\jshint-stylish\package.json
+248 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma\package.json
+249 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-chrome-launcher\package.json
+250 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-coverage\package.json
+251 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-firefox-launcher\package.json
+252 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine\package.json
+253 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine-runner-reporter\package.json
+254 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-ng-html2js-preprocessor\package.json
+255 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\karma-ng-scenario\package.json
+256 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\less\package.json
+257 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\load-grunt-tasks\package.json
+258 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\ngmin\package.json
+259 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\pretty-bytes\package.json
+260 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\shortid\package.json
+261 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\socket.io\package.json
+262 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\strip-ansi\package.json
+263 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\time-grunt\package.json
+264 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\grunt-zip\package.json
+265 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\grunt-zip.cmd\package.json
+266 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\gulp\package.json
+267 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\gulp.cmd\package.json
+268 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\gzip-size\package.json
+269 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\gzip-size.cmd\package.json
+270 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\jasmine\package.json
+271 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\jasmine.cmd\package.json
+272 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\jshint\package.json
+273 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\jshint.cmd\package.json
+274 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\karma\package.json
+275 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\karma.cmd\package.json
+276 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\lessc\package.json
+277 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\lessc.cmd\package.json
+278 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\ngmin\package.json
+279 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\ngmin.cmd\package.json
+280 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\pretty-bytes\package.json
+281 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\pretty-bytes.cmd\package.json
+282 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\strip-ansi\package.json
+283 verbose targetResolver reading package data from C:\Projetos\querotrabalharnoapontador\node_modules\.bin\strip-ansi.cmd\package.json
+284 silly cache add args [ 'jasmine-core@*', null ]
+285 verbose cache add spec jasmine-core@*
+286 silly cache add parsed spec Result {
+286 silly cache add   raw: 'jasmine-core@*',
+286 silly cache add   scope: null,
+286 silly cache add   name: 'jasmine-core',
+286 silly cache add   rawSpec: '*',
+286 silly cache add   spec: '*',
+286 silly cache add   type: 'range' }
+287 silly addNamed jasmine-core@*
+288 verbose addNamed "*" is a valid semver range for jasmine-core
+289 silly addNameRange { name: 'jasmine-core', range: '*', hasData: false }
+290 silly mapToRegistry name jasmine-core
+291 silly mapToRegistry using default registry
+292 silly mapToRegistry registry https://registry.npmjs.org/
+293 silly mapToRegistry data Result {
+293 silly mapToRegistry   raw: 'jasmine-core',
+293 silly mapToRegistry   scope: null,
+293 silly mapToRegistry   name: 'jasmine-core',
+293 silly mapToRegistry   rawSpec: '',
+293 silly mapToRegistry   spec: 'latest',
+293 silly mapToRegistry   type: 'tag' }
+294 silly mapToRegistry uri https://registry.npmjs.org/jasmine-core
+295 verbose addNameRange registry:https://registry.npmjs.org/jasmine-core not in flight; fetching
+296 verbose request uri https://registry.npmjs.org/jasmine-core
+297 verbose request no auth needed
+298 info attempt registry request try #1 at 16:57:17
+299 verbose etag "EBKK5B80KDK8EBH5O7VZW9R5X"
+300 http request GET https://registry.npmjs.org/jasmine-core
+301 http 304 https://registry.npmjs.org/jasmine-core
+302 verbose headers { date: 'Thu, 20 Oct 2016 18:57:17 GMT',
+302 verbose headers   via: '1.1 varnish',
+302 verbose headers   'cache-control': 'max-age=300',
+302 verbose headers   etag: '"EBKK5B80KDK8EBH5O7VZW9R5X"',
+302 verbose headers   age: '44',
+302 verbose headers   connection: 'keep-alive',
+302 verbose headers   'x-served-by': 'cache-gru7122-GRU',
+302 verbose headers   'x-cache': 'HIT',
+302 verbose headers   'x-cache-hits': '3',
+302 verbose headers   'x-timer': 'S1476989837.259899,VS0,VE0',
+302 verbose headers   vary: 'Accept-Encoding' }
+303 silly get cb [ 304,
+303 silly get   { date: 'Thu, 20 Oct 2016 18:57:17 GMT',
+303 silly get     via: '1.1 varnish',
+303 silly get     'cache-control': 'max-age=300',
+303 silly get     etag: '"EBKK5B80KDK8EBH5O7VZW9R5X"',
+303 silly get     age: '44',
+303 silly get     connection: 'keep-alive',
+303 silly get     'x-served-by': 'cache-gru7122-GRU',
+303 silly get     'x-cache': 'HIT',
+303 silly get     'x-cache-hits': '3',
+303 silly get     'x-timer': 'S1476989837.259899,VS0,VE0',
+303 silly get     vary: 'Accept-Encoding' } ]
+304 verbose etag https://registry.npmjs.org/jasmine-core from cache
+305 verbose get saving jasmine-core to C:\Users\Marcio Santos\AppData\Roaming\npm-cache\registry.npmjs.org\jasmine-core\.cache.json
+306 verbose correctMkdir C:\Users\Marcio Santos\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+307 silly addNameRange number 2 { name: 'jasmine-core', range: '*', hasData: true }
+308 silly addNameRange versions [ 'jasmine-core',
+308 silly addNameRange   [ '2.0.0',
+308 silly addNameRange     '2.0.1',
+308 silly addNameRange     '2.0.4',
+308 silly addNameRange     '2.1.0',
+308 silly addNameRange     '2.1.1',
+308 silly addNameRange     '2.1.2',
+308 silly addNameRange     '2.1.3',
+308 silly addNameRange     '2.2.0',
+308 silly addNameRange     '2.3.0',
+308 silly addNameRange     '2.3.2',
+308 silly addNameRange     '2.3.3',
+308 silly addNameRange     '2.3.4',
+308 silly addNameRange     '2.4.0',
+308 silly addNameRange     '2.4.1',
+308 silly addNameRange     '2.5.0',
+308 silly addNameRange     '2.5.1',
+308 silly addNameRange     '2.5.2' ] ]
+309 silly addNamed jasmine-core@2.5.2
+310 verbose addNamed "2.5.2" is a plain semver version for jasmine-core
+311 silly cache afterAdd jasmine-core@2.5.2
+312 verbose afterAdd C:\Users\Marcio Santos\AppData\Roaming\npm-cache\jasmine-core\2.5.2\package\package.json not in flight; writing
+313 verbose correctMkdir C:\Users\Marcio Santos\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+314 verbose afterAdd C:\Users\Marcio Santos\AppData\Roaming\npm-cache\jasmine-core\2.5.2\package\package.json written
+315 silly install resolved [ { name: 'jasmine-core',
+315 silly install resolved     license: 'MIT',
+315 silly install resolved     version: '2.5.2',
+315 silly install resolved     repository:
+315 silly install resolved      { type: 'git',
+315 silly install resolved        url: 'git+https://github.com/jasmine/jasmine.git' },
+315 silly install resolved     keywords: [ 'test', 'jasmine', 'tdd', 'bdd' ],
+315 silly install resolved     scripts: { test: 'grunt jshint execSpecsInNode' },
+315 silly install resolved     description: 'Official packaging of Jasmine\'s core files for use by Node.js projects.',
+315 silly install resolved     homepage: 'http://jasmine.github.io',
+315 silly install resolved     main: './lib/jasmine-core.js',
+315 silly install resolved     devDependencies:
+315 silly install resolved      { glob: '~7.0.5',
+315 silly install resolved        grunt: '^1.0.1',
+315 silly install resolved        'grunt-cli': '^1.2.0',
+315 silly install resolved        'grunt-contrib-compass': '^1.1.1',
+315 silly install resolved        'grunt-contrib-compress': '^1.3.0',
+315 silly install resolved        'grunt-contrib-concat': '^1.0.1',
+315 silly install resolved        'grunt-contrib-jshint': '^1.0.0',
+315 silly install resolved        jasmine: '^2.4.0',
+315 silly install resolved        'load-grunt-tasks': '^0.4.0',
+315 silly install resolved        shelljs: '^0.7.0',
+315 silly install resolved        temp: '~0.8.1' },
+315 silly install resolved     gitHead: '6816bc4252fe40ea2cf6a16b4aac7ddce6922095',
+315 silly install resolved     bugs: { url: 'https://github.com/jasmine/jasmine/issues' },
+315 silly install resolved     _id: 'jasmine-core@2.5.2',
+315 silly install resolved     _shasum: '6f61bd79061e27f43e6f9355e44b3c6cab6ff297',
+315 silly install resolved     _from: 'jasmine-core@*',
+315 silly install resolved     _npmVersion: '2.12.1',
+315 silly install resolved     _nodeVersion: '0.12.7',
+315 silly install resolved     _npmUser: { name: 'slackersoft', email: 'gregg@slackersoft.net' },
+315 silly install resolved     maintainers: [ [Object], [Object] ],
+315 silly install resolved     dist:
+315 silly install resolved      { shasum: '6f61bd79061e27f43e6f9355e44b3c6cab6ff297',
+315 silly install resolved        tarball: 'https://registry.npmjs.org/jasmine-core/-/jasmine-core-2.5.2.tgz' },
+315 silly install resolved     _npmOperationalInternal:
+315 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+315 silly install resolved        tmp: 'tmp/jasmine-core-2.5.2.tgz_1474071878974_0.8996635694056749' },
+315 silly install resolved     directories: {},
+315 silly install resolved     _resolved: 'https://registry.npmjs.org/jasmine-core/-/jasmine-core-2.5.2.tgz',
+315 silly install resolved     readme: 'ERROR: No README data found!' } ]
+316 info install jasmine-core@2.5.2 into C:\Projetos\querotrabalharnoapontador
+317 info installOne jasmine-core@2.5.2
+318 verbose installOne of jasmine-core to C:\Projetos\querotrabalharnoapontador not in flight; installing
+319 verbose correctMkdir C:\Users\Marcio Santos\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+320 verbose lock using C:\Users\Marcio Santos\AppData\Roaming\npm-cache\_locks\jasmine-core-4f70e7b1096f7735.lock for C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core
+321 silly install write writing jasmine-core 2.5.2 to C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core
+322 verbose unbuild node_modules\jasmine-core
+323 silly gentlyRm C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core is being purged from base C:\Projetos\querotrabalharnoapontador
+324 verbose gentlyRm don't care about contents; nuking C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core
+325 verbose tar unpack C:\Users\Marcio Santos\AppData\Roaming\npm-cache\jasmine-core\2.5.2\package.tgz
+326 verbose tar unpacking to C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core
+327 silly gentlyRm C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core is being purged
+328 verbose gentlyRm don't care about contents; nuking C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core
+329 silly gunzTarPerm modes [ '777', '666' ]
+330 silly gunzTarPerm extractEntry package.json
+331 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+332 silly gunzTarPerm extractEntry .npmignore
+333 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+334 silly gunzTarPerm extractEntry README.md
+335 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+336 silly gunzTarPerm extractEntry .github/CONTRIBUTING.md
+337 silly gunzTarPerm modified mode [ '.github/CONTRIBUTING.md', 420, 438 ]
+338 silly gunzTarPerm extractEntry .github/ISSUE_TEMPLATE.md
+339 silly gunzTarPerm modified mode [ '.github/ISSUE_TEMPLATE.md', 420, 438 ]
+340 silly gunzTarPerm extractEntry .codeclimate.yml
+341 silly gunzTarPerm modified mode [ '.codeclimate.yml', 420, 438 ]
+342 silly gunzTarPerm extractEntry MANIFEST.in
+343 silly gunzTarPerm modified mode [ 'MANIFEST.in', 420, 438 ]
+344 silly gunzTarPerm extractEntry MIT.LICENSE
+345 silly gunzTarPerm modified mode [ 'MIT.LICENSE', 420, 438 ]
+346 silly gunzTarPerm extractEntry .editorconfig
+347 silly gunzTarPerm modified mode [ '.editorconfig', 420, 438 ]
+348 silly gunzTarPerm extractEntry RELEASE.md
+349 silly gunzTarPerm modified mode [ 'RELEASE.md', 420, 438 ]
+350 silly gunzTarPerm extractEntry bower.json
+351 silly gunzTarPerm modified mode [ 'bower.json', 420, 438 ]
+352 silly gunzTarPerm extractEntry images/jasmine-horizontal.png
+353 silly gunzTarPerm modified mode [ 'images/jasmine-horizontal.png', 420, 438 ]
+354 silly gunzTarPerm extractEntry images/jasmine-horizontal.svg
+355 silly gunzTarPerm modified mode [ 'images/jasmine-horizontal.svg', 420, 438 ]
+356 silly gunzTarPerm extractEntry images/jasmine_favicon.png
+357 silly gunzTarPerm modified mode [ 'images/jasmine_favicon.png', 420, 438 ]
+358 silly gunzTarPerm extractEntry jasmine_core.egg-info/PKG-INFO
+359 silly gunzTarPerm modified mode [ 'jasmine_core.egg-info/PKG-INFO', 420, 438 ]
+360 silly gunzTarPerm extractEntry jasmine_core.egg-info/SOURCES.txt
+361 silly gunzTarPerm modified mode [ 'jasmine_core.egg-info/SOURCES.txt', 420, 438 ]
+362 silly gunzTarPerm extractEntry jasmine_core.egg-info/dependency_links.txt
+363 silly gunzTarPerm modified mode [ 'jasmine_core.egg-info/dependency_links.txt', 420, 438 ]
+364 silly gunzTarPerm extractEntry jasmine_core.egg-info/requires.txt
+365 silly gunzTarPerm modified mode [ 'jasmine_core.egg-info/requires.txt', 420, 438 ]
+366 silly gunzTarPerm extractEntry jasmine_core.egg-info/top_level.txt
+367 silly gunzTarPerm modified mode [ 'jasmine_core.egg-info/top_level.txt', 420, 438 ]
+368 silly gunzTarPerm extractEntry lib/jasmine-core.js
+369 silly gunzTarPerm modified mode [ 'lib/jasmine-core.js', 420, 438 ]
+370 silly gunzTarPerm extractEntry lib/console/console.js
+371 silly gunzTarPerm modified mode [ 'lib/console/console.js', 420, 438 ]
+372 silly gunzTarPerm extractEntry lib/jasmine-core/boot.js
+373 silly gunzTarPerm modified mode [ 'lib/jasmine-core/boot.js', 420, 438 ]
+374 silly gunzTarPerm extractEntry lib/jasmine-core/jasmine-html.js
+375 silly gunzTarPerm modified mode [ 'lib/jasmine-core/jasmine-html.js', 420, 438 ]
+376 silly gunzTarPerm extractEntry lib/jasmine-core/jasmine.js
+377 silly gunzTarPerm modified mode [ 'lib/jasmine-core/jasmine.js', 420, 438 ]
+378 silly gunzTarPerm extractEntry lib/jasmine-core/json2.js
+379 silly gunzTarPerm modified mode [ 'lib/jasmine-core/json2.js', 420, 438 ]
+380 silly gunzTarPerm extractEntry lib/jasmine-core/node_boot.js
+381 silly gunzTarPerm modified mode [ 'lib/jasmine-core/node_boot.js', 420, 438 ]
+382 silly gunzTarPerm extractEntry lib/jasmine-core/example/node_example/lib/jasmine_examples/Player.js
+383 silly gunzTarPerm modified mode [ 'lib/jasmine-core/example/node_example/lib/jasmine_examples/Player.js',
+383 silly gunzTarPerm   420,
+383 silly gunzTarPerm   438 ]
+384 silly gunzTarPerm extractEntry lib/jasmine-core/example/node_example/lib/jasmine_examples/Song.js
+385 silly gunzTarPerm modified mode [ 'lib/jasmine-core/example/node_example/lib/jasmine_examples/Song.js',
+385 silly gunzTarPerm   420,
+385 silly gunzTarPerm   438 ]
+386 silly gunzTarPerm extractEntry lib/jasmine-core/example/node_example/spec/helpers/jasmine_examples/SpecHelper.js
+387 silly gunzTarPerm modified mode [ 'lib/jasmine-core/example/node_example/spec/helpers/jasmine_examples/SpecHelper.js',
+387 silly gunzTarPerm   420,
+387 silly gunzTarPerm   438 ]
+388 silly gunzTarPerm extractEntry lib/jasmine-core/example/node_example/spec/jasmine_examples/PlayerSpec.js
+389 silly gunzTarPerm modified mode [ 'lib/jasmine-core/example/node_example/spec/jasmine_examples/PlayerSpec.js',
+389 silly gunzTarPerm   420,
+389 silly gunzTarPerm   438 ]
+390 silly gunzTarPerm extractEntry lib/jasmine-core/example/spec/PlayerSpec.js
+391 silly gunzTarPerm modified mode [ 'lib/jasmine-core/example/spec/PlayerSpec.js', 420, 438 ]
+392 silly gunzTarPerm extractEntry lib/jasmine-core/example/spec/SpecHelper.js
+393 silly gunzTarPerm modified mode [ 'lib/jasmine-core/example/spec/SpecHelper.js', 420, 438 ]
+394 silly gunzTarPerm extractEntry lib/jasmine-core/example/src/Player.js
+395 silly gunzTarPerm modified mode [ 'lib/jasmine-core/example/src/Player.js', 420, 438 ]
+396 silly gunzTarPerm extractEntry lib/jasmine-core/example/src/Song.js
+397 silly gunzTarPerm modified mode [ 'lib/jasmine-core/example/src/Song.js', 420, 438 ]
+398 silly gunzTarPerm extractEntry lib/jasmine-core/jasmine.css
+399 silly gunzTarPerm modified mode [ 'lib/jasmine-core/jasmine.css', 420, 438 ]
+400 silly gunzTarPerm extractEntry requirements.txt
+401 silly gunzTarPerm modified mode [ 'requirements.txt', 420, 438 ]
+402 verbose write writing to C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core\package.json
+403 info preinstall jasmine-core@2.5.2
+404 verbose readDependencies loading dependencies from C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core\package.json
+405 verbose readDependencies loading dependencies from C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core\package.json
+406 silly install resolved []
+407 verbose about to build C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core
+408 info build C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core
+409 info linkStuff jasmine-core@2.5.2
+410 silly linkStuff jasmine-core@2.5.2 has C:\Projetos\querotrabalharnoapontador\node_modules as its parent node_modules
+411 verbose linkBins jasmine-core@2.5.2
+412 verbose linkMans jasmine-core@2.5.2
+413 verbose rebuildBundles jasmine-core@2.5.2
+414 info install jasmine-core@2.5.2
+415 info postinstall jasmine-core@2.5.2
+416 verbose unlock done using C:\Users\Marcio Santos\AppData\Roaming\npm-cache\_locks\jasmine-core-4f70e7b1096f7735.lock for C:\Projetos\querotrabalharnoapontador\node_modules\jasmine-core
+417 verbose unlock done using C:\Users\Marcio Santos\AppData\Roaming\npm-cache\_locks\karma-jasmine-9ddd524fc650e8d0.lock for C:\Projetos\querotrabalharnoapontador\node_modules\karma-jasmine
+418 verbose validateInstall loading C:\Projetos\querotrabalharnoapontador\package.json for validation
+419 verbose stack Error: The package grunt@0.4.5 does not satisfy its siblings' peerDependencies requirements!
+419 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\lib\install.js:125:32
+419 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\lib\install.js:268:7
+419 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+419 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+419 verbose stack     at cb (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+419 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+419 verbose stack     at cb (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+419 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+419 verbose stack     at cb (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+419 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+420 verbose cwd C:\Projetos\querotrabalharnoapontador
+421 error Windows_NT 10.0.14393
+422 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "karma-jasmine" "--save-dev"
+423 error node v4.6.0
+424 error npm  v2.15.9
+425 error code EPEERINVALID
+426 error peerinvalid The package grunt@0.4.5 does not satisfy its siblings' peerDependencies requirements!
+426 error peerinvalid Peer grunt-karma@0.10.1 wants grunt@0.4.x
+426 error peerinvalid Peer grunt-contrib-copy@0.5.0 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-checkrepo@0.1.0 wants grunt@~0.4.1
+426 error peerinvalid Peer grunt-contrib-clean@0.5.0 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-usemin@2.1.1 wants grunt@>=0.4.0
+426 error peerinvalid Peer grunt-newer@0.7.0 wants grunt@~0.4.1
+426 error peerinvalid Peer grunt-concurrent@0.5.0 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-contrib-concat@0.4.0 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-filerev@0.2.1 wants grunt@>=0.4.0
+426 error peerinvalid Peer grunt-bower-install@1.0.2 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-contrib-connect@0.7.1 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-contrib-watch@0.6.1 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-svgmin@0.2.1 wants grunt@~0.4
+426 error peerinvalid Peer grunt-contrib-compress@0.10.0 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-contrib-cssmin@0.9.0 wants grunt@~0.4.1
+426 error peerinvalid Peer grunt-contrib-htmlmin@0.3.0 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-contrib-jshint@0.10.0 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-contrib-less@0.11.4 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-wiredep@1.9.0 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-autoprefixer@0.7.6 wants grunt@~0.4.2
+426 error peerinvalid Peer grunt-contrib-uglify@0.4.1 wants grunt@~0.4.0
+426 error peerinvalid Peer grunt-contrib-imagemin@1.0.0 wants grunt@>=0.4.0
+426 error peerinvalid Peer grunt-template-jasmine-istanbul@0.5.0 wants grunt@^1.0.1
+427 verbose exit [ 1, true ]

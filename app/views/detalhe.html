@@ -1,0 +1,116 @@
+
+<app-header></app-header>
+
+
+<div id="pagDetalhe">
+	<div ng-show="showPlace" class="image-featured">
+		<img ng-src="{{imagefull}}" class=""/>		
+	</div>
+
+	<div class="container">
+		<breadcrumb></breadcrumb>	
+		<messages></messages>
+
+		<section ng-show="showPlace" class="featured row">
+			<header>
+				<h1 class="font-h1">{{place.name}}</h1>
+				<div class="reviews">
+					<widget-stars content="place.statistics.rating" total="place.statistics.rating"></widget-stars>
+				</div>
+			</header>
+
+			<article class="col-sm-5 nopadding-left" ng-if="carousel">
+				<widget-carousel content="carousel"></widget-carousel>
+			</article>
+
+			<aside class="info col-sm-6 pull-right">
+				<ul class="list">
+					<li ng-show="place.address">
+						<address>
+							<i class="icon icon-localidade"></i> 
+							{{place.address.description}}
+						</address>
+					</li>
+					<li ng-show="place.openingHours">
+						<i class="icon icon-relogio"></i> 
+						Aberto Hoje: 
+						<span ng-bind-html="(place.openingHours.openNow ? 'Sim' : 'Não')"></span>
+					</li>
+					<li ng-show="place.phones.length > 0">
+						<i class="icon icon-tel"></i> 
+						<span ng-repeat="phone in place.phones">
+							{{phone | viewMaks: '+99 (99)9999-9999'}} <span ng-if="!$last">/</span> 
+						</span>
+					</li>
+					<li ng-show="place.statistics.thumbsUp">
+						<i class="icon icon-curtir"></i> {{place.statistics.thumbsUp}} pessoas recomenaram
+					</li>
+				</ul>
+			</aside>
+		</section>
+
+		<section ng-show="showPlace" id="info-additional" class="row">
+			<div class="col-sm-8">				
+				<article id="informations" class="content-additional">
+					<tabset active="active" class="widget-abas">
+					    <tab index="0" heading="{{infosAdditional.info.title}}">
+					    	<div ng-bind-html="infosAdditional.info.description"></div>
+					    </tab>
+
+					    <tab index="2" heading="{{infosAdditional.photos.title}}">
+					    	<div class="content-photos">
+						    	<figure ng-repeat="figure in infosAdditional.photos.images|limitTo: 4" class="photos">
+						    		<img ng-src="{{figure.medium}}" alt="{{figure.place.name}}"/>
+						    		
+						    		<figcaption ng-if="$last && infosAdditional.photos.amount > 4" class="amount">
+						    			<a href="">
+								    		<i class="glyphicon glyphicon-camera"></i>
+							    			Ver todas as {{infosAdditional.photos.amount}} fotos >>
+						    			</a>
+						    		</figcaption>
+						    	</figure>
+						    </div>
+					    </tab>
+
+					    <tab index="2" heading="{{infosAdditional.more.title}}">
+					    	<ul class="list">
+					    		<li>Cadastrado por <strong>{{infosAdditional.more.per}}</strong></li>
+					    		<li>
+					    			Categorias: 
+					    			<strong ng-repeat="categorie in infosAdditional.more.categorias">{{categorie.name}}</strong>
+					    		</li>
+					    		<li>
+					    			Tags: 
+					    			<strong class="btn btn-secundary" ng-repeat="tag in infosAdditional.more.tags">{{tag.value}} </strong>
+					    		</li>
+					    		<li>Site: <a href="{{infosAdditional.more.site}}">{{infosAdditional.more.site}}</a></li>
+					    	</ul>					    	
+					    </tab>
+
+					    <tab index="3" heading="{{infosAdditional.map.title}}">
+					    	<h4 class="font-h4">{{infosAdditional.map.description}}</h4>
+					    	<iframe width="100%" height="300" frameborder="0" scrolling="0" ng-src="{{infosAdditional.map.src | trustAsResourceUrl}}"></iframe>					    	
+					    </tab>
+					</tabset>
+				</article>
+
+				<article id="reviews" class="content-additional">
+					<header>
+						<h2 class="font-h3">Avaliações</h2>	
+					</header>
+					<widget-reviews content="reviews"></widget-reviews>		
+				</article>
+			</div>
+
+			<aside id="location-suggested" class="col-sm-4">
+				<header>
+					<h2 class="font-h3">Locais parecidos</h2>
+				</header>
+				<widget-locationsuggested content="locations"></widget-locationsuggested>
+			</aside>
+		</section>
+			
+	</div>
+</div>
+
+<app-footer></app-footer>
