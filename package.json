@@ -1,0 +1,26 @@
+{
+  "name": "Gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.5.0",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-minify-html": "^1.0.1",
+    "gulp-ruby-sass": "^1.0.1",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.4",
+    "gulp.spritesmith": "^3.5.3",
+    "rsyncwrapper": "^0.4.2",
+    "tiny-lr": "^0.1.5"
+  }
+}
