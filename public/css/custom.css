@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+  outline:none;
+  text-rendering:optimizeLegibility!important;
+}
+
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	min-height:100%; width:100%;
+	height:auto;
+}
+
+body {
+	margin: 0;
+  width:100%;
+	font-size: 62.5%;
+	font-family: 'Open Sans', sans-serif;
+
+	text-rendering: geometricPrecision;
+  font-weight: normal;
+  font-style: normal;
+
+	height:auto;
+  overflow:auto;
+
+  overflow-x:hidden;
+}
+section {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+	    background: #dfdfdf;
+}
+
+.bg-branco{
+	background: #fff;
+	padding: 20px;
+}
+
+.maps {
+  width: 100%;
+  padding: 0px;
+  margin-top: 20px;
+  border: none;
+  height: 400px;
+  pointer-events: none;
+ }
+
+
+/******
+  Header
+******/
+
+header{
+  width: 100%;
+  height: 50px;
+  background: #ff8207;
+}
+
+header .linha{
+  height: 100%;
+}
+
+header .logo{
+  text-indent: -999999px;
+  background: url(../images/logo.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/******
+  Info API
+******/
+
+.info-api .breadcrumb p{
+  font-size: 1.4em;
+  text-transform: uppercase;
+  color: #919191;
+  margin: 30px 0 10px;
+  cursor: pointer;
+}
+
+.info-api .breadcrumb p .raiz{
+  color: #ff8207;
+}
+
+.info-api h2{
+  font-size: 3.5em;
+  font-weight: 400;
+}
+
+.info-api .rating i{
+  font-size: 1.8em;
+  color: #ff8207;
+  margin-top: 5px;
+}
+
+.info-api .info-texto{
+	font-size: 1.4em;
+	color:#535353;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.linha-6{
+	max-width: 460px !important;
+}
+.tags{
+	width: auto;
+	padding: 7px;
+	background: #77c04b;
+	color: #fff;
+	margin-bottom: 23px;
+	margin-right: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.5s ease;
+}
+.tags:hover{
+	opacity: 0.7;
+	transition: all 0.5s ease;
+}
+#photos {
+    background: #ffbf13;
+}
+
+.autor-foto{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 191, 19, 0.36);
+	top:0px;
+	left: 0px;
+	opacity: 0;
+	transition: all 0.4s ease;
+	cursor: pointer;
+}
+
+.autor-foto:hover{
+	opacity: 1;
+	transition: all 0.4s ease;
+}
+
+.autor-foto p{
+	position: absolute;
+	top:50%;
+	text-align: center;
+	width: 100%;
+	font-size: 1.8em;
+}
+
+
+.info-api .info-texto{
+	font-size: 1.4em;
+	color:#535353;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.ads{
+	width: 100%;
+}
+
+#recomendados h3{
+	font-size: 1.6em;
+	margin-bottom: 20px;
+	color: #ffbf13;
+}
+
+.mt-info{
+	margin-top: -105px;
+}
+#recomendados .item-recomendado{
+	cursor: pointer;
+	padding: 5px;
+	transition: all 0.5s ease;
+}
+
+#recomendados .item-recomendado:hover{
+	background: #ffbf13;
+	transition: all 0.5s ease;
+}
+
+#reviews .item-review{
+	margin-bottom: 40px;
+}
+
+#reviews h2{
+	font-size: 1.9em;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+#reviews .autor-review{
+	font-size: 1.5em;
+	color:#ff8207;
+}
+#reviews .texto-review {
+    font-size: 1.2em;
+}
+
+#reviews .item-review img{
+  width: 60px;
+	height: 60px;
+	border: 3px solid rgba(255, 130, 7, 0.51);
+}
+
+#reviews .like-info{
+	font-size: 1.4em;
+	font-weight: 100;
+	color:#969696;
+	margin-top: 10px;
+}
+
+#reviews .like-info i{
+	color:#0660a0;
+}
