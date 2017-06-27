@@ -1,0 +1,42 @@
+<div ng-controller="localCtrl" data-ng-init="init()">
+	
+	<div class="row">
+		<hr/>
+	</div>
+
+	<div id="onde-estou" class="row">
+		<p class="caminho">Apontador  > {{place.address.city}}  > {{place.categories[0].name}} > {{place.categories[0].subcategory.name}} > {{place.name}}</p>
+	</div>
+
+	<div id="place-name" class="row titulo">
+		<h1>{{place.name}}</h1>
+	</div>
+
+	<div id="place.statistics" class="row">		
+		<div class="estrelas col-md-6 col-lg-6">                
+			<img src="https://clientmanager.apontador-assets.com/prod/base/images/5-on.png"/>
+			<label>Media: {{place.statistics.rating}} </label>
+		</div>
+		<div class="avalicoes col-md-6 col-lg-6">
+			<label><a href="">{{place.statistics.reviews}} Avaliações</a></label> <label class="left-10"><a href="">Mais detalhes</a></label>
+		</div>		
+	</div>
+	
+	<!-- INCLUDE DO CARROUSEL E INFORMAÇÕES -->
+	 <div ng-include="'/view/local/local-carrousel.html'"></div>
+
+	<div class="row">
+		<hr/>
+	</div>
+
+	<!-- INCLUDE DAS TABS E LOCAIS PARECIDOS -->
+	<div ng-include="'/view/local/local-tabs/local-tabs-template.html'"></div>
+
+	<div class="row">
+		<hr/>
+	</div>
+
+	<!-- INCLUDE DAS AVALIAÇOES -->
+	<div ng-include="'/view/local/local-avaliacoes.html'"></div>
+	
+</div>
