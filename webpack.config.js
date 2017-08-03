@@ -18,6 +18,11 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loader: ['babel-loader?presets[]=react,presets[]=es2015']
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loaders: ['eslint-loader']
             }
         ]
     },
