@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Row from 'styled/app/row.styled';
+import {Row} from 'styled/app/styles.styled';
 
 const headerColor = '#ff8207';
 
