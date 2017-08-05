@@ -16,6 +16,12 @@ injectGlobal`
     main {
         margin-top: 20px;
     }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
  
     * {
         box-sizing: border-box;
