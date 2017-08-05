@@ -1,20 +1,39 @@
 import React from 'react';
+import {Container} from 'styled/components/info/info.styled';
 import Carousel from 'components/carousel/carousel';
-import {Box, Row} from 'styled/app/styles.styled';
-import {H1} from 'styled/app/headers.styled';
+import {Box} from 'styled/app/styles.styled';
+import {H1, P} from 'styled/app/elements.styled';
+import Rating from 'components/rating/rating';
 
-export default class Info extends React.Component {
+const Categories = ({categories}) => {
 
-    render() {
+    const cats = categories.map(cat => cat.name);
 
-        return(
-            <Row>
-                <Box>
-                    <Carousel/>
-                    <H1>Parque do Ibirapuera</H1>
-                    <span>Testando a fonte e tal</span>
-                </Box>
-            </Row>
-        );
-    }
-}
+    return <P>{cats.join(', ')}</P>;
+};
+
+const Address = ({address}) => {
+
+    const text = `${address.district}, ${address.city}`;
+
+    return <P>{text}</P>;
+};
+
+const Info = ({place}) => {
+
+    return (
+        <Container>
+            <Box>
+                <Carousel/>
+                <H1>
+                    {place.name}
+                    <Rating rate={place.statistics.rating}/>
+                </H1>
+                <Categories categories={place.categories}/>
+                <Address address={place.address}/>
+            </Box>
+        </Container>
+    );
+};
+
+export default Info;
