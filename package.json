@@ -24,6 +24,7 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.1.0",
     "styled-components": "^2.1.1",
+    "vanilla-masker": "^1.2.0",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },
