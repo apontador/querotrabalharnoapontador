@@ -9,5 +9,5 @@ export const Row = styled.div`
 export const Box = styled.div`
     background-color: #fff;
     border-radius: 2px;
-    padding: 8px 10px;
+    padding: 8px;
 `;
