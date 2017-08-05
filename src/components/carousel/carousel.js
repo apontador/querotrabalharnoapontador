@@ -34,7 +34,7 @@ export default class Carousel extends React.Component {
     render() {
 
         return (
-            <Container>
+            <Container marginBottom={this.props.marginBottom}>
                 <NavArrow left onClick={this.move.bind(this, 'prev')}/>
                 <List innerRef={elem => this.$list = elem}>
                     {this.state.photos.map(photo => (

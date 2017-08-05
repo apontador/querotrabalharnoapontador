@@ -5,6 +5,7 @@ const imageSize = '100px';
 export const Container = styled.div`
     overflow-x: hidden;
     position: relative;
+    margin-bottom: 15px;
 `;
 
 export const List = styled.ul`
