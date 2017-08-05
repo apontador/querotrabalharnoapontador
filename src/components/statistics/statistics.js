@@ -1,8 +1,22 @@
 import React from 'react';
-import {Container} from 'styled/components/rating/rating.styled';
+import {Container, Rating, Rate, Reviews, Voting, Votes} from 'styled/components/statistics/statistics.styled';
 
-const Rating = ({rate}) => {
-    return <Container rate={rate}>{rate}</Container>;
+const Statistics = ({statistics}) => {
+    return (
+        <Container>
+            <Rating>
+                <Rate rate={statistics.rating}>{statistics.rating}</Rate>
+                <Reviews>
+                    <span className="statistics__totalreviews">{statistics.reviews}</span>
+                    <span className="statistics__reviewtext">avaliações</span>
+                </Reviews>
+            </Rating>
+            <Voting>
+                <Votes vote="up"/>
+                <Votes vote="down"/>
+            </Voting>
+        </Container>
+    );
 };
 
-export default Rating;
+export default Statistics;

@@ -3,7 +3,7 @@ import {Container} from 'styled/components/info/info.styled';
 import Carousel from 'components/carousel/carousel';
 import {Box} from 'styled/app/styles.styled';
 import {H1, P} from 'styled/app/elements.styled';
-import Rating from 'components/rating/rating';
+import Statistics from 'components/statistics/statistics';
 
 const Categories = ({categories}) => {
 
@@ -27,10 +27,10 @@ const Info = ({place}) => {
                 <Carousel/>
                 <H1>
                     {place.name}
-                    <Rating rate={place.statistics.rating}/>
                 </H1>
                 <Categories categories={place.categories}/>
                 <Address address={place.address}/>
+                <Statistics statistics={place.statistics}/>
             </Box>
         </Container>
     );
