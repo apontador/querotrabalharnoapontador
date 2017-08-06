@@ -18,7 +18,6 @@ export const List = styled.ul`
 
 export const Item = styled.li`
     display: flex;
-    flex-basis: 50%;
     justify-content: center;
     
     &:not(:last-child) {
