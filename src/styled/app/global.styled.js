@@ -22,6 +22,11 @@ injectGlobal`
         padding: 0;
         list-style: none;
     }
+    
+    a {
+        text-decoration: none;
+        color: ${grayMain}
+    }
  
     * {
         box-sizing: border-box;

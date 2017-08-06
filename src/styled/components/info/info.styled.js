@@ -15,7 +15,7 @@ export const Item = styled.li`
     
     p {
         margin-bottom: 0;
-        padding: 5px 0;
+        padding: 6px 0;
         font-size: 14px;
     }
 `;
