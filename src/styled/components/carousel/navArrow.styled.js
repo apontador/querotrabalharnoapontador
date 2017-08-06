@@ -17,6 +17,7 @@ export const Container = styled.div`
     background-color: ${mainColor};
     z-index: 5;
     cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     
     .navArrow__image {
         margin-left: 2px;
