@@ -1,10 +1,10 @@
 import React from 'react';
-import {Container, List, Item, IconFone, IconAddress, IconHours} from 'styled/components/venue/venue.styled';
+import {Container, List, Item, IconFone, IconAddress, IconHours} from 'styled/components/info/info.styled';
 import {Box} from 'styled/app/styles.styled';
 import {P} from 'styled/app/elements.styled';
 import VMasker from 'vanilla-masker';
 
-export default class Venue extends React.Component {
+export default class Info extends React.Component {
 
     render() {
 
@@ -25,6 +25,10 @@ export default class Venue extends React.Component {
                         <Item>
                             <IconHours/>
                             <P>{this.openingHours}</P>
+                        </Item>
+                        <Item>
+                            <IconHours/>
+                            <P>TODO: aqui viria demais informações</P>
                         </Item>
                     </List>
                 </Box>

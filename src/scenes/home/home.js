@@ -1,6 +1,6 @@
 import React from 'react';
 import About from 'components/about/about';
-import Venue from 'components/venue/venue';
+import Info from 'components/info/info';
 import ApontadorService from 'services/apontador.service';
 
 export default class Home extends React.Component {
@@ -31,7 +31,7 @@ export default class Home extends React.Component {
         return (
             <main>
                 <About place={this.state.place}/>
-                <Venue place={this.state.place}/>
+                <Info place={this.state.place}/>
                 <div id="modalContainer"></div>
             </main>
         );
