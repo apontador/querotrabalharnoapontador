@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {grayLight} from 'styled/app/colors.styled';
+import {grayLight, borderLight} from 'styled/app/colors.styled';
 
 const rates = {
     5: '#00B551',
@@ -18,7 +18,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 18px; 
-    border-top: 1px solid #eee;
+    border-top: 1px solid ${borderLight};
     padding-top: 8px;
 `;
 
