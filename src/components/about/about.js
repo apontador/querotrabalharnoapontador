@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container} from 'styled/components/info/info.styled';
+import {Container} from 'styled/components/about/about.styled';
 import Carousel from 'components/carousel/carousel';
 import {Box} from 'styled/app/styles.styled';
 import {H1, P} from 'styled/app/elements.styled';
@@ -19,7 +19,7 @@ const Address = ({address}) => {
     return <P>{text}</P>;
 };
 
-const Info = ({place}) => {
+const About = ({place}) => {
 
     return (
         <Container>
@@ -36,4 +36,4 @@ const Info = ({place}) => {
     );
 };
 
-export default Info;
+export default About;

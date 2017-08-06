@@ -1,5 +1,5 @@
 import React from 'react';
-import Info from 'components/info/info';
+import About from 'components/about/about';
 import Venue from 'components/venue/venue';
 import ApontadorService from 'services/apontador.service';
 
@@ -30,7 +30,7 @@ export default class Home extends React.Component {
 
         return (
             <main>
-                <Info place={this.state.place}/>
+                <About place={this.state.place}/>
                 <Venue place={this.state.place}/>
                 <div id="modalContainer"></div>
             </main>
