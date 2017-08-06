@@ -7,9 +7,7 @@ import 'styled/app/global.styled';
 ReactDOM.render(
     <div>
         <Header/>
-        <main>
-            <Home/>
-        </main>
+        <Home/>
     </div>,
     document.getElementById('app')
 );
