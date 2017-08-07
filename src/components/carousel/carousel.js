@@ -18,10 +18,6 @@ export default class Carousel extends React.Component {
 
         this.apontadorService = new ApontadorService();
 
-        this.state = {
-            photos: []
-        };
-
         // Armazena a posição X atual do carousel
         this.translateX = 0;
     }
@@ -43,10 +39,11 @@ export default class Carousel extends React.Component {
      */
     move(direction) {
 
-        const imageSize   = this.gallery.$list.querySelector('.gallery__image').offsetWidth;
-        const jump        = direction === 'next' ? -navDistance : navDistance;
-        const distance    = this.translateX + jump;
-        const maxDistance = -(this.state.photos.length * imageSize) + this.gallery.$list.offsetWidth - 45;
+        const imageSize    = this.gallery.$list.querySelector('.gallery__image').offsetWidth;
+        const imagesLength = this.gallery.$list.querySelectorAll('.gallery__image').length;
+        const jump         = direction === 'next' ? -navDistance : navDistance;
+        const distance     = this.translateX + jump;
+        const maxDistance  = -(imagesLength * imageSize) + this.gallery.$list.offsetWidth - 45;
 
         let finalDistance;
 
