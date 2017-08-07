@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ApontadorService from 'services/apontador.service';
-import {Container, List, Item, Content, Image} from 'styled/components/carousel/carousel.styled';
+import {Container} from 'styled/components/carousel/carousel.styled';
 import NavArrow from 'components/carousel/navArrow';
 import Modal from 'components/modal/modal';
 import ModalContentImage from 'components/modal-content-image/modal-content-image';
 import proportionalSize from 'helpers/proportionalSize.helper';
+import Gallery from 'components/gallery/gallery';
 
 const navDistance = 200;
 const photoSize   = 100;
@@ -36,15 +37,7 @@ export default class Carousel extends React.Component {
         return (
             <Container marginBottom={this.props.marginBottom}>
                 <NavArrow left onClick={this.move.bind(this, 'prev')}/>
-                <List innerRef={elem => this.$list = elem}>
-                    {this.state.photos.map(photo => (
-                        <Item key={photo.id} onClick={this.openModal.bind(this, photo)}>
-                            <Content>
-                                <Image background={photo.small}/>
-                            </Content>
-                        </Item>
-                    ))}
-                </List>
+                <Gallery carousel ref={elem => this.gallery = elem}/>
                 <NavArrow onClick={this.move.bind(this, 'next')}/>
             </Container>
         );
@@ -57,7 +50,6 @@ export default class Carousel extends React.Component {
     getPhotos() {
 
         return this.apontadorService.getPlacePhotos().then(response => {
-            console.log(response);
             this.setState({
                 photos: response.photoResults.photos
             });
@@ -72,7 +64,7 @@ export default class Carousel extends React.Component {
 
         const jump        = direction === 'next' ? -navDistance : navDistance;
         const distance    = this.translateX + jump;
-        const maxDistance = -(this.state.photos.length * photoSize) + this.$list.offsetWidth - 45;
+        const maxDistance = -(this.state.photos.length * photoSize) + this.gallery.$list.offsetWidth - 45;
 
         let finalDistance;
 
@@ -87,7 +79,7 @@ export default class Carousel extends React.Component {
         }
 
         this.translateX            = finalDistance;
-        this.$list.style.transform = `translateX(${this.translateX}px)`;
+        this.gallery.$list.style.transform = `translateX(${this.translateX}px)`;
     }
 
     /**
