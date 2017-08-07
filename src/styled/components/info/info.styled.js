@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import {Row} from 'styled/app/styles.styled';
 
-export const Container = Row.extend``;
+export const Container = styled.div``;
 
 export const List = styled.ul`
     display: flex;

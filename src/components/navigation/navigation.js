@@ -25,7 +25,7 @@ export default class Navigation extends React.Component {
     render() {
 
         return (
-            <Container>
+            <Container className="navigation">
                 <Box>
                     <Tabs tabs={this.tabs}/>
                     <Evaluation/>

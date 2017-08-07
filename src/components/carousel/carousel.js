@@ -26,11 +26,6 @@ export default class Carousel extends React.Component {
         this.translateX = 0;
     }
 
-    componentWillMount() {
-
-        this.getPhotos();
-    }
-
     render() {
 
         return (
@@ -40,19 +35,6 @@ export default class Carousel extends React.Component {
                 <NavArrow onClick={this.move.bind(this, 'next')}/>
             </Container>
         );
-    }
-
-    /**
-     * Armazena a lista de fotos do local
-     * @returns {*}
-     */
-    getPhotos() {
-
-        return this.apontadorService.getPlacePhotos().then(response => {
-            this.setState({
-                photos: response.photoResults.photos
-            });
-        });
     }
 
     /**

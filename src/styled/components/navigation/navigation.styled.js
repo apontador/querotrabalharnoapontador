@@ -1,3 +1,3 @@
-import {Row} from 'styled/app/styles.styled';
+import styled from 'styled-components';
 
-export const Container = Row.extend``;
+export const Container = styled.div``;

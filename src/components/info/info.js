@@ -11,7 +11,7 @@ export default class Info extends React.Component {
         this.place = this.props.place;
 
         return (
-            <Container>
+            <Container className="info">
                 <Box>
                     <List>
                         <Item>

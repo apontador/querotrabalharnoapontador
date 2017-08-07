@@ -26,7 +26,7 @@ export default class Gallery extends React.Component {
     render() {
 
         return (
-            <Container carousel={this.props.carousel}>
+            <Container carousel={this.props.carousel} className="gallery">
                 <List innerRef={elem => this.$list = elem} className="gallery__list">
                     {this.state.photos.map(photo => (
                         <Item key={photo.id} onClick={this.openModal.bind(this, photo)} className="gallery__item">

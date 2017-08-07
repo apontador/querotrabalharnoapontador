@@ -7,7 +7,7 @@ const imageSizeTablet = '150px';
 export const Container = styled.div`
     position: relative;
     margin-bottom: 15px;
-    margin: -2px;
+    margin: -2.5px;
 
     ${props => props.carousel && css`
         margin: 0 0 15px 0;
@@ -64,7 +64,7 @@ export const Item = styled.li`
     `}
     
     ${media.tablet`
-        flex-basis: 16.6666%;
+        flex-basis: 25%;
     `}
 `;
 
@@ -74,7 +74,7 @@ export const Content = styled.div`
     cursor: pointer;
     border-radius: 3px;
     overflow: hidden;
-    margin: 2px;
+    margin: 2.5px;
 `;
 
 export const Image = styled.div`
