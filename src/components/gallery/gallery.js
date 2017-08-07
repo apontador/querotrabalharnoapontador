@@ -1,0 +1,71 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Container, List, Item, Content, Image} from 'styled/components/gallery/gallery.styled';
+import ApontadorService from 'services/apontador.service';
+import Modal from 'components/modal/modal';
+import ModalContentImage from 'components/modal-content-image/modal-content-image';
+import proportionalSize from 'helpers/proportionalSize.helper';
+
+export default class Gallery extends React.Component {
+
+    constructor() {
+
+        super();
+
+        this.apontadorService = new ApontadorService();
+
+        this.state = {
+            photos: []
+        };
+    }
+
+    componentWillMount() {
+        this.getPhotos();
+    }
+
+    render() {
+
+        return (
+            <Container carousel={this.props.carousel}>
+                <List innerRef={elem => this.$list = elem} className="gallery__list">
+                    {this.state.photos.map(photo => (
+                        <Item key={photo.id} onClick={this.openModal.bind(this, photo)} className="gallery__item">
+                            <Content className="gallery__content">
+                                <Image background={photo.medium} className="gallery__image"/>
+                            </Content>
+                        </Item>
+                    ))}
+                </List>
+            </Container>
+        );
+    }
+
+    /**
+     * Armazena a lista de fotos do local
+     * @returns {*}
+     */
+    getPhotos() {
+
+        return this.apontadorService.getPlacePhotos().then(response => {
+            this.setState({
+                photos: response.photoResults.photos
+            });
+        });
+    }
+
+    /**
+     * Abre o modal com a imagem maior
+     * @param photo
+     */
+    openModal(photo) {
+
+        const size = proportionalSize(640, 480, window.innerWidth - 20);
+
+        ReactDOM.render(
+            <Modal width={size.width} height={size.height}>
+                <ModalContentImage photo={photo}/>
+            </Modal>,
+            document.getElementById('modalContainer')
+        );
+    }
+}
