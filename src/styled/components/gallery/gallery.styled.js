@@ -1,6 +1,8 @@
 import styled, {css} from 'styled-components';
+import media from 'styled/app/media.styled';
 
-const imageSize = '100px';
+const imageSize       = '100px';
+const imageSizeTablet = '150px';
 
 export const Container = styled.div`
     position: relative;
@@ -15,6 +17,10 @@ export const Container = styled.div`
             flex-wrap: initial;
             height: ${imageSize}; // Altura fixa para evitar que o conteúdo abaixo pule/pisque
             transition: transform .3s ease-out;
+            
+            ${media.tablet`
+                height: ${imageSizeTablet}
+            `}
         }
         
         .gallery__item {
@@ -32,6 +38,11 @@ export const Container = styled.div`
         .gallery__image {
             width: ${imageSize};
             height: ${imageSize};
+            
+            ${media.tablet`
+                width: ${imageSizeTablet};
+                height: ${imageSizeTablet};
+            `}
         }
     `}
 `;
@@ -41,12 +52,6 @@ export const List = styled.ul`
     flex-wrap: wrap;
     padding: 0;
     list-style: none;
-    
-    ${props => props.carousel && css`
-        flex-wrap: initial;
-        height: ${imageSize}; // Altura fixa para evitar que o conteúdo abaixo pule/pisque
-        transition: transform .3s ease-out;
-    `}
 `;
 
 export const Item = styled.li`
@@ -54,12 +59,12 @@ export const Item = styled.li`
     justify-content: center;
     flex-basis: 33.3333%;
     
-    ${props => props.carousel && css`
-        flex-basis: initial;
-        
-        &:not(:last-child) {
-            margin-right: 5px;
-        }
+    ${media.tablet`
+        flex-basis: 20%;
+    `}
+    
+    ${media.tablet`
+        flex-basis: 16.6666%;
     `}
 `;
 
@@ -70,10 +75,6 @@ export const Content = styled.div`
     border-radius: 3px;
     overflow: hidden;
     margin: 2px;
-    
-    ${props => props.carousel && css`
-        margin: 0;
-    `}
 `;
 
 export const Image = styled.div`
@@ -81,9 +82,4 @@ export const Image = styled.div`
     position: relative;
     background: url(${props => props.background}) no-repeat center center;
     background-size: cover;
-    
-    ${props => props.carousel && css`
-        width: ${imageSize};
-        height: ${imageSize};
-    `}
 `;

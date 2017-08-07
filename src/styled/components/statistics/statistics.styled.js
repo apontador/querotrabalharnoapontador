@@ -62,8 +62,13 @@ export const Votes = styled.span`
     height: 22px;
     cursor: pointer;
     background: url(assets/images/thumb-${props => props.vote}.svg) no-repeat;
+    transition: transform 0.1s ease-in-out;
     
     &:not(:last-child) {
         margin-right: 15px;
+    }
+    
+    &:hover {
+        transform: scale(1.2);
     }
 `;

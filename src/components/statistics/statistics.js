@@ -3,7 +3,7 @@ import {Container, Rating, Rate, Reviews, Voting, Votes} from 'styled/components
 
 const Statistics = ({statistics}) => {
     return (
-        <Container>
+        <Container className="statistics">
             <Rating>
                 <Rate rate={statistics.rating}>{statistics.rating}</Rate>
                 <Reviews>

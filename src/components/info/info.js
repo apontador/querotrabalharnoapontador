@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, List, Item, IconFone, IconAddress, IconHours} from 'styled/components/info/info.styled';
 import {Box} from 'styled/app/styles.styled';
-import {P} from 'styled/app/elements.styled';
+import {Small} from 'styled/app/elements.styled';
 import VMasker from 'vanilla-masker';
 
 export default class Info extends React.Component {
@@ -16,19 +16,19 @@ export default class Info extends React.Component {
                     <List>
                         <Item>
                             <IconFone/>
-                            <P>{this.phones}</P>
+                            <Small>{this.phones}</Small>
                         </Item>
                         <Item>
                             <IconAddress/>
-                            <P>{this.address}</P>
+                            <Small>{this.address}</Small>
                         </Item>
                         <Item>
                             <IconHours/>
-                            <P>{this.openingHours}</P>
+                            <Small>{this.openingHours}</Small>
                         </Item>
                         <Item>
                             <IconHours/>
-                            <P>TODO: aqui viria demais informações</P>
+                            <Small>TODO: aqui viria demais informações</Small>
                         </Item>
                     </List>
                 </Box>

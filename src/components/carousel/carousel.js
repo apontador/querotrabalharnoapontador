@@ -9,7 +9,6 @@ import proportionalSize from 'helpers/proportionalSize.helper';
 import Gallery from 'components/gallery/gallery';
 
 const navDistance = 200;
-const photoSize   = 100;
 
 export default class Carousel extends React.Component {
 
@@ -62,9 +61,10 @@ export default class Carousel extends React.Component {
      */
     move(direction) {
 
+        const imageSize   = this.gallery.$list.querySelector('.gallery__image').offsetWidth;
         const jump        = direction === 'next' ? -navDistance : navDistance;
         const distance    = this.translateX + jump;
-        const maxDistance = -(this.state.photos.length * photoSize) + this.gallery.$list.offsetWidth - 45;
+        const maxDistance = -(this.state.photos.length * imageSize) + this.gallery.$list.offsetWidth - 45;
 
         let finalDistance;
 
@@ -78,7 +78,7 @@ export default class Carousel extends React.Component {
             finalDistance = Math.max(distance, maxDistance);
         }
 
-        this.translateX            = finalDistance;
+        this.translateX                    = finalDistance;
         this.gallery.$list.style.transform = `translateX(${this.translateX}px)`;
     }
 
