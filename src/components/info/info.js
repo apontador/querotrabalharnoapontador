@@ -36,10 +36,18 @@ export default class Info extends React.Component {
         );
     }
 
+    /**
+     * Retorna os telefones formatados
+     * @returns {string}
+     */
     get phones() {
         return this.place.phones.map(phone => VMasker.toPattern(phone, '99 (99) 9999-9999')).join(' / ');
     }
 
+    /**
+     * Retorna o endereço completo
+     * @returns {string}
+     */
     get address() {
 
         const address = this.place.address;
@@ -47,6 +55,10 @@ export default class Info extends React.Component {
         return `${address.street}, ${address.number}, ${address.complement}, ${address.district}`;
     }
 
+    /**
+     * Retorna o status aberto/fechado e o horário
+     * @returns {string}
+     */
     get openingHours() {
 
         const openingHours  = this.place.openingHours;
