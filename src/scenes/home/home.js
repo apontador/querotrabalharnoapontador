@@ -1,6 +1,7 @@
 import React from 'react';
 import About from 'components/about/about';
 import Info from 'components/info/info';
+import Navigation from 'components/navigation/navigation';
 import ApontadorService from 'services/apontador.service';
 
 export default class Home extends React.Component {
@@ -32,6 +33,7 @@ export default class Home extends React.Component {
             <main>
                 <About place={this.state.place}/>
                 <Info place={this.state.place}/>
+                <Navigation/>
                 <div id="modalContainer"></div>
             </main>
         );
