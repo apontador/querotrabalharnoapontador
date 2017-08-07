@@ -15,6 +15,11 @@ export const Tab = styled.li`
         padding-bottom: 6px;
         border-bottom: 3px solid ${props => props.active ? mainColor : 'transparent'};
         cursor: pointer;
+        transition: opacity 0.1s ease-in-out;
+    }
+    
+    a:hover {
+        opacity: 0.8;
     }
     
     &:not(:last-child) {
