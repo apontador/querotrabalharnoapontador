@@ -38,8 +38,8 @@ const proportionalSize = (originalWidth, originalHeight, maxWidth, maxHeight) =>
     }
 
     return {
-        width: width,
-        height: height
+        width,
+        height
     };
 };
 

@@ -1,4 +1,4 @@
-import request from 'helpers/request.helper';
+import request from 'helpers/request/request.helper';
 
 let instance = null;
 
@@ -74,6 +74,7 @@ export default class ApontadorService {
 
         return request(params).then(response => {
             localStorage.setItem('accessToken', response.access_token);
+            return response;
         });
     }
 }

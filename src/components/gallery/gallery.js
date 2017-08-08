@@ -4,7 +4,7 @@ import {Container, List, Item, Content, Image} from 'styled/components/gallery/g
 import ApontadorService from 'services/apontador.service';
 import Modal from 'components/modal/modal';
 import ModalContentImage from 'components/modal-content-image/modal-content-image';
-import proportionalSize from 'helpers/proportionalSize.helper';
+import proportionalSize from 'helpers/proportionalSize/proportionalSize.helper';
 
 export default class Gallery extends React.Component {
 
