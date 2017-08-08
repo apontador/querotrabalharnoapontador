@@ -1,11 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ApontadorService from 'services/apontador.service';
 import {Container} from 'styled/components/carousel/carousel.styled';
 import NavArrow from 'components/carousel/navArrow';
-import Modal from 'components/modal/modal';
-import ModalContentImage from 'components/modal-content-image/modal-content-image';
-import proportionalSize from 'helpers/proportionalSize.helper';
 import Gallery from 'components/gallery/gallery';
 
 const navDistance = 200;
@@ -59,21 +55,5 @@ export default class Carousel extends React.Component {
 
         this.translateX                    = finalDistance;
         this.gallery.$list.style.transform = `translateX(${this.translateX}px)`;
-    }
-
-    /**
-     * Abre o modal com a imagem maior
-     * @param photo
-     */
-    openModal(photo) {
-
-        const size = proportionalSize(640, 480, window.innerWidth - 20);
-
-        ReactDOM.render(
-            <Modal width={size.width} height={size.height}>
-                <ModalContentImage photo={photo}/>
-            </Modal>,
-            document.getElementById('modalContainer')
-        );
     }
 }
