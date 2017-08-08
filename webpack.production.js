@@ -8,8 +8,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve('dist'),
-        filename: 'src/bundle.js',
-        publicPath: 'http://localhost:8080'
+        filename: 'bundle.js',
     },
     module: {
         loaders: [

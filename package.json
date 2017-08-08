@@ -4,7 +4,8 @@
   "description": "Quero Trabalhar no Apontador! =============================",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack -p --config ./webpack.production.js"
   },
   "repository": "git+https://github.com/gjlacerda/querotrabalharnoapontador.git",
   "author": "Guilherme Lacerda",
