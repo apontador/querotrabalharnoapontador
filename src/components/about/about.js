@@ -19,12 +19,12 @@ const Address = ({address}) => {
     return <P>{text}</P>;
 };
 
-const About = ({place}) => {
+const About = ({place, photos}) => {
 
     return (
         <Container>
             <Box>
-                <Carousel/>
+                <Carousel photos={photos}/>
                 <H1>
                     {place.name}
                 </H1>

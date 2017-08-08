@@ -1,7 +1,5 @@
 import request from 'helpers/request.helper';
 
-const access_key = 'db498fc6-ce29-482f-b4a9-ee17eae3559c';
-
 let instance = null;
 
 export default class ApontadorService {
@@ -25,8 +23,15 @@ export default class ApontadorService {
         return {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${access_key}`
+            'Authorization': `Bearer ${this.accessKey}`
         };
+    }
+
+    /**
+     * Retorna a chave de acesso à API
+     */
+    get accessKey() {
+        return localStorage.getItem('accessToken');
     }
 
     /**
@@ -45,6 +50,10 @@ export default class ApontadorService {
         return request(params);
     }
 
+    /**
+     * Retorna as informações do local passado por parâmetro
+     * @param placeId
+     */
     getPlaceInfo(placeId = 'B37822W2') {
 
         const params = {
@@ -54,5 +63,17 @@ export default class ApontadorService {
         };
 
         return request(params);
+    }
+
+    setAccessKey() {
+
+        const params = {
+            url: 'https://api.apontador.com.br/v2/oauth/token?client_id=testefront&client_secret=jO98nsGN6rXlmWXKKxnwS9NogdD~&grant_type=client_credentials',
+            method: 'POST'
+        };
+
+        return request(params).then(response => {
+            localStorage.setItem('accessToken', response.access_token);
+        });
     }
 }

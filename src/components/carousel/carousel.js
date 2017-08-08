@@ -27,7 +27,7 @@ export default class Carousel extends React.Component {
         return (
             <Container marginBottom={this.props.marginBottom}>
                 <NavArrow left onClick={this.move.bind(this, 'prev')}/>
-                <Gallery carousel ref={elem => this.gallery = elem}/>
+                <Gallery photos={this.props.photos} carousel ref={elem => this.gallery = elem}/>
                 <NavArrow onClick={this.move.bind(this, 'next')}/>
             </Container>
         );

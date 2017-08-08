@@ -6,7 +6,7 @@ export default class Photos extends React.Component {
 
     render() {
         return <Container id="photos">
-            <Gallery/>
+            <Gallery photos={this.props.photos} />
         </Container>;
     }
 }

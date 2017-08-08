@@ -29,7 +29,7 @@ export default class Navigation extends React.Component {
                 <Box>
                     <Tabs tabs={this.tabs}/>
                     <Evaluation/>
-                    <Photos/>
+                    <Photos photos={this.props.photos}/>
                 </Box>
             </Container>
         );

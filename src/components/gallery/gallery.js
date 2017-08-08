@@ -13,14 +13,6 @@ export default class Gallery extends React.Component {
         super();
 
         this.apontadorService = new ApontadorService();
-
-        this.state = {
-            photos: []
-        };
-    }
-
-    componentWillMount() {
-        this.getPhotos();
     }
 
     render() {
@@ -28,7 +20,7 @@ export default class Gallery extends React.Component {
         return (
             <Container carousel={this.props.carousel} className="gallery">
                 <List innerRef={elem => this.$list = elem} className="gallery__list">
-                    {this.state.photos.map(photo => (
+                    {this.props.photos.map(photo => (
                         <Item key={photo.id} onClick={this.openModal.bind(this, photo)} className="gallery__item">
                             <Content className="gallery__content">
                                 <Image background={photo.medium} className="gallery__image"/>
@@ -38,19 +30,6 @@ export default class Gallery extends React.Component {
                 </List>
             </Container>
         );
-    }
-
-    /**
-     * Armazena a lista de fotos do local
-     * @returns {*}
-     */
-    getPhotos() {
-
-        return this.apontadorService.getPlacePhotos().then(response => {
-            this.setState({
-                photos: response.photoResults.photos
-            });
-        });
     }
 
     /**

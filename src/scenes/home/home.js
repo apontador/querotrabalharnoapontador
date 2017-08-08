@@ -14,6 +14,7 @@ export default class Home extends React.Component {
         this.apontadorService = new ApontadorService();
 
         this.state = {
+            photos: [],
             place: {
                 address: {},
                 categories: [],
@@ -24,18 +25,25 @@ export default class Home extends React.Component {
         };
     }
 
+    /**
+     * Gera o access_key, busca os dados na api e manda para os componentes
+     */
     componentWillMount() {
-        this.getInfo();
+
+        this.apontadorService.setAccessKey().then(() => {
+            this.getInfo();
+            this.getPhotos();
+        });
     }
 
     render() {
 
         return (
             <main>
-                <About place={this.state.place}/>
+                <About {...this.state}/>
                 <Container>
                     <Info place={this.state.place}/>
-                    <Navigation/>
+                    <Navigation photos={this.state.photos}/>
                 </Container>
                 <div id="modalContainer"></div>
             </main>
@@ -52,6 +60,19 @@ export default class Home extends React.Component {
             console.log(response);
             this.setState({
                 place: response.place
+            });
+        });
+    }
+
+    /**
+     * Armazena a lista de fotos do local
+     * @returns {*}
+     */
+    getPhotos() {
+
+        return this.apontadorService.getPlacePhotos().then(response => {
+            this.setState({
+                photos: response.photoResults.photos
             });
         });
     }
