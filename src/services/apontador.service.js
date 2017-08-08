@@ -1,5 +1,3 @@
-import request from 'helpers/request/request.helper';
-
 let instance = null;
 
 export default class ApontadorService {
@@ -41,13 +39,10 @@ export default class ApontadorService {
      */
     getPlacePhotos(placeId = 'B37822W2') {
 
-        const params = {
-            url: `https://api.apontador.com.br/v2/places/${placeId}/photos`,
+        return fetch(`https://api.apontador.com.br/v2/places/${placeId}/photos`, {
             method: 'GET',
             headers: this.accessHeaders
-        };
-
-        return request(params);
+        }).then(response => response.json());
     }
 
     /**
@@ -56,25 +51,20 @@ export default class ApontadorService {
      */
     getPlaceInfo(placeId = 'B37822W2') {
 
-        const params = {
-            url: `https://api.apontador.com.br/v2/places/${placeId}?fl=*,openingHours`,
+        return fetch(`https://api.apontador.com.br/v2/places/${placeId}?fl=*,openingHours`, {
             method: 'GET',
             headers: this.accessHeaders
-        };
-
-        return request(params);
+        }).then(response => response.json());
     }
 
     setAccessKey() {
 
-        const params = {
-            url: 'https://api.apontador.com.br/v2/oauth/token?client_id=testefront&client_secret=jO98nsGN6rXlmWXKKxnwS9NogdD~&grant_type=client_credentials',
-            method: 'POST'
-        };
-
-        return request(params).then(response => {
-            localStorage.setItem('accessToken', response.access_token);
-            return response;
-        });
+        return fetch('https://api.apontador.com.br/v2/oauth/token?client_id=testefront&client_secret=jO98nsGN6rXlmWXKKxnwS9NogdD~&grant_type=client_credentials')
+            .then(response => response.json())
+            .then(response => {
+                debugger;
+                localStorage.setItem('accessToken', response.access_token);
+                return response;
+            });
     }
 }
