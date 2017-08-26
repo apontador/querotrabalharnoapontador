@@ -45,3 +45,35 @@ Sobre a Empresa
 ---------------
 
 O Apontador é um site que conecta pessoas e locais ao seu redor, facilitando seu dia-a-dia e oferecendo diversos serviços a partir da intenção e localização dos usuários, tanto na web como no mobile. Apesar de seus 12 anos de existência, fomos selecionados pela FastCompany como uma das 10 empresas mais inovadoras do Brasil. A empresa é formada por pessoas que têm tesão por tecnologia, comprometimento e paixão pelo que fazem. Nós trabalhamos duro para construir uma empresa legal com um ambiente descontraído em que o desenvolvimento das pessoas dependa fundamentalmente do empenho e da vontade delas. O Apontador tem mais de 16 milhões de visitantes únicos por mês e 23% de alcance na internet brasileira (1 em cada 5 pessoas que acessam a internet passam pelo Apontador!). Diferentemente de outras startups, focamos na receita desde o início para criar uma empresa de verdade.
+
+# Sobre a aplicação
+
+MVP usando as API's do Apontador em Angularjs
+
+## Primeiros passos
+
+Download ou clone esse repositório.
+
+```
+git clone https://github.com/kimmikirino/querotrabalharnoapontador.git
+```
+
+### Pré requisitos
+
+É necessário ter o Node e NPM instalados.
+
+### Instalação
+
+Acesse a pasta que fez o download e instale as dependências:
+
+grunt serve
+
+```
+cd querotrabalharnoapontador
+npm install
+grunt serve
+```
+
+### Edição
+
+Acesse a pasta /src

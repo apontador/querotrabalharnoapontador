@@ -1,0 +1,134 @@
+@import "variables.less";
+@import "reset.less";
+@import "responsive/responsive.less";
+@import "components/local.less";
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: @fontGeneral;
+  line-height: 1.5;
+
+  > footer {
+    margin: 0 auto;
+    position: inherit;
+    background-color: #333;
+    color: @baseheader;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @fontTitle;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.17em;
+  }
+
+  h4 {
+    font-size: 1.12em;
+  }
+
+  h5 {
+    font-size: .83em;
+  }
+
+  h6 {
+    font-size: .75em;
+  }
+
+  > header {
+    background-color: @brandcolor;
+    color: @baseheader;
+
+    .brand {
+      margin-left: -15px;
+    }
+  }
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .fa {
+    color: @brandThirdColor;
+  }
+
+  .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .ki-col-12, .ki-col-8, .ki-col-7, .ki-col-6, .ki-col-5, .ki-col-4, .ki-col-3, .ki-col-2, .ki-col-2-5, .ki-col {
+    float: left;
+    position: relative;
+  }
+
+  .ki-col-12 {
+    width: 8.33%;
+  }
+
+  .ki-col-8 {
+    width: 12.5%;
+  }
+
+  .ki-col-6 {
+    width: 16.66%;
+  }
+
+  .ki-col-5 {
+    width: 20%;
+  }
+
+  .ki-col-4 {
+    width: 25%;
+  }
+
+  .ki-col-3 {
+    width: 33.33%;
+  }
+
+  .ki-col-2 {
+    width: 50%;
+  }
+
+  .ki-col-2-5 {
+    width: 70%;
+  }
+
+  .ki-col {
+    width: 100%;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: @fontTitle;
+    float: left;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="local-details">
+  <span class="ki-col">
+    <i class="fa fa-map-marker" aria-hidden="true"></i>{{place.address.street}}, {{place.address.number}}, {{place.address.complement}} {{place.address.district}} CEP: {{place.address.zipcode}}
+  </span>
+  <span class="ki-col">
+    <i class="fa fa-phone" aria-hidden="true"></i>
+    <ul style="margin-top: -5px;">
+      <li ng-repeat="phone in place.phones">{{phone | phoneformat }}</li>
+    </ul>
+  </span>
+  <span class="ki-col">
+    <i class="fa fa-clock-o" aria-hidden="true"></i>{{place.openingHours.openNow ? 'Aberto agora' : 'Fechado agora'}}
+  </span>
+  <span class="ki-col">
+    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>{{place.statistics.thumbsUp}} likes
+  </span>
+</div>

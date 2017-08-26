@@ -1,0 +1,15 @@
+<div>
+  <div class="ki-col-2-5 carousel slide">
+    <img src="{{imageSelected.large}}" class='img-slide'>
+    <ol class='ki-col-8'>
+      <li ng-repeat="img in photos">
+        <img src="{{img.small}}" class="carousel-indicators" ng-click="selectImage(img)">
+      </li>
+      <li ng-click="selectImage(placePhotos.photos[6])">
+        <img src="{{placePhotos.photos[6].small}}" class="carousel-indicators" >
+        <span class="photo-seemore"></span>
+        <span class="photo-seemore-text">+Ver mais</span>
+      </li>
+    </ol>
+  </div>
+</div>
