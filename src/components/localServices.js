@@ -22,4 +22,9 @@ localServices.service('localServices', ['localAPI', function (localAPI) {
 
     return localAPI.getPlaces(subcategory, city);
   };
+
+  this.getReviews = function (placeId, start, rows) {
+
+    return localAPI.getReviews(placeId, start, rows);
+  };
 }]);

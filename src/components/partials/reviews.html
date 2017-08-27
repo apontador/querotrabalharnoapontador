@@ -1,0 +1,23 @@
+<div class="reviews">
+  <h2>Avaliações</h2>
+  <ul class="ki-col">
+    <li ng-repeat="review in reviewResults.reviews">
+      <div class="ki-col-8">
+        <img src="{{review.creation.author.photo}}">
+      </div>
+      <div>
+        <div>
+          <h5>{{review.creation.author.name}}</h5>
+        </div>
+        <div>
+          <star-rating rating='review.statistics.rating'></star-rating>
+          <span class="review-text">{{review.creation.created | date:"dd/MM/yyyy"}}</span>
+        </div>
+        <div>
+          <p class="review-text">{{review.text}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <button>Carregar mais</button>
+</div>

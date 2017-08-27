@@ -7,7 +7,7 @@ localAPI.service('localAPI', ['apontadorConfig', '$http', 'authServices', '$reso
     let api = {
         _local: $resource(url + '/places/:placeId', {placeId: '@placeId'}, {
             getLocalInfo: {
-                url: url + '/places/:placeId?fl=*,openingHours',
+                url: url + '/places/:placeId?fl=*,openingHours,description',
                 method: 'GET',
                 headers: authServices.getHeaders()
             },
@@ -25,6 +25,11 @@ localAPI.service('localAPI', ['apontadorConfig', '$http', 'authServices', '$reso
                 url: url + '/places/?fq=categories.category.subcategory.name::subcategory&fq=address.city:":city"&wt=json&rows=5&sort=statistics.rating desc,statistics.pageviews desc',
                 method: 'GET',
                 headers: authServices.getHeaders()
+            },
+            getReviews: {
+                url: url + '/places/:placeId/reviews?start=:start&rows=:rows',
+                method: 'GET',
+                headers: authServices.getHeaders()
             }
         }),
         getLocalInfo: function(placeId) {
@@ -39,6 +44,9 @@ localAPI.service('localAPI', ['apontadorConfig', '$http', 'authServices', '$reso
         },
         getPlaces: function(subcategory, city) {
             return this._local.getPlaces({subcategory: subcategory, city:city});
+        },
+        getReviews: function(placeId, start, rows) {
+            return this._local.getReviews({placeId: placeId, start:start, rows:rows});
         }
     };
 
