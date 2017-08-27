@@ -14,7 +14,8 @@
           <span class="review-text">{{review.creation.created | date:"dd/MM/yyyy"}}</span>
         </div>
         <div>
-          <p class="review-text">{{review.text}}</p>
+          <p class="review-text" ng-class="{ 'show': showDetails }">{{review.text}}</p>
+          <span class="pull-right" ng-click="showDetails = !showDetails">{{showDetails ? '- ver menos' : '+ ver mais'}}</span>
         </div>
       </div>
     </li>
