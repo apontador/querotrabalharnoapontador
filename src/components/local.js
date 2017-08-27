@@ -87,11 +87,18 @@ local.directive('reviews', ['$routeParams', '$location', 'localServices', functi
         scope: {placeid: '='},
         link: function ($scope, iElm, iAttrs, controller) {
             $scope.options = { year: 'numeric', month: 'numeric', day: 'numeric' };
-            console.log($scope.placeid);
+
             localServices.getReviews($scope.placeid, 0, 5).$promise.then( function(reviews) {
                 console.log(reviews.reviewResults);
                 $scope.reviewResults = reviews.reviewResults;
             });
+
+            $scope.showMore = function (start, rows) {
+                localServices.getReviews($scope.placeid, start + rows, rows).$promise.then( function(reviews) {
+                    $scope.reviewResults.reviews = $scope.reviewResults.reviews.concat(reviews.reviewResults.reviews);
+                    $scope.reviewResults.header = reviews.reviewResults.header;
+                });
+            };
         }
     };
 }]);

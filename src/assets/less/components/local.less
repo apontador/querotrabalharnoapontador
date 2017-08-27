@@ -158,6 +158,10 @@ i {
 }
 
 .reviews {
+  padding-bottom: 10px;
+  .btn-default {
+    margin-right: 20px;
+  }
   img {
     width: 80%;
     border-radius: 50px;
@@ -171,6 +175,7 @@ i {
 
   .review-text {
     font-size: 0.8em;
+    margin-bottom: 10px;
 
     &.show {
       max-height: 100%;
@@ -200,5 +205,24 @@ i {
         text-overflow: ellipsis;
       }
     }
+  }
+}
+
+.similar-places {
+  a {
+    text-decoration: none;
+    font-size: 13px;
+    &:visited {
+      text-decoration: none;
+    }
+  }
+  .star-rating{
+    font-size: 14px;
+    padding: 5px 0s;
+    width: 70px;
+  }
+
+  ul {
+    padding-top: 10px;
   }
 }
