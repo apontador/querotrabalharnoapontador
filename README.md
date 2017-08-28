@@ -66,11 +66,16 @@ git clone https://github.com/kimmikirino/querotrabalharnoapontador.git
 
 Acesse a pasta que fez o download e instale as dependências:
 
-grunt serve
-
 ```
 cd querotrabalharnoapontador
 npm install
+```
+
+Em seguida para executar o serviço digite:
+
+grunt serve
+
+```
 grunt serve
 ```
 
