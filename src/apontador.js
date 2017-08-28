@@ -11,6 +11,10 @@ var apontador = angular.module('apontador', [
 
 apontador.config(['$routeProvider', '$httpProvider', '$sceDelegateProvider',
     function($routeProvider, $httpProvider, $sceDelegateProvider) {
+      $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        'http://www.apontador.com.br/**'
+      ]);
     }
 ]);
 
@@ -19,7 +23,6 @@ apontador.run(['$rootScope', '$location', 'authServices', function($rootScope, $
 
   $promise.then( function () {
       $location.path('/local');
-      console.log(authServices.getAccessToken());
   }).catch( function(error) {
       console.log(error);
   });

@@ -22,14 +22,11 @@ local.config(['$routeProvider', '$httpProvider',
 
 local.controller('localController', ['$scope', '$rootScope', '$routeParams','apontadorConfig', 'localServices', 'authServices',
     function($scope, $rootScope, $routeParams, apontadorConfig, localServices, authServices ) {
-        console.log('teste');
         $scope.placeId = $routeParams.placeId ? $routeParams.placeId : apontadorConfig.place_id;
-        $scope.w = window.innerWidth;
-        $scope.h = window.innerHeight;
+        $scope.mapUrl = '';
 
         if (authServices.getAccessToken()) {
             localServices.getLocalInfo($scope.placeId).$promise.then( function (data) {
-                console.log(data.place);
                 $scope.place = data.place;
                 $scope.mapUrl = 'https://widget.maplink.com.br/WidGetGenerator/?v=4.1&lat=' + data.place.location.lat + '&lng=' + data.place.location.lng + '&w=300&h=200&m=400&image=http://static.portal.maplink.com.br/images/markers/marker_apontador_map.png&count=0';
 
@@ -37,15 +34,18 @@ local.controller('localController', ['$scope', '$rootScope', '$routeParams','apo
                     $scope.placePhotos = photoData.photoResults;
                     $scope.photos = photoData.photoResults.photos.slice(0,5);
                     $scope.imageSelected = photoData.photoResults.photos[0];
-                    console.log(photoData);
                 });
             });
         } else {
-            window.href = '/';
+            window.location.href = '#';
         }
 
         $scope.selectImage = function (img) {
             $scope.imageSelected = img;
+        };
+
+        $scope.gotoApontador = function () {
+            window.location.href = 'https://www.apontador.com.br/local/sp/sao_paulo/parques/B37822W2/parque_do_ibirapuera/como-chegar.html';
         };
     }
 ]);
@@ -61,7 +61,7 @@ local.directive('localDetails', ['$routeParams', '$location', function ($routePa
         templateUrl: 'components/partials/localDetails.html',
         replace: true,
         link: function ($scope, iElm, iAttrs, controller) {
-            console.log($scope.placeId);
+
         }
     };
 }]);
@@ -73,7 +73,9 @@ local.directive('localPhotos', ['$routeParams', '$location', function ($routePar
         templateUrl: 'components/partials/localPhotos.html',
         replace: true,
         link: function ($scope, iElm, iAttrs, controller) {
-            console.log($scope.placeId);
+            $scope.gotoApontador = function () {
+                window.location.href = 'https://www.apontador.com.br/local/sp/sao_paulo/parques/B37822W2/parque_do_ibirapuera/fotos.html';
+            };
         }
     };
 }]);
@@ -89,7 +91,6 @@ local.directive('reviews', ['$routeParams', '$location', 'localServices', functi
             $scope.options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
             localServices.getReviews($scope.placeid, 0, 5).$promise.then( function(reviews) {
-                console.log(reviews.reviewResults);
                 $scope.reviewResults = reviews.reviewResults;
             });
 
@@ -111,9 +112,7 @@ local.directive('similarPlaces', ['$routeParams', '$location', 'localServices', 
         replace: true,
         scope: {vanityname: '=', city: '=', placeid: '='},
         link: function ($scope, iElm, iAttrs, controller) {
-            console.log($scope.placeid);
             localServices.getPlaces($scope.vanityname, $scope.city).$promise.then( function(places) {
-                console.log(places);
                 $scope.places = places.results.places.filter( function(place) {
                     return place.id !== $scope.placeid;
                 });

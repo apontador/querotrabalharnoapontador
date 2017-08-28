@@ -2,7 +2,7 @@
   <h2>Avaliações</h2>
   <ul class="ki-col">
     <li ng-repeat="review in reviewResults.reviews">
-      <div class="ki-col-8">
+      <div class="ki-col-8" ng-show="review.creation.author.photo">
         <img src="{{review.creation.author.photo}}">
       </div>
       <div>

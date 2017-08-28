@@ -33,7 +33,6 @@ localAPI.service('localAPI', ['apontadorConfig', '$http', 'authServices', '$reso
             }
         }),
         getLocalInfo: function(placeId) {
-            console.log(authServices.getHeaders());
             return this._local.getLocalInfo({placeId: placeId});
         },
         getLocalPhotos: function(placeId, start) {

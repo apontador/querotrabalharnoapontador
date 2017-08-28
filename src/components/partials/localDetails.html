@@ -1,14 +1,14 @@
 <div class="local-details">
-  <span class="ki-col">
+  <span class="ki-col" ng-show="place.address">
     <i class="fa fa-map-marker" aria-hidden="true"></i>{{place.address.street}}, {{place.address.number}}, {{place.address.complement}} {{place.address.district}} CEP: {{place.address.zipcode}}
   </span>
-  <span class="ki-col">
+  <span class="ki-col" ng-show="place.phones">
     <i class="fa fa-phone" aria-hidden="true"></i>
     <ul style="margin-top: -5px;">
       <li ng-repeat="phone in place.phones">{{phone | phoneformat }}</li>
     </ul>
   </span>
-  <span class="ki-col">
+  <span class="ki-col" ng-show="place.openingHours">
     <i class="fa fa-clock-o" aria-hidden="true"></i>{{place.openingHours.openNow ? 'Aberto agora' : 'Fechado agora'}}
   </span>
   <span class="ki-col">
