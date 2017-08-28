@@ -1,0 +1,16 @@
+<div class="similar-places">
+  <h3>Lugares semelhantes</h3>
+  <ul>
+    <li ng-repeat="place in places" class="ki-col">
+      <a href="#/local/{{place.id}}">
+        <aside class="ki-col-4">
+          <img src="https://d31a08puryq8et.cloudfront.net/apps/sponsoredplacepromoted/files/placeholder.png">
+        </aside>
+        <aside class="ki-col-2-5">
+          <span class="ki-col">{{place.name}}</span>
+          <star-rating rating='place.statistics.rating'></star-rating>
+        </aside>
+      </a>
+    </li>
+  </ul>
+</div>

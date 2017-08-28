@@ -1,0 +1,26 @@
+<div class="container local" ng-if="place">
+  <div class="row">
+    <p class="title">{{place.name}}</p>
+    <star-rating rating='place.statistics.rating' ></star-rating>
+  </div>
+  <div class="row">
+    <local-details></local-details>
+  </div>
+  <div>
+    <local-photos ng-if="placePhotos"></local-photos>
+    <div class='ki-col-4 section'>
+      <span class="place-text">
+        {{place.description}}
+      </span>
+      <span class="map-content" ng-click="gotoApontador()">
+        <img src="{{mapUrl}}" height="100%" width="100%">
+        <span class="map-bg"></span>
+        <span class="map-text"><i class="fa fa-map-marker" aria-hidden="true"></i> ver mapa</span>
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <reviews placeid="placeId" class='ki-col-2-5'></reviews>
+    <similar-places city="place.address.city" vanityname='place.categories[0].subcategory.vanityName' placeid='placeId' class='ki-col-4'></similar-places>
+  </div>
+</div>

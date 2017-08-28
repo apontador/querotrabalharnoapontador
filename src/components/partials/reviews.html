@@ -1,0 +1,24 @@
+<div class="reviews">
+  <h2>Avaliações</h2>
+  <ul class="ki-col">
+    <li ng-repeat="review in reviewResults.reviews">
+      <div class="ki-col-8" ng-show="review.creation.author.photo">
+        <img src="{{review.creation.author.photo}}">
+      </div>
+      <div>
+        <div>
+          <h5>{{review.creation.author.name}}</h5>
+        </div>
+        <div>
+          <star-rating rating='review.statistics.rating'></star-rating>
+          <span class="review-text">{{review.creation.created | date:"dd/MM/yyyy"}}</span>
+        </div>
+        <div>
+          <p class="review-text" ng-class="{ 'show': showDetails }">{{review.text}}</p>
+          <span class="pull-right" ng-click="showDetails = !showDetails">{{showDetails ? '- ver menos' : '+ ver mais'}}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <button class="btn btn-default pull-right" ng-click="showMore(reviewResults.header.start, reviewResults.header.rows)" ng-hide="reviewResults.header.found <= reviewResults.reviews.length">Carregar mais</button>
+</div>
