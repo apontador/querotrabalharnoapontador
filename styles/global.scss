@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  background-color: #f3f3f3;
+}
+
+header {
+  margin: 0;
+  position: fixed;
+  z-index: 99999;
+  background: #fcfcfc;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
+  padding: 16px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+header #menu-trigger {
+  padding: 3px;
+  margin: 10px 0;
+  cursor: pointer;
+  float: left;
+}
+
+header #logo {
+  float: left;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+.box{
+  display: block;
+
+}
+
+.left{
+  margin-right: 16px;
+  float: left;
+}
+
+header.with-search #header-search {
+  width: 614px;
+  margin: 0 auto;
+}
+
+header.with-search form#search {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+form#search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 33px;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999;
+
+}
+
+.row {
+  float: left;
+}
+
+form#search .component {
+  border: 1px solid #ff8207;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.component {
+  display: block;
+  float: left;
+}
+
+form#search .component .box {
+  width: 336px;
+}
+
+form#search .component .box#location {
+  width: 222px;
+}
+
+form#search input {
+  padding: 16px 8.8px 15px;
+  width: 100%;
+  border-color: transparent;
+  outline: 0;
+  font-size: 1.4em;
+  -webkit-appearance: none;
+  outline: 0;
+}
+
+header.with-search form#search .component .box#search-place {
+  width: 50px;
+}
+
+form#search button {
+  border-color: transparent;
+  width: 100%;
+  background: #ff8207 url(https://newpoi-assets.apontador.com.br/website/images/buscar.svg) no-repeat;
+  background-position: center left 15px;
+  font-size: 1.6em;
+  text-transform: none;
+  color: #fff;
+  padding: 15px 5px 15px 25px;
+
+}
+
+header.with-search form#search button {
+  text-indent: -9999px;
+  height: 100%;
+}
+
+.box {
+  display: block;
+  float: left;
+}
+
+.box.right, .component.right {
+  float: right;
+}
+
+header .component#login {
+  margin-left: 16px;
+}
+
+button {
+  border: 1px solid #000;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  background: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 11px 12px;
+
+}
+
+header button {
+  color: #9012fe;
+  border-color: #9012fe;
+}
+
+header #login button {
+  margin-right: 0;
+  border: 1px solid transparent;
+  color: #ff8207;
+  background-color: #eee;
+}
+
+@media screen and (max-width: 960px) {
+  header.with-search {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  header.with-search .box.right {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+
+  header.with-search .box.left {
+    order: 1;
+    flex-grow: 2;
+    margin-right: 0;
+    justify-content: center;
+    display: flex;
+  }
+
+  header.with-search #header-search {
+    order: 4;
+    width: 100%;
+    flex-grow: 2;
+    margin-top: 20px;
+  }
+
+  header #menu-trigger {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+  }
+
+}
+
+@media screen and (max-width: 1150px){
+  header .component#anuncie {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px){
+  form#search .component .box#query {
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 716px){
+  form#search {
+    display: block;
+  }
+
+  form#search .component {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  form#search .component .box#query {
+    width: 90%;
+  }
+
+  form#search .component .box#location {
+    display: none;
+  }
+
+  form#search .component .box#search-place {
+    float: right;
+
+  }
+
+  form#search button {
+    text-indent: -9999px;
+    padding: 0;
+    height: 51px;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  form#search button {
+
+    background: #ff8207 url(https://newpoi-assets.apontador.com.br/website/images/buscar.svg) no-repeat;
+    background-position: center;
+    background-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 530px){
+  header .component#login button {
+    border: 0;
+    padding: 0;
+    background: url(https://newpoi-assets.apontador.com.br/website/images/entrar_mobile.svg) no-repeat;
+    text-indent: -9999px;
+    width: 20px;
+    height: 20px;
+  }
+
+  header .component#login {
+    margin: 10px 0;
+  }
+
+  //form#search .component {
+  //  height: 46px;
+  //}
+}
+
+
+

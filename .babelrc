@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "components": "./components",
+        "utils": "./utils",
+        "actions": "./actions",
+        "reducers": "./reducers",
+        "styles": "./styles"
+      }
+    }],
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["css$", "sass$", "scss$"]
+      }
+    ]
+  ],
+  "presets": [
+    "next/babel"
+
+  ],
+  "ignore": []
+}

@@ -1,0 +1,47 @@
+{
+  "name": "querotrabalharnoapontador",
+  "version": "1.0.0",
+  "description": "Teste para trabalhar no apontador",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanqueija/querotrabalharnoapontador.git"
+  },
+  "author": "Nathan Queija",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanqueija/querotrabalharnoapontador/issues"
+  },
+  "homepage": "https://github.com/nathanqueija/querotrabalharnoapontador#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "^3.2.2",
+    "next-redux-wrapper": "^1.3.4",
+    "raw-loader": "^0.5.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-plugin-css-modules-transform": "^1.2.7",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-define": "^1.3.0",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.12",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6"
+  }
+}
