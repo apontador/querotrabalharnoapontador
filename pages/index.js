@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import withRedux from 'next-redux-wrapper'
 import initStore from 'utils/store';
-import { setVillainLocation} from 'actions/villain';
-
+import { authenticate} from 'actions/auth';
+import MainContent from 'components/MainContent';
 import Layout from 'components/Layout';
+import Breadcrumb from 'components/Breadcrumb';
 class Index extends Component {
 
   constructor (props, context) {
@@ -11,36 +12,30 @@ class Index extends Component {
   }
 
   getContent(){
-    if(this.props.villain.info.targets){
+      const {info} = this.props.place;
       return (
-        <div style={{display: 'flex', flexDirection: 'column', flexWrap: 'wrap', height: 'auto'}}>
-
-    </div>
+        <div>
+            <Breadcrumb place={info.name ? {name: info.name, link: info.urlApontador} : {}} content={info.breadcrumb || []}/>
+            <MainContent/>
+        </div>
     );
-    }
-
-    return <h2>Carregando...</h2>
   }
 
   render () {
-
-
-    return (
+      return (
       <Layout>
-    <div className="container">
-    {this.getContent()}
-
-    </div>
-    </Layout>
-  )
+        {this.getContent()}
+      </Layout>
+    )
   }
 }
 
-const mapStateToProps = ({ villain }) => ({
-  villain
+const mapStateToProps = ({ auth, place }) => ({
+  auth,
+    place
 });
 
 
 export default withRedux(initStore, mapStateToProps, {
-  setVillainLocation
+    authenticate
 })(Index);

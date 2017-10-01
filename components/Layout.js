@@ -1,51 +1,53 @@
 import React from 'react';
+import styled from 'styled-components';
 import Head from 'next/head';
 import stylesheet from 'styles/global.scss';
-import { getPossibleLocations} from 'actions/villain';
+import { authenticate} from 'actions/auth';
 import { connect } from 'react-redux';
 import Header from 'components/Header';
+import AdsSection from 'components/AdsSection';
+import Footer from 'components/Footer';
 
-
+const Main = styled.main`
+  @media screen and (max-width: 960px) {
+    margin-top: 145px;
+  }
+`;
 class Layout extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {
-      latitude: '',
-      longitude: ''
-    }
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleTouchTap = this.handleTouchTap.bind(this);
+    this.props.authenticate();
   }
 
-  handleChange(event){
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  };
+  getContent(){
+      const {authenticating, fail, info, error} = this.props.auth;
 
-  handleTouchTap(){
-    this.props.getPossibleLocations(this.state);
+      if(authenticating){
+          return <h1 style={{textAlign: 'center', margin: '50px'}}>Autenticando...</h1>
+      }
+
+      if(fail){
+          return <h1 style={{textAlign: 'center', margin: '50px'}}>Erro ao autenticar a aplicação. Contate o administrador do sistema</h1>
+      }
+
+      return this.props.children;
   }
 
   render() {
-
-    return (
+      return (
         <div>
           {<style dangerouslySetInnerHTML={{ __html: stylesheet }} />}
           <Head>
-            <title>{ this.props.title || 'Home' }</title>
+            <title>{ this.props.place.info.name || 'Apontador' }</title>
           </Head>
           <Header/>
-
-          <div className='container'>
-
-            <h1 id="welcome">Home</h1>
-            {this.props.children}
-
-          </div>
+            <Main id="place">
+            {this.getContent()}
+            </Main>
+            <AdsSection/>
+          <Footer/>
 
         </div>
     )
@@ -53,8 +55,9 @@ class Layout extends React.Component {
 }
 
 
-const mapStateToProps = ({ villain }) => ({
-  villain
+const mapStateToProps = ({ auth, place }) => ({
+  auth,
+    place
 });
 
-export default connect(mapStateToProps, {getPossibleLocations})(Layout);
+export default connect(mapStateToProps, {authenticate})(Layout);

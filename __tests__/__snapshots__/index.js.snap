@@ -1,0 +1,1215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <div
+          className="box left"
+        >
+          <div
+            id="menu-trigger"
+          >
+            <img
+              alt="Menu"
+              src="https://newpoi-assets.apontador.com.br/website/images/menu.svg"
+              title="Menu"
+            />
+          </div>
+          <div
+            id="logo"
+          >
+            <a
+              href="https://www.apontador.com.br/"
+            >
+              <img
+                src="https://newpoi-assets.apontador.com.br/website/images/logo_small.svg"
+              />
+            </a>
+          </div>
+        </div>,
+        <div
+          id="header-search"
+        >
+          <form
+            action="https://www.apontador.com.br/local/search.html"
+            className="row"
+            id="search"
+            name="search"
+          >
+            <div
+              className="component"
+            >
+              <div
+                className="box"
+                id="query"
+              >
+                <input
+                  autocomplete="off"
+                  id="query_field"
+                  name="q"
+                  placeholder="O que você procura?"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                className="box"
+                id="location"
+              >
+                <input
+                  autocomplete="off"
+                  id="location_field"
+                  name="loc"
+                  placeholder="Cidade, Estado"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                className="box"
+                id="search-place"
+              >
+                <button
+                  type="submit"
+                >
+                  Buscar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>,
+        <div
+          className="box right"
+        >
+          <div
+            className="component"
+            id="anuncie"
+          >
+            <a
+              href="https://www.apontador.com.br/mais/planos/"
+              target="_blank"
+            >
+              <button
+                id="anuncie"
+              >
+                Anuncie seu Negócio
+              </button>
+            </a>
+          </div>
+          <div
+            className="component"
+            id="login"
+          >
+            <button
+              id="login-trigger"
+            >
+              Entrar
+            </button>
+          </div>
+        </div>,
+      ],
+      "className": "with-search",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              id="menu-trigger"
+            >
+              <img
+                alt="Menu"
+                src="https://newpoi-assets.apontador.com.br/website/images/menu.svg"
+                title="Menu"
+              />
+            </div>,
+            <div
+              id="logo"
+            >
+              <a
+                href="https://www.apontador.com.br/"
+              >
+                <img
+                  src="https://newpoi-assets.apontador.com.br/website/images/logo_small.svg"
+                />
+              </a>
+            </div>,
+          ],
+          "className": "box left",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="Menu"
+                src="https://newpoi-assets.apontador.com.br/website/images/menu.svg"
+                title="Menu"
+              />,
+              "id": "menu-trigger",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Menu",
+                "src": "https://newpoi-assets.apontador.com.br/website/images/menu.svg",
+                "title": "Menu",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="https://www.apontador.com.br/"
+              >
+                <img
+                  src="https://newpoi-assets.apontador.com.br/website/images/logo_small.svg"
+                />
+              </a>,
+              "id": "logo",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  src="https://newpoi-assets.apontador.com.br/website/images/logo_small.svg"
+                />,
+                "href": "https://www.apontador.com.br/",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "src": "https://newpoi-assets.apontador.com.br/website/images/logo_small.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "a",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": <form
+            action="https://www.apontador.com.br/local/search.html"
+            className="row"
+            id="search"
+            name="search"
+          >
+            <div
+              className="component"
+            >
+              <div
+                className="box"
+                id="query"
+              >
+                <input
+                  autocomplete="off"
+                  id="query_field"
+                  name="q"
+                  placeholder="O que você procura?"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                className="box"
+                id="location"
+              >
+                <input
+                  autocomplete="off"
+                  id="location_field"
+                  name="loc"
+                  placeholder="Cidade, Estado"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                className="box"
+                id="search-place"
+              >
+                <button
+                  type="submit"
+                >
+                  Buscar
+                </button>
+              </div>
+            </div>
+          </form>,
+          "id": "header-search",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "action": "https://www.apontador.com.br/local/search.html",
+            "children": <div
+              className="component"
+            >
+              <div
+                className="box"
+                id="query"
+              >
+                <input
+                  autocomplete="off"
+                  id="query_field"
+                  name="q"
+                  placeholder="O que você procura?"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                className="box"
+                id="location"
+              >
+                <input
+                  autocomplete="off"
+                  id="location_field"
+                  name="loc"
+                  placeholder="Cidade, Estado"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                className="box"
+                id="search-place"
+              >
+                <button
+                  type="submit"
+                >
+                  Buscar
+                </button>
+              </div>
+            </div>,
+            "className": "row",
+            "id": "search",
+            "name": "search",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="box"
+                  id="query"
+                >
+                  <input
+                    autocomplete="off"
+                    id="query_field"
+                    name="q"
+                    placeholder="O que você procura?"
+                    type="text"
+                    value=""
+                  />
+                </div>,
+                <div
+                  className="box"
+                  id="location"
+                >
+                  <input
+                    autocomplete="off"
+                    id="location_field"
+                    name="loc"
+                    placeholder="Cidade, Estado"
+                    type="text"
+                    value=""
+                  />
+                </div>,
+                <div
+                  className="box"
+                  id="search-place"
+                >
+                  <button
+                    type="submit"
+                  >
+                    Buscar
+                  </button>
+                </div>,
+              ],
+              "className": "component",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <input
+                    autocomplete="off"
+                    id="query_field"
+                    name="q"
+                    placeholder="O que você procura?"
+                    type="text"
+                    value=""
+                  />,
+                  "className": "box",
+                  "id": "query",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "autocomplete": "off",
+                    "id": "query_field",
+                    "name": "q",
+                    "placeholder": "O que você procura?",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <input
+                    autocomplete="off"
+                    id="location_field"
+                    name="loc"
+                    placeholder="Cidade, Estado"
+                    type="text"
+                    value=""
+                  />,
+                  "className": "box",
+                  "id": "location",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "autocomplete": "off",
+                    "id": "location_field",
+                    "name": "loc",
+                    "placeholder": "Cidade, Estado",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <button
+                    type="submit"
+                  >
+                    Buscar
+                  </button>,
+                  "className": "box",
+                  "id": "search-place",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Buscar",
+                    "type": "submit",
+                  },
+                  "ref": null,
+                  "rendered": "Buscar",
+                  "type": "button",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "form",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="component"
+              id="anuncie"
+            >
+              <a
+                href="https://www.apontador.com.br/mais/planos/"
+                target="_blank"
+              >
+                <button
+                  id="anuncie"
+                >
+                  Anuncie seu Negócio
+                </button>
+              </a>
+            </div>,
+            <div
+              className="component"
+              id="login"
+            >
+              <button
+                id="login-trigger"
+              >
+                Entrar
+              </button>
+            </div>,
+          ],
+          "className": "box right",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="https://www.apontador.com.br/mais/planos/"
+                target="_blank"
+              >
+                <button
+                  id="anuncie"
+                >
+                  Anuncie seu Negócio
+                </button>
+              </a>,
+              "className": "component",
+              "id": "anuncie",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <button
+                  id="anuncie"
+                >
+                  Anuncie seu Negócio
+                </button>,
+                "href": "https://www.apontador.com.br/mais/planos/",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Anuncie seu Negócio",
+                  "id": "anuncie",
+                },
+                "ref": null,
+                "rendered": "Anuncie seu Negócio",
+                "type": "button",
+              },
+              "type": "a",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <button
+                id="login-trigger"
+              >
+                Entrar
+              </button>,
+              "className": "component",
+              "id": "login",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Entrar",
+                "id": "login-trigger",
+              },
+              "ref": null,
+              "rendered": "Entrar",
+              "type": "button",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <div
+            className="box left"
+          >
+            <div
+              id="menu-trigger"
+            >
+              <img
+                alt="Menu"
+                src="https://newpoi-assets.apontador.com.br/website/images/menu.svg"
+                title="Menu"
+              />
+            </div>
+            <div
+              id="logo"
+            >
+              <a
+                href="https://www.apontador.com.br/"
+              >
+                <img
+                  src="https://newpoi-assets.apontador.com.br/website/images/logo_small.svg"
+                />
+              </a>
+            </div>
+          </div>,
+          <div
+            id="header-search"
+          >
+            <form
+              action="https://www.apontador.com.br/local/search.html"
+              className="row"
+              id="search"
+              name="search"
+            >
+              <div
+                className="component"
+              >
+                <div
+                  className="box"
+                  id="query"
+                >
+                  <input
+                    autocomplete="off"
+                    id="query_field"
+                    name="q"
+                    placeholder="O que você procura?"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  className="box"
+                  id="location"
+                >
+                  <input
+                    autocomplete="off"
+                    id="location_field"
+                    name="loc"
+                    placeholder="Cidade, Estado"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  className="box"
+                  id="search-place"
+                >
+                  <button
+                    type="submit"
+                  >
+                    Buscar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>,
+          <div
+            className="box right"
+          >
+            <div
+              className="component"
+              id="anuncie"
+            >
+              <a
+                href="https://www.apontador.com.br/mais/planos/"
+                target="_blank"
+              >
+                <button
+                  id="anuncie"
+                >
+                  Anuncie seu Negócio
+                </button>
+              </a>
+            </div>
+            <div
+              className="component"
+              id="login"
+            >
+              <button
+                id="login-trigger"
+              >
+                Entrar
+              </button>
+            </div>
+          </div>,
+        ],
+        "className": "with-search",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                id="menu-trigger"
+              >
+                <img
+                  alt="Menu"
+                  src="https://newpoi-assets.apontador.com.br/website/images/menu.svg"
+                  title="Menu"
+                />
+              </div>,
+              <div
+                id="logo"
+              >
+                <a
+                  href="https://www.apontador.com.br/"
+                >
+                  <img
+                    src="https://newpoi-assets.apontador.com.br/website/images/logo_small.svg"
+                  />
+                </a>
+              </div>,
+            ],
+            "className": "box left",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="Menu"
+                  src="https://newpoi-assets.apontador.com.br/website/images/menu.svg"
+                  title="Menu"
+                />,
+                "id": "menu-trigger",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Menu",
+                  "src": "https://newpoi-assets.apontador.com.br/website/images/menu.svg",
+                  "title": "Menu",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="https://www.apontador.com.br/"
+                >
+                  <img
+                    src="https://newpoi-assets.apontador.com.br/website/images/logo_small.svg"
+                  />
+                </a>,
+                "id": "logo",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    src="https://newpoi-assets.apontador.com.br/website/images/logo_small.svg"
+                  />,
+                  "href": "https://www.apontador.com.br/",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "src": "https://newpoi-assets.apontador.com.br/website/images/logo_small.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "a",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": <form
+              action="https://www.apontador.com.br/local/search.html"
+              className="row"
+              id="search"
+              name="search"
+            >
+              <div
+                className="component"
+              >
+                <div
+                  className="box"
+                  id="query"
+                >
+                  <input
+                    autocomplete="off"
+                    id="query_field"
+                    name="q"
+                    placeholder="O que você procura?"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  className="box"
+                  id="location"
+                >
+                  <input
+                    autocomplete="off"
+                    id="location_field"
+                    name="loc"
+                    placeholder="Cidade, Estado"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  className="box"
+                  id="search-place"
+                >
+                  <button
+                    type="submit"
+                  >
+                    Buscar
+                  </button>
+                </div>
+              </div>
+            </form>,
+            "id": "header-search",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "action": "https://www.apontador.com.br/local/search.html",
+              "children": <div
+                className="component"
+              >
+                <div
+                  className="box"
+                  id="query"
+                >
+                  <input
+                    autocomplete="off"
+                    id="query_field"
+                    name="q"
+                    placeholder="O que você procura?"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  className="box"
+                  id="location"
+                >
+                  <input
+                    autocomplete="off"
+                    id="location_field"
+                    name="loc"
+                    placeholder="Cidade, Estado"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  className="box"
+                  id="search-place"
+                >
+                  <button
+                    type="submit"
+                  >
+                    Buscar
+                  </button>
+                </div>
+              </div>,
+              "className": "row",
+              "id": "search",
+              "name": "search",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="box"
+                    id="query"
+                  >
+                    <input
+                      autocomplete="off"
+                      id="query_field"
+                      name="q"
+                      placeholder="O que você procura?"
+                      type="text"
+                      value=""
+                    />
+                  </div>,
+                  <div
+                    className="box"
+                    id="location"
+                  >
+                    <input
+                      autocomplete="off"
+                      id="location_field"
+                      name="loc"
+                      placeholder="Cidade, Estado"
+                      type="text"
+                      value=""
+                    />
+                  </div>,
+                  <div
+                    className="box"
+                    id="search-place"
+                  >
+                    <button
+                      type="submit"
+                    >
+                      Buscar
+                    </button>
+                  </div>,
+                ],
+                "className": "component",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <input
+                      autocomplete="off"
+                      id="query_field"
+                      name="q"
+                      placeholder="O que você procura?"
+                      type="text"
+                      value=""
+                    />,
+                    "className": "box",
+                    "id": "query",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "autocomplete": "off",
+                      "id": "query_field",
+                      "name": "q",
+                      "placeholder": "O que você procura?",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <input
+                      autocomplete="off"
+                      id="location_field"
+                      name="loc"
+                      placeholder="Cidade, Estado"
+                      type="text"
+                      value=""
+                    />,
+                    "className": "box",
+                    "id": "location",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "autocomplete": "off",
+                      "id": "location_field",
+                      "name": "loc",
+                      "placeholder": "Cidade, Estado",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <button
+                      type="submit"
+                    >
+                      Buscar
+                    </button>,
+                    "className": "box",
+                    "id": "search-place",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Buscar",
+                      "type": "submit",
+                    },
+                    "ref": null,
+                    "rendered": "Buscar",
+                    "type": "button",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            "type": "form",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="component"
+                id="anuncie"
+              >
+                <a
+                  href="https://www.apontador.com.br/mais/planos/"
+                  target="_blank"
+                >
+                  <button
+                    id="anuncie"
+                  >
+                    Anuncie seu Negócio
+                  </button>
+                </a>
+              </div>,
+              <div
+                className="component"
+                id="login"
+              >
+                <button
+                  id="login-trigger"
+                >
+                  Entrar
+                </button>
+              </div>,
+            ],
+            "className": "box right",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="https://www.apontador.com.br/mais/planos/"
+                  target="_blank"
+                >
+                  <button
+                    id="anuncie"
+                  >
+                    Anuncie seu Negócio
+                  </button>
+                </a>,
+                "className": "component",
+                "id": "anuncie",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <button
+                    id="anuncie"
+                  >
+                    Anuncie seu Negócio
+                  </button>,
+                  "href": "https://www.apontador.com.br/mais/planos/",
+                  "target": "_blank",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Anuncie seu Negócio",
+                    "id": "anuncie",
+                  },
+                  "ref": null,
+                  "rendered": "Anuncie seu Negócio",
+                  "type": "button",
+                },
+                "type": "a",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <button
+                  id="login-trigger"
+                >
+                  Entrar
+                </button>,
+                "className": "component",
+                "id": "login",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Entrar",
+                  "id": "login-trigger",
+                },
+                "ref": null,
+                "rendered": "Entrar",
+                "type": "button",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

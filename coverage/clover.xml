@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1506826622964" clover="3.2.0">
+  <project timestamp="1506826622964" name="All files">
+    <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0" elements="14" coveredelements="0" complexity="0" loc="10" ncloc="10" packages="1" files="2" classes="2">
+      <file name="next.config.js" path="/Users/nathanqueija/Desktop/projetos/querotrabalharnoapontador/next.config.js">
+        <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+      <file name="postcss.config.js" path="/Users/nathanqueija/Desktop/projetos/querotrabalharnoapontador/postcss.config.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>

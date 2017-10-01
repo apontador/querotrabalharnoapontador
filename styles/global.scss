@@ -11,6 +11,10 @@ body {
   background-color: #f3f3f3;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   margin: 0;
   position: fixed;
@@ -23,21 +27,6 @@ header {
   display: flex;
 }
 
-header #menu-trigger {
-  padding: 3px;
-  margin: 10px 0;
-  cursor: pointer;
-  float: left;
-}
-
-header #logo {
-  float: left;
-  margin-left: 16px;
-  display: flex;
-  align-items: center;
-  height: 38px;
-}
-
 .box{
   display: block;
 
@@ -48,79 +37,18 @@ header #logo {
   float: left;
 }
 
-header.with-search #header-search {
-  width: 614px;
-  margin: 0 auto;
-}
 
-header.with-search form#search {
-  width: 100%;
-  margin-bottom: 0;
-}
-
-form#search {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 33px;
-  flex-direction: column;
-  position: relative;
-  z-index: 9999;
-
-}
 
 .row {
   float: left;
+  width: 100%;
 }
 
-form#search .component {
-  border: 1px solid #ff8207;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
-  border-radius: 2px;
-  margin: 0 auto;
-}
+
 
 .component {
   display: block;
   float: left;
-}
-
-form#search .component .box {
-  width: 336px;
-}
-
-form#search .component .box#location {
-  width: 222px;
-}
-
-form#search input {
-  padding: 16px 8.8px 15px;
-  width: 100%;
-  border-color: transparent;
-  outline: 0;
-  font-size: 1.4em;
-  -webkit-appearance: none;
-  outline: 0;
-}
-
-header.with-search form#search .component .box#search-place {
-  width: 50px;
-}
-
-form#search button {
-  border-color: transparent;
-  width: 100%;
-  background: #ff8207 url(https://newpoi-assets.apontador.com.br/website/images/buscar.svg) no-repeat;
-  background-position: center left 15px;
-  font-size: 1.6em;
-  text-transform: none;
-  color: #fff;
-  padding: 15px 5px 15px 25px;
-
-}
-
-header.with-search form#search button {
-  text-indent: -9999px;
-  height: 100%;
 }
 
 .box {
@@ -130,10 +58,6 @@ header.with-search form#search button {
 
 .box.right, .component.right {
   float: right;
-}
-
-header .component#login {
-  margin-left: 16px;
 }
 
 button {
@@ -148,129 +72,86 @@ button {
 
 }
 
-header button {
-  color: #9012fe;
-  border-color: #9012fe;
+body main {
+  margin-top: 86px;
+  float: left;
+  width: 100%;
 }
 
-header #login button {
+.flex-box {
+  display: flex;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li a span {
+  color: #6c6c6c;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+
+
+.shadow-default {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
+  background: #fff;
+  border-radius: 2px;
+}
+
+.box.left, .component.left {
+  float: left;
+}
+
+ul.stars {
+  float: left;
+  margin-right: 13px;
+}
+
+ul.stars li.star.filled {
+  background: url(https://newpoi-assets.apontador.com.br/website/images/estrela_ativada.svg) no-repeat;
+  background-size: cover;
+}
+
+ul.stars li.star {
+  background: url(https://newpoi-assets.apontador.com.br/website/images/estrela_desativada.svg) no-repeat;
+  width: 20.6px;
+  height: 19.6px;
+  background-size: cover;
+}
+
+ul.stars li {
+  float: left;
+  margin-right: 3px;
+}
+
+ul.stars li:last-child {
   margin-right: 0;
-  border: 1px solid transparent;
-  color: #ff8207;
-  background-color: #eee;
 }
 
-@media screen and (max-width: 960px) {
-  header.with-search {
-    display: flex;
-
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  header.with-search .box.right {
-    position: absolute;
-    right: 16px;
-    top: 16px;
-  }
-
-  header.with-search .box.left {
-    order: 1;
-    flex-grow: 2;
-    margin-right: 0;
-    justify-content: center;
-    display: flex;
-  }
-
-  header.with-search #header-search {
-    order: 4;
-    width: 100%;
-    flex-grow: 2;
-    margin-top: 20px;
-  }
-
-  header #menu-trigger {
-    position: absolute;
-    left: 16px;
-    top: 16px;
-  }
-
+.box.right, .component.right {
+  float: right;
 }
 
-@media screen and (max-width: 1150px){
-  header .component#anuncie {
-    display: none;
-  }
+.distancy {
+  background: url(https://newpoi-assets.apontador.com.br/website/images/distancia.svg) no-repeat;
+  padding-left: 20px;
+  background-position: center left;
+  float: right;
 }
+
 
 @media screen and (max-width: 600px){
-  form#search .component .box#query {
-    width: 80%;
+
+  h4 {
+    font-size: 2.5em;
   }
-}
-
-
-@media screen and (max-width: 716px){
-  form#search {
-    display: block;
-  }
-
-  form#search .component {
-    width: 100%;
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-
-  }
-
-  form#search .component .box#query {
-    width: 90%;
-  }
-
-  form#search .component .box#location {
-    display: none;
-  }
-
-  form#search .component .box#search-place {
-    float: right;
-
-  }
-
-  form#search button {
-    text-indent: -9999px;
-    padding: 0;
-    height: 51px;
-  }
-
-}
-
-@media screen and (max-width: 500px){
-  form#search button {
-
-    background: #ff8207 url(https://newpoi-assets.apontador.com.br/website/images/buscar.svg) no-repeat;
-    background-position: center;
-    background-size: 20px;
-  }
-}
-
-
-@media screen and (max-width: 530px){
-  header .component#login button {
-    border: 0;
-    padding: 0;
-    background: url(https://newpoi-assets.apontador.com.br/website/images/entrar_mobile.svg) no-repeat;
-    text-indent: -9999px;
-    width: 20px;
-    height: 20px;
-  }
-
-  header .component#login {
-    margin: 10px 0;
-  }
-
-  //form#search .component {
-  //  height: 46px;
-  //}
 }
 
 

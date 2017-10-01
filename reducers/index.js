@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import villain from './Villain';
+import auth from './Auth';
+import place from './Place';
 
 export default combineReducers({
-  villain
+    auth,
+    place
 });

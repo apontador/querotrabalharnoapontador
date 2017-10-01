@@ -16,8 +16,10 @@
         "extensions": ["css$", "sass$", "scss$"]
       }
     ]
+
   ],
   "presets": [
+    "env",
     "next/babel"
 
   ],
