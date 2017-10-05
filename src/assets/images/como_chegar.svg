@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_directions_black_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Responsive_POI_Free_1280_Desktop_V4" transform="translate(-407.000000, -364.000000)">
+            <g id="Action" transform="translate(184.000000, 356.000000)">
+                <g id="bt_como_chegar" transform="translate(201.000000, 0.000000)">
+                    <g id="Group-19" transform="translate(20.000000, 6.000000)">
+                        <g id="Group-23">
+                            <g id="ic_directions_black_24px">
+                                <path d="M21.71,11.29 L12.71,2.29 C12.32,1.9 11.69,1.9 11.3,2.29 L2.3,11.29 C1.91,11.68 1.91,12.31 2.3,12.7 L11.3,21.7 C11.69,22.09 12.32,22.09 12.71,21.7 L21.71,12.7 C22.1,12.32 22.1,11.69 21.71,11.29 Z M14,14.5 L14,12 L10,12 L10,15 L8,15 L8,11 C8,10.45 8.45,10 9,10 L14,10 L14,7.5 L17.5,11 L14,14.5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
