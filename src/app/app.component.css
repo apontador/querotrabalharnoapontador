@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+
+* { box-sizing: border-box; font-family: 'Roboto',sans-serif; outline: 0; color: #424242; }
+body { background-color: #f3f3f3; overflow: auto; }
+h1 { font-size: 2.6em; margin: 0; }
+h2 { font-size: 1.8em; margin: 0; font-weight: 400; color: rgba(0,0,0,0.87); }
+h3 { font-size: 1.4em; margin: 0; font-weight: 400; }
+hr { border-color: rgba(0,0,0,0.12); border-width: 0 0 1px; margin: 10px 0; }
+p { font-size: 1.4em; color: rgba(0,0,0,0.52); }
+a { color: #ff8207; }
+
+.content-container { margin: 0 auto; max-width: 960px; font-size: 65.2%; }
+.box-container { float: left; padding: 0 16px 16px 0; }
+.box-container.two-third { width: 66%; }
+.box-container.one-third { width: 33%; }
+.box { padding: 16px; overflow: hidden; }
+.shadow { box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12); background: #fff; border-radius: 2px; }
+
+.reviews { padding: 10px 0; }
+
+.rating { display: inline-block; width: 112px; height: 19px; position: relative; }
+.rating .stars { display: block; position: absolute; height: 100%; background-repeat: no-repeat; }
+.rating .stars.off { background-image: url(../assets/images/rating-off.png); width: 100%; }
+.rating .stars.on { background-image: url(../assets/images/rating-on.png); }
+
+.reviews .reviews-count { font-size: 1.4em; } 
+.reviews .reviews-count a { text-decoration: none; color: inherit; } 
+.reviews .reviews-count a:hover { text-decoration: underline; } 
+
+.buttons { text-align: center; padding: 10px 0; }
+.buttons .bt-container { display: inline-block; width: 33%; margin-left: -4px; padding-right: 16px; }
+.buttons .bt-container button { width: 100%; }
+
+button { padding: 11px 12px; border: solid 1px #000; text-transform: uppercase; background: 0; font-weight: bold; font-size: 14px; }
+button.ico { text-indent: 25px; background-repeat: no-repeat; background-position: center left 18px; }
+button.ico.phone { background-image: url(../assets/images/ver_telefone.svg); }
+button.ico.direction { background-image: url(../assets/images/como_chegar.svg); }
+button.ico.share { background-image: url(../assets/images/compartilhar.svg); }
+button.orange { background-color: #ff8207; color: #fff; border-color: #ff8207; }
+button.white { background-color: #fff; color: #ff8207; border-color: #ff8207; }
+
+.address { font-size: 1.4em; padding: 10px 0; }
+
+.map .image { display: flex; justify-content: center; align-items: center; width: 100%; }
+.map .image img { width: 100%; }
+
+.photos ul { list-style: none; margin: 0; padding: 0; display: flex; width: 100%; justify-content: center; flex-wrap: wrap; }
+.photos ul li { display: flex; width: 128px; height: 128px; overflow: hidden; justify-content: center; align-items: center; margin-right: 10px }
+.photos ul li img { width: auto; height: 100%; }
+
+.working-hours { position: relative; }
+.working-hours .status-text { font-size: 1.4em; font-weight: bold; text-transform: uppercase; display: inline-block; position: absolute; top: 16px; right: 16px; }
+.working-hours .status-text.green { color: #20b226; }
+.working-hours p { font-size: 1.4em; }
+
+.links-list { margin: 0; padding: 0; list-style: none; font-size: 1.4em; }
