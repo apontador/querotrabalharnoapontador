@@ -12,7 +12,7 @@ O teste visa analisar como o projeto é construído, analisando primariamente a 
 
 ## Requisitos:
 
-* **Front-end**: Consturir HTML/CSS/JS conforme modelo contido na pasta "docs/layout", realizando o consumo da API que será construída como back-end.
+* **Front-end**: Consturir HTML/CSS/JS conforme modelo contido na pasta "layout", realizando o consumo da API que será construída como back-end.
 
 * **Back-end**: Construir API que forneça os endpoints necessários para as funcionalidades providas na tarefa de front-end.
 
@@ -24,7 +24,3 @@ O teste visa analisar como o projeto é construído, analisando primariamente a 
 
 * Documentação da API
 * Dockerfile
-
-# Enviando para validação:
-
-Disponibilizar o projeto em um repositório público, preferencialmente o GitHub e enviar e-mail com o link para seguinte e-mail: *dev@apontador.com.br* com o assunto *Teste Full-stack Apontador - < Seu Nome >*
