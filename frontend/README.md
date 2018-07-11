@@ -39,7 +39,7 @@ Como Se Candidatar - Front End
 Contato
 -------
 
-Mande um e-mail para: bruno.muller@apontador.com
+Mande um e-mail para: dev@apontador.com
 
 Sobre a Empresa
 ---------------
