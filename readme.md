@@ -3,8 +3,8 @@ Quero Trabalhar no Apontador
 
 Tipos de teste e vagas:
 
-* [Front-end](https://github.com/apontador/querotrabalharnoapontador/frontend)
-* [Full-stack](https://github.com/apontador/querotrabalharnoapontador/fullstack)
+* [Front-end](https://github.com/apontador/querotrabalharnoapontador/tree/master/frontend)
+* [Full-stack](https://github.com/apontador/querotrabalharnoapontador/tree/master/fullstack)
 
 # Enviando para validação:
 
