@@ -1,0 +1,179 @@
+var PLAYER = (function (f, h) {
+    var i = {};
+
+    function g(a) {
+        i = h.extend(i, a)
+    }
+    function j() {
+        h.ajax({
+            url: "/player/get/" + f.user.id,
+            success: g,
+            dataType: "json",
+            type: "GET",
+            async: false
+        })
+    }
+    if (f.user.logged) {
+        j()
+    }
+    return i
+}(pageObj, jQuery));
+jq(document).ready(function () {
+    pageObj.load();
+    if (!pageObj.user.logged) {
+        jq("a.login_required").each(function () {
+            jq(this).attr("href", "/accounts/login.html")
+        })
+    }
+    if (pageObj.user.id === 0) {
+        jq(".notlogged").slideDown()
+    } else {
+        jq(".logged").slideDown()
+    }
+    jq(".close").click(function (b) {
+        b.preventDefault();
+        jq(this).unbind("click").parent().slideUp()
+    });
+    jq.prettyLoader({
+        loader: "/apontador_v8/images/prettyLoader/ajax-loader.gif"
+    });
+    (function () {
+        jq(".thumb_usuario").setProfilePhoto(pageObj.user.logged, {
+            photoSize: "s"
+        });
+        jq(".photo_usuario").setProfilePhoto(pageObj.user.logged, {
+            photoSize: "b"
+        });
+        jq.updatePlayerInfo(pageObj, PLAYER, {
+            pointsElm: ".pontos_valor",
+            currentLevelElm: ".current_level",
+            currentLevelNameElm: ".current_level_name",
+            nextLevelElm: ".next_level",
+            nextLevelNameElm: ".next_level_name",
+            progressBarElm: ".pontos",
+            toNextLevelPercents: ".to_next_level_percent"
+        })
+    })();
+    (function (c) {
+        var d = {
+            _dispatch: function (b, a) {
+                var j = 0;
+                var h = b.length;
+                for (j = 0; j < h; j++) {
+                    var i = b[j].reward;
+                    this.reward.create(i.type.toLowerCase(), i.html)
+                }
+            },
+            init: function () {
+                c.getJSON("/accounts/notification.json", c.proxy(this._dispatch, this))
+            },
+            reward: {
+                _element: null,
+                _timeout: null,
+                _type: null,
+                _displayTime: 10000,
+                create: function (a, b) {
+                    this._element = c(b);
+                    this._type = this[a] ? a : "default";
+                    c("body").append(this._element);
+                    c.proxy(this[this._type].show, this)()
+                },
+                _clearTimeout: function () {
+                    if (typeof this._timeout === "number") {
+                        clearTimeout(this._timeout)
+                    }
+                },
+                _scheduleClose: function () {
+                    this._clearTimeout();
+                    this._timeout = setTimeout(c.proxy(this[this._type].close, this), this._displayTime)
+                },
+                _destroy: function () {
+                    this._element.remove();
+                    this._element = null
+                },
+                "default": {
+                    show: function () {
+                        this._element.bind("mouseover", c.proxy(this._scheduleClose, this));
+                        c(".badge .close").click(c.proxy(this[this._type].close, this));
+                        this._element.animate({
+                            height: "toggle"
+                        }, 500, c.proxy(this._scheduleClose, this))
+                    },
+                    close: function () {
+                        this._clearTimeout();
+                        this._element.animate({
+                            height: "toggle"
+                        }, 300, c.proxy(this._destroy, this))
+                    }
+                },
+                level: {
+                    show: function () {
+                        var a = c.createModalBackground(),
+                            b = this;
+                        c(".fechar_pop").click(function () {
+                            c.proxy(b[b._type].close, b)();
+                            a.fadeOut("fast", function () {
+                                a.remove()
+                            })
+                        });
+                        c.updatePlayerInfo(pageObj, PLAYER, {
+                            pointsElm: ".pontos_valor",
+                            currentLevelElm: ".current_level",
+                            nextLevelElm: ".next_level",
+                            progressBarElm: ".pontos"
+                        });
+                        c(".level_up").fadeIn("fast")
+                    },
+                    close: function () {
+                        c(".level_up").fadeOut("fast", c.proxy(this._destroy, this))
+                    }
+                }
+            }
+        };
+        if (pageObj.user.logged) {
+            d.init()
+        }
+    })(jQuery);
+});
+if (pageObj.user.logged) {
+    jq("#userIsLogged").val("1")
+} else {
+    jq("#userIsLogged").val("0")
+}
+if (jq.cookie("loginError")) {
+    jq(".loginError").removeClass("hide");
+    jq.cookie("loginError", null)
+}
+setTimeout(function () {
+    var a = document.createElement("script");
+    var b = document.getElementsByTagName("script")[0];
+    a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/6757.js";
+    a.async = true;
+    a.type = "text/javascript";
+    b.parentNode.insertBefore(a, b)
+}, 1);
+FB.init({
+    appId: FACEBOOK_APP_ID,
+    channelUrl: APT_SERVER + "/apontador/channel.html",
+    status: true,
+    cookie: true,
+    oauth: true,
+    xfbml: false
+});
+jq(".bt_face_login, .bt_face_login_small").click(function (b) {
+    FB.login(function (a) {
+        if (a.authResponse) {
+            var f = new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 365));
+            var e = jq.cookie("fbsr_" + FACEBOOK_APP_ID);
+            jq.cookie("fbsr_" + FACEBOOK_APP_ID, e, {
+                domain: ".apontador.com.br",
+                expires: f,
+                path: "/"
+            });
+            document.location.href = "/accounts/login.html?campaign=profile_signup"
+        } else {}
+    }, {
+        scope: "email,offline_access,publish_stream,user_location"
+    });
+    b.preventDefault()
+});

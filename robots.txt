@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /local_ajax/
+Disallow: /widget/?version=1
+Disallow: /apontador_insite/
+Disallow: /rastreamento/
+Disallow: /local/email/
+Disallow: /local/report/
+Disallow: /local/widget/generate/
+Disallow: /widget/gerar_mapa.html
+Disallow: /accounts/
+Disallow: /redirect/
+Disallow: /print_coupon/
