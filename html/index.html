@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.0" media="screen" />
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        <div id="form-login" style="width:100%; background:#F90; height:100px;">
+            <div class="wrapper">
+                <span style="width:100%; color:#fff; font-size:30px; text-align:center;">FORMULÁRIO DE LOGIN/CADASTRO</span>
+            </div>
+        </div>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="logo">Apontador</h1>
+
+                <!-- BUSCA -->
+                <section>
+                <form id="search_form" method="get" action="/local/search.html">
+                    <fieldset>
+
+                        <!-- PROCURE -->
+                        <section>
+                            <label for="procure">Procure por:</label>
+                            <br>
+                            <input value="" id="procure" name="q" type="text" title="Local" tabindex="1" placeholder="Restaurante, bar, hotel...">
+                        </section>
+
+                        <!-- ONDE -->
+                        <section>
+                            <label for="onde">Onde?</label>
+                            <br>
+                            <!--
+                            <a href="#" id="linkSpecify" title="Especifique um endereço para sua busca" class="ico_drop">&nbsp;</a>
+                            -->
+                            <input autocomplete="off" value="" id="onde" name="loc" title="Onde" type="text" tabindex="2" placeholder="São Paulo, SP" class="ui-autocomplete-input" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        </section>
+
+                        <!-- ENVIAR BOTAO -->
+                        <section>
+                            <button form="search_form" id="buscar" type="submit" value="Buscar">
+                            Buscar Locais
+                            </button>
+                        </section>
+
+                        <!-- Escolher endereço - Escondido 
+                        <section>
+                            <label for="loc">Endereço</label>
+                            <input name="loc_b" type="text" id="loc_b" autocomplete="off" class="loc_b w260 ui-autocomplete-input" value="" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        </section>
+                        -->
+                    </fieldset>
+                </form>
+            </section>
+
+            <!-- ADCIONAR LOCAL -->
+            <ul id="login">
+                <li><img src="img/botao_facebook.jpg" /></li>
+                <li id="cadastrar-botao"><a href="#">Cadastre-se</a></li>
+                <li id="login-botao"><a href="#">Login</a></li>
+            </ul>
+
+            <!-- MENU PRINCIPAL -->
+            <nav id="main-menu">
+                <ul>
+                    <li><a href="#">Locais</a></li>
+                    <li><a href="#">Comunidade</a></li>
+                    <li><a href="#">Divulgue seu negócio</a></li>
+                    <li><a href="#">Apontador no seu celular</a></li>
+                </ul>
+            </nav>
+            
+            </header>
+
+        </div>
+
+        <div class="wrapper main-container">
+
+            <div style="width:728px; height:90px; background:#999; margin: 15px auto;">Banner</div>
+
+            <ul id="breadcrumb">
+                <li><a href="/" title="Apontador">Apontador</a></li>
+                <li><a href="#" title="Apontador São Paulo, SP">São Paulo</a></li>
+                <li><a href="#">Bares e Casas Noturnas</a></li>
+                <li>Casas Noturnas</li>
+            </ul>
+
+            <div class="main wrapper clearfix">
+
+                <section id="main-content">
+
+                    <header>
+                    
+                    <h2>Bar do Juarez</h2>
+
+                        <ul>   
+                            <li class="estrelas quatro">
+                                4
+                            </li>
+
+                            <li>
+                                <span class="notas"><strong title="44" class="count">44</strong>  avaliações</span>
+                            </li>
+                            
+                            <li><strong>9305</strong> visitas </li>
+                            
+                            <li id="link-site">
+                                <a target="_blank" rel="nofollow" href="#">Ir para o site</a>
+                            </li>
+                        </ul>
+
+                    </header>
+
+                    <!-- CONTEÚDO PRINCIPAL -->
+                    <div id="principal">
+
+                        <!-- MAPA -->
+                        <div id="mapa">
+                            <h3><a href="tel:551150524449">11-5052-4449</a></h3>
+
+                            <a class="fancybox fancybox.iframe" href="http://maplink.com.br/como-chegar-bar_do_juarez__Y2RX4EP2"><img src="img/mapa.jpg" border="0" /></a>
+
+                            <address>
+                            <strong>Av. Jurema, 324</strong> - Indianópolis<br />São Paulo - SP
+                            </address>
+
+                            <a href="#">Como chegar</a>
+                        </div>
+
+                        <!-- COMMENT -->
+                        <div id="comentario">
+
+                            <h4>Já esteve nesse lugar?</h4>
+                            <img src="img/de_sua_nota.jpg" style="margin:8px 0 3px 13px;" />
+                            <!--
+                            <p>Dê sua nota: * * * * * </p>
+
+                            <fieldset>
+                            <textarea class="review_text" id="comment" name="comment" placeholder="Ex. O atendimento é bom? A localização e os preços são adequados? diga o que você acha :)"></textarea>
+                            <p>Caracteres digitados <strong>0</strong></p>
+                            <button id="submitMiniReviewSpan" form="form_mini_resenha" type="submit">Enviar minha avaliação</button>
+                            </fieldset>
+                            -->
+                        </div>
+
+                        <!-- COMPARTILHE -->
+                        <div id="compartilhe">
+
+                            <div>
+                                <img src="img/google_facebook_likes.jpg" />
+
+                                <a href="Javascript:void(0)" class="compartilhe">Compartilhe</a>
+
+                                <ul id="links-editar">
+                                    <li>Encontrou alguma informação incorreta?</li>
+                                    <li>Reportar abuso</li>
+                                </ul>
+                            </div>
+
+                            <div id="form-compartilhe">
+                                <img src="img/compartilhe.jpg" />
+                                <!--
+                                <h5>Link para esta página</h5>
+                                <input id="poiShortUrl" type="text" class="column w330">
+                                
+                                <h5>Compartilhe com:</h5>
+                                <span class="sharebox">
+                                    <button title="Enviar por e-mail" role="button">E-mail</button>
+                                    <a title="Compartilhar com o Facebook">Facebook</a>
+                                    <a title="Postar no Twitter">Twitter</a>
+                                </span>
+                                
+                                <h5><strong>Coloque o mapa deste local no seu site:</strong></h5>
+                                <input type="text">
+                                <br />
+                                <a href="#" target="_blank">Personalize o tamanho do mapa</a>
+                            </div>
+
+                            <div>
+                                QR CODE -->
+                            </div>
+                        </div>
+
+                    </div><!-- FIM DE CONTEÚDO PRINCIPAL -->
+
+                    <div>
+                        <img src="img/anuncios_google.jpg" style="width:100%; margin:10px 0;" />
+                    </div>
+
+                    <!-- INFORMAÇÕES / FOTOS -->
+                    <div id="info-lugar">
+                            
+                        <article>
+
+                            <header>
+                                <h2>Sobre o Bar do Juarez</h2>
+                            </header>
+                            
+                            <section>
+                                <p>Localizado em Moema, o Bar do Juarez é um ótimo local para reunir os amigos e fazer um happy hour. A casa tem decoração inspirada nos antigos bares do centro da cidade, no cardápio feijoada, petiscos de botequim, guloseimas de balcão e outros.</p>
+                                <p><strong>Especialidade:</strong> Culinária de Botequim</p>
+                                <p><strong>Pratos Recomendados:</strong> Guloseimas de balcão ou Canapés de Rosbife. Aos sábados o destaque fica para a Feijoca do Juarez, servida em cumbuca de barro</p>
+                                <p><strong>Capacidade:</strong> 400 lugares</p>
+                                <p><strong>Dias de Funcionamento:</strong> Todos os dias da semana</p>
+                                <p><strong>Horário de funcionamento:</strong> Seg-Sex 17h/1h, Sáb-Dom-Fer 12/1h</p>
+                                <p><strong>Possui estacionamento:</strong></p>
+                                <p><strong>Serviços Especiais:</strong> Wi-Fi</p>
+                            </section>
+
+                            <aside>
+                                <div>
+                                    <img src="img/bar_grande.jpg" />
+                                </div>
+                                <ul>
+                                    <li><a href=""><img src="img/thumb_bar.jpg" /></a></li>
+                                    <li><a href=""><img src="img/thumb_bar.jpg" /></a></li>
+                                    <li><a href=""><img src="img/thumb_bar.jpg" /></a></li>
+                                    <li><a href=""><img src="img/thumb_bar.jpg" /></a></li>
+                                    <li><a href=""><img src="img/thumb_bar.jpg" /></a></li>
+                                </ul>
+                            </aside>
+
+                        </article>
+
+                    </div>
+                    <a href="Javascript:void(0)"  class="verMaisBotao">Ver Mais [+]</a>
+
+                    <!-- AVALIAÇÕES -->
+                    <div id="avaliacoes">
+                    
+                        <h2>Avaliações da comunidade Apontador sobre o local <span>Bar do Juarez</span></h2>
+
+                        <!-- COMENTÁRIO -->
+                        <div>
+                        <img src="img/comentario.jpg" style="text-align:center; margin:0 10px;" />
+                        <br /><br />
+                        <img src= "img/load.gif" />
+                            <!-- FOTO -->
+                            <!--
+                            <div>
+                                <a href="/profile/2185200540.html" rel="nofollow" title="Yasmim Carvalho Alves">
+                                    <img src="/apontador_v8/images/accounts/user64.gif" alt="Yasmim Carvalho Alves">
+                                </a>
+                                <span class="seguir botao userfollowpoi user_id_2185200540 hide">
+                                    <a class="follow hide" href="/accounts/login.html">Seguir</a>
+                                </span>
+                            </div>
+
+                            <!-- INFO USUARIO 
+                            <div class="info_usuario">
+                                
+                                
+                                <div class="usuario">
+                                    <a href="/profile/2185200540.html" rel="nofollow" title="Yasmim Carvalho Alves">Yasmim Carvalho Alves</a>
+                                    <p>Membro desde 12/02/2012</p>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        <p><span>5</span>avaliações</p>
+                                    </li>
+                                    <li>
+                                        <p><span>0</span><br>seguidor</p>    
+                                    </li>
+                                    <li>
+                                        <p><span>0</span><br>local</p>    
+                                    </li>
+                                    <li>
+                                        <p><span>0</span><br>foto</p>
+                                    </li>
+                                </ul>
+
+                                <!--  TEXTO 
+                                <div>
+                                    * * * * *
+                                    <a href="/local/sp/sao_paulo/bares_e_casas_noturnas/Y2RX4EP2/bar_do_juarez_.html#547576">12/02/2012</a>
+                                    via <a rel="nofollow" href="http://www.apontador.com.br">Apontador</a>
+
+                                    <p>TEXTO</p>
+                                </div>
+
+                                <a>Essa avaliação me ajudou <span>(1)</span></a>
+                                <a href="#" title="Reportar abuso">Reportar abuso</a>
+                                
+                             </div>
+                            -->
+                        </div><!-- FIM DE COMENTÁRIO -->
+
+                    </div><!-- FIM DE AVALIAÇÕES -->
+                    <a href="Javascript:void(0)" class="verMaisBotao">Ver Mais [+]</a>
+
+                </section>
+
+                <aside>
+                    <img src="img/aside.jpg" style="width:175px; margin:0 0 0 15px;" />
+                    <!--
+                    <div>
+                        BANNER
+                    </div>
+
+                    <div>
+                        FOTOS
+                    </div>
+
+                    <div>
+                        RECOMENDAM
+                    </div>
+
+                    <div>
+                        CHECK-IN
+                    </div>
+
+                    <div>
+                        VEJA TAMBÉM
+                    </div>
+
+                    <div>
+                        OFERTAS
+                    </div>
+                    -->
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container" style="background:url(img/footer.jpg); height:321px;">
+            <footer class="wrapper">
+                <!-- <h3>footer</h3> -->
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.0"></script>
+        
+        <script type="text/javascript">
+
+        $(document).ready(function() {
+
+        var slideL = false;
+        //SLIDE LOGIN
+        $("#cadastrar-botao").on('click', function(){
+            slideLogin();
+        });
+
+        $("#login-botao").on('click', function(){
+            slideLogin();
+        });
+
+        function slideLogin(){
+            if(slideL == false){
+                $("#form-login").slideToggle();
+                $("body").css("background", "url(img/bg.jpg) 0 100px repeat-x");
+                slideL = true;
+            }else{
+                $("#form-login").slideToggle();
+                $("body").css("background", "url(img/bg.jpg) 0 0 repeat-x");
+                slideL = false;  
+            }
+        }
+
+
+        // VER MAIS #1
+        var ligado1 = false;
+        $(".verMaisBotao:eq(0)").on('click', function(){
+            if(ligado1 == false){
+                $("#info-lugar").animate({
+                    height: '495px'
+                  }, 500);
+                $(this).text("Ver Menos [-]");
+                ligado1 = true;
+            }else{
+                $("#info-lugar").animate({
+                    height: '340px'
+                  }, 500);
+                $(this).text("Ver Mais [+]");
+                ligado1 = false;
+            }
+        });
+
+        // VER MAIS #2
+        var ligado2 = false;
+        $(".verMaisBotao:eq(1)").on('click', function(){
+            if(ligado2 == false){
+                $("#avaliacoes").animate({
+                    height: '450px'
+                  }, 500);
+                $(this).text("Ver Menos [-]");
+                ligado2 = true;
+            }else{
+                $("#avaliacoes").animate({
+                    height: '356px'
+                  }, 500);
+                $(this).text("Ver Mais [+]");
+                ligado2 = false;
+            }
+        });
+
+        $(".compartilhe").on('click', function(){
+            $("#form-compartilhe").slideToggle();
+        });
+
+
+        $('.fancybox').fancybox();
+
+            
+        });
+        </script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
