@@ -24,3 +24,8 @@ O teste visa analisar como o projeto é construído, analisando primariamente a 
 
 * Documentação da API
 * Dockerfile
+
+## diferencial
+
+* Implementar a API GraphQL / REST
+* Apresentar deploy em um ambiente cloud a escolha do candidato.
