@@ -18,7 +18,10 @@ O teste visa analisar como o projeto é construído, analisando primariamente a 
 
 * **Readme**: Disponibilizar arquivo com explicações para realizar *build* e execução de *testes* para o projeto.
 
-*Observação*: Criar *docker-compose* para dependências externas ao projeto como por exemplo, banco de dados. 
+*Observação*: 
+* Criar *docker-compose* para dependências externas ao projeto como por exemplo, banco de dados. 
+* implementar as funções cadastro, busca e listagem do resultado de busca conforme layout.
+* submeter pull request ao final do projeto.
 
 ## Não obrigatório
 
