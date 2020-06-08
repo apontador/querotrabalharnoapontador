@@ -9,10 +9,10 @@ Este repositório contém os projetos "back-end" e "front-end", desenvolvidos co
 A pasta **"apontador-backend"** contém uma "solution" (Visual Studio) com os seguintes projetos:<br/>
 - **Apontador.API**<br/>Este é o projeto da aplicação "back-end". Uma API que expõe os endpoints para cadastro e consulta dos dados.<br/>
 - **Apontador.API.Tests**<br/>Um projeto para implementação dos testes unitários.
-<br/>
+
 Ao executar a aplicação back-end (Apontador.API) será apresentada uma interface do Swagger que pode ser usada para testar a API e contém a documentação dos metodos POST e GET.
-
-
+<br/>
+<br/>
 A pasta **"apontador-frontend"** contém a aplicação web desenvolvida com React e Redux para disponibilizar as interfaces de usuário (formulário de cadastro e página de consultas).
 
 O projeto "front-end" foi desenvolvido em React + Redux.
