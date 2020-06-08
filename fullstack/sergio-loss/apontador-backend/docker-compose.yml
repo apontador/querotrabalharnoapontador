@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  apontador.api:
+    image: ${DOCKER_REGISTRY-}apontadorapi
+    build:
+      context: .
+      dockerfile: Apontador.API\Dockerfile
