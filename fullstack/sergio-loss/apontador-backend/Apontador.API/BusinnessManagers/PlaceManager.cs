@@ -33,7 +33,7 @@ namespace Apontador.API.BusinnessManagers
                     throw new Exception("Error - ParsePlaceRequest");
                 }
 
-                return new { Id = place.Id } ;
+                return new PlaceAddedModel { Id = place.Id } ;
             }
             catch(Exception ex)
             {

@@ -28,7 +28,7 @@ namespace Apontador.API.Controllers
 
 
         [HttpPost("add")]
-        [SwaggerResponse(200, "Returns the 'Id' of the new place", Type = typeof(Object))]
+        [SwaggerResponse(200, "Retorna o 'Id' do novo cadastro.", Type = typeof(PlaceAddedModel))]
         public async Task<IActionResult> Add(PlaceModel placeModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -44,7 +44,7 @@ namespace Apontador.API.Controllers
         }
 
         [HttpGet("list/{search_text}/{page}")]
-        [SwaggerResponse(200, "Returns a list with all places", Type = typeof(PlaceListModel))]
+        [SwaggerResponse(200, "Retorna uma lista conforme os termos de busca", Type = typeof(PlaceListModel))]
         public async Task<IActionResult> GetList(string search_text, int page)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
