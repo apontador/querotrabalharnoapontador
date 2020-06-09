@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: db
+    image: mysql:8.0.20
+    ports:
+      - "8082:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: apontador
+      MYSQL_ROOT_HOST: "%"
