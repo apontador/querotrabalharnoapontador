@@ -30,7 +30,7 @@ namespace Apontador.API
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
 
 
-            //services.AddCors();
+            services.AddCors();
 
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllers();
