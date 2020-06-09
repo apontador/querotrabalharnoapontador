@@ -29,6 +29,21 @@ Utilizando o VS Code como editor de código:
 
 ---
 
+**Site:**<br/>
+[http://apontador-api-test.us-east-1.elasticbeanstalk.com/](http://apontador-api-test.us-east-1.elasticbeanstalk.com/)<br/>
+
+![Site](https://github.com/sloss-apontador/querotrabalharnoapontador/blob/sergio-loss/fullstack/sergio-loss/images/site-p.png)
+
+---
+
+**API (Swagger):**<br/>
+[http://apontador-api-test.us-east-1.elasticbeanstalk.com:81/swagger/index.html](http://apontador-api-test.us-east-1.elasticbeanstalk.com:81/swagger/index.html)<br/>
+
+![Swagger](https://github.com/sloss-apontador/querotrabalharnoapontador/blob/sergio-loss/fullstack/sergio-loss/images/swagger-p.png)
+
+
+---
+
 Sergio S Loss<br/>
 E-mail: sergio.sloss@gmail.com<br/>
 Telefone: (11) 97317-3504<br/>
